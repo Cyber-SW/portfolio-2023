@@ -5,7 +5,7 @@
   --clr-primary-400: #ff4000;
 
   --clr-accent: #16f568;
-  --clr-bg: #212729;
+  --clr-bg: black;
 
   --clr-font-dark: black;
   --clr-font-bright: white;
@@ -93,6 +93,17 @@ body {
   color: var(--clr-primary-400);
   font-weight: 500;
 }
+
+
+/* GENERAL STYLING */
+.hero-section {
+  height: 100vh;
+  background-image: url("./assets/hamburg-skyline-neon.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
 
 
 @media (max-width: 600px) {
