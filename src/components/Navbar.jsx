@@ -4,7 +4,7 @@ import { useState } from "react";
 function Navbar() {
   const [toggleNav, setToggleNav] = useState(false);
 
-  const logo = new URL("../assets/logo-sw.png", import.meta.url).href;
+  const logo = new URL("../assets/logo-sw-2.png", import.meta.url).href;
 
   const handleToggleNavbar = () => {
     setToggleNav(!toggleNav)
@@ -14,7 +14,7 @@ function Navbar() {
     <nav className="navbar">
       <div className="nav-container">
         <div className="nav-logo">
-          <img src={logo} alt="logo-sw" height="40px" />
+          <img src={logo} alt="logo-sw" height="30px" />
         </div>
         <div className={`menu-icon ${toggleNav && "active"}`} onClick={handleToggleNavbar}>
             <span className="bar"></span>
