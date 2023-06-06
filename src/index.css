@@ -98,6 +98,15 @@ body {
 
 
 /* HERO SECTION */
+.hero-headline-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 15rem;
+}
+
 .triangle-hero {
   max-width: 100vw;
   height: calc(200vh - 80px);
