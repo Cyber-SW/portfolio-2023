@@ -1,16 +1,15 @@
-import { useState } from 'react'
-import Navbar from "./components/Navbar"
-import HeroSection from './components/HeroSection'
+import Navbar from "./components/Navbar";
+import HeroSection from "./components/HeroSection";
+import AboutSection from "./components/AboutSection";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
       <Navbar />
       <HeroSection />
+      <AboutSection />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
