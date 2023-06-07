@@ -14,7 +14,7 @@ function HeroSection() {
 
   const { scrollYProgress } = useScroll({
     onChange: ({ value: { scrollYProgress } }) => {
-      setScrollVal(Math.exp(scrollYProgress * 9) * 0.2);
+      setScrollVal(Math.exp(scrollYProgress * 9.2) * 0.2);
     },
   });
 
@@ -47,97 +47,77 @@ function HeroSection() {
         </h1>
         <h2>James Clear, Atomic Habits</h2>
       </animated.div>
-      <div className="hero-triangle">
-        <img
-          style={{
-            transform: `scale(${scrollVal}) translate(0, -50px)`,
-            position: "fixed",
-            top: "4rem",
-            width: "100%",
-          }}
-          src={TriangleSVG}
-          alt="triangle svg"
-        />
-        {scrollVal >= 2 ? (
+      <div className="hero-triangle-container">
+        <div className="hero-triangle">
           <img
+            className="triangle"
             style={{
-              transform: `scale(${
-                scrollVal / Math.exp(1)
-              }) translate(0, -50px)`,
-              position: "fixed",
-              top: "4rem",
-              width: "100%",
+              transform: `scale(${scrollVal})`,
             }}
             src={TriangleSVG}
             alt="triangle svg"
           />
-        ) : (
-          ""
-        )}
-        {scrollVal >= 4 ? (
-          <img
-            style={{
-              transform: `scale(${
-                scrollVal / Math.exp(2)
-              }) translate(0, -50px)`,
-              position: "fixed",
-              top: "4rem",
-              width: "100%",
-            }}
-            src={TriangleSVG}
-            alt="triangle svg"
-          />
-        ) : (
-          ""
-        )}
-        {scrollVal >= 8 ? (
-          <img
-            style={{
-              transform: `scale(${
-                scrollVal / Math.exp(3)
-              }) translate(0, -50px)`,
-              position: "fixed",
-              top: "4rem",
-              width: "100%",
-            }}
-            src={TriangleSVG}
-            alt="triangle svg"
-          />
-        ) : (
-          ""
-        )}
-        {scrollVal >= 16 ? (
-          <img
-            style={{
-              transform: `scale(${
-                scrollVal / Math.exp(4)
-              }) translate(0, -50px)`,
-              position: "fixed",
-              top: "4rem",
-              width: "100%",
-            }}
-            src={TriangleSVG}
-            alt="triangle svg"
-          />
-        ) : (
-          ""
-        )}
-        {scrollVal >= 32 ? (
-          <img
-            style={{
-              transform: `scale(${
-                scrollVal / Math.exp(5)
-              }) translate(0, -50px)`,
-              position: "fixed",
-              top: "4rem",
-              width: "100%",
-            }}
-            src={TriangleSVG}
-            alt="triangle svg"
-          />
-        ) : (
-          ""
-        )}
+          {scrollVal >= 2 ? (
+            <img
+              className="triangle"
+              style={{
+                transform: `scale(${scrollVal / Math.exp(1)})`,
+              }}
+              src={TriangleSVG}
+              alt="triangle svg"
+            />
+          ) : (
+            ""
+          )}
+          {scrollVal >= 4 ? (
+            <img
+              className="triangle"
+              style={{
+                transform: `scale(${scrollVal / Math.exp(2)})`,
+              }}
+              src={TriangleSVG}
+              alt="triangle svg"
+            />
+          ) : (
+            ""
+          )}
+          {scrollVal >= 8 ? (
+            <img
+              className="triangle"
+              style={{
+                transform: `scale(${scrollVal / Math.exp(3)})`,
+              }}
+              src={TriangleSVG}
+              alt="triangle svg"
+            />
+          ) : (
+            ""
+          )}
+          {scrollVal >= 16 ? (
+            <img
+              className="triangle"
+              style={{
+                transform: `scale(${scrollVal / Math.exp(4)})`,
+              }}
+              src={TriangleSVG}
+              alt="triangle svg"
+            />
+          ) : (
+            ""
+          )}
+          {scrollVal >= 32 ? (
+            <img
+              className="triangle"
+              style={{
+                transform: `scale(${scrollVal / Math.exp(5)})`,
+              }}
+              src={TriangleSVG}
+              alt="triangle svg"
+            />
+          ) : (
+            ""
+          )}
+        </div>
       </div>
     </section>
   );

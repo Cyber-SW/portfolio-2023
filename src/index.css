@@ -118,17 +118,76 @@ h3 {
   margin-top: 8rem;
 }
 
+.hero-triangle-container {
+  position: relative;
+  right: 50%;
+  bottom: 20rem;
+}
+
 .hero-triangle {
   width: 100%;
   height: calc(200vh - 80px);
 }
 
+.triangle {
+  position: fixed;
+  transform: translate(0, -50px);
+  width: 100%;
+}
+
 /* ABOUT SECTION */
 .about-section-container {
+  max-width: 1700px;
   display: flex;
   justify-content: center;
-  margin-bottom: 30rem;
+  align-items: baseline;
+  margin: 0 auto;
 }
+
+.about-image-container {
+  display: flex;
+  flex-direction: row;
+  text-align: right;
+  position: relative;
+  bottom: 10rem;
+  right: 4rem;
+}
+
+.about-image {
+  max-width: 30rem;
+}
+
+.about-headline-container {
+  position: relative;
+  left: 6rem;
+}
+
+.about-subline {
+  font-size: 1rem;
+}
+
+.about-text-container {
+  max-width: 600px;
+  line-height: 1.5;
+  position: relative;
+  bottom: 4rem;
+  left: 4rem;
+}
+
+.about-text-container h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.about-btn {
+  border: 1px solid var(--clr-primary-400);
+  background-color: transparent;
+  color: var(--clr-primary-400);
+  padding: 0.5rem 1rem;
+  margin-top: 1.5rem;
+  margin-right: 1rem;
+}
+
 
 @media (max-width: 600px) {
   :root {
@@ -210,5 +269,31 @@ h3 {
   }
 
   /* HERO SECTION */
+  .hero-headline-container {
+    margin-top: 16rem;
+  }
 
+  .hero-triangle-container {
+    bottom: 7rem;
+  }
+}
+
+@media(min-width: 601px) and (max-width: 1030px) {
+  :root {
+    font-size: 15px;
+  }
+
+  .hero-triangle-container {
+    bottom: 10rem;
+  }
+}
+
+@media(min-width: 1031px) and (max-width: 1630px) {
+  :root {
+    font-size: 18px;
+  }
+
+  .hero-triangle-container {
+    bottom: 14rem;
+  }
 }
