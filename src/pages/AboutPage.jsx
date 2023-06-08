@@ -22,10 +22,10 @@ function AboutSection() {
   });
 
   useEffect(() => {
-    if (scrollVal > 0.9) {
+    if (scrollVal > 0.8) {
       aboutHeadlineApi.start();
       setHeadlineFade(false);
-    } else if (scrollVal < 0.9) {
+    } else if (scrollVal < 0.8) {
       setHeadlineFade(true);
       aboutHeadlineApi.start();
     }
@@ -52,15 +52,15 @@ function AboutSection() {
 
   const aboutText = useSpring({
     ref: aboutTextApi,
-    from: { opacity: 0, translateY: "5rem" },
-    to: { opacity: 1, translateY: "0" },
+    from: { opacity: 0, translateX: "6rem" },
+    to: { opacity: 1, translateX: "0" },
     reverse: textFade,
   });
 
   const aboutImage = useSpring({
     ref: imageApi,
-    from: { opacity: 0 },
-    to: { opacity: 1 },
+    from: { opacity: 0, translateY: "5rem" },
+    to: { opacity: 1, translateY: "0" },
     reverse: textFade,
   });
 
@@ -69,10 +69,25 @@ function AboutSection() {
 
   return (
     <section className="about-section-container">
+    <div className="about-image-container">
+        <animated.img
+          className="about-image"
+          src={AboutImage}
+          alt="about image"
+          style={aboutImage}
+        />
+        <animated.div
+          className="about-headline-container"
+          style={aboutHeadline}
+        >
+          <h1>Hi I am Shawn,</h1>
+          <h2 className="about-subline">Web Developer and Media Designer</h2>
+        </animated.div>
+      </div>
       <animated.div className="about-text-container" style={aboutText}>
         <h1>ABOUT</h1>
         <p>
-          I am a Business-oriented Web-Developer with a Media-Designer
+          I am a Business-oriented Web Developer with a Media Designer
           background, always curious about the newest tech trends and
           technologies. My open mindset and the ability to adapt quickly give me
           a significant competitive advantage in a rapidly developing industry.
@@ -83,27 +98,7 @@ function AboutSection() {
         <button className="about-btn">CV/Resume</button>
         <button className="about-btn">Certificates</button>
       </animated.div>
-      <div className="about-image-container">
-        <animated.div
-          className="about-headline-container"
-          style={aboutHeadline}
-        >
-          <h1>Hi I am Shawn,</h1>
-          <h2 className="about-subline">
-            Web Developer
-            <br />
-            Media Designer
-            <br />
-            Gamer
-          </h2>
-        </animated.div>
-        <animated.img
-          className="about-image"
-          src={AboutImage}
-          alt="about image"
-          style={aboutImage}
-        />
-      </div>
+      
     </section>
   );
 }

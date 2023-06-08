@@ -1,13 +1,13 @@
 import Navbar from "./components/Navbar";
-import HeroSection from "./components/HeroSection";
-import AboutSection from "./components/AboutSection";
+import HomePage from "./pages/HomePage";
+import AboutPage from "./pages/AboutPage";
 
 function App() {
   return (
     <>
       <Navbar />
-      <HeroSection />
-      <AboutSection />
+      <HomePage />
+      <AboutPage />
     </>
   );
 }
