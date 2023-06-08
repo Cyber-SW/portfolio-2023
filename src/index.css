@@ -49,7 +49,7 @@ h3 {
 
 /* NAVBAR */
 .navbar {
-  height: 8rem;
+  height: 6rem;
   background-color: transparent;
   position: relative;
 }
@@ -58,55 +58,73 @@ h3 {
   max-width: 1700px;
   margin: 0 auto;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   height: 100%;
 }
 
-.nav-logo {
+.codewars-icon {
+  background-image: url("./assets/codewars-white.svg");
+  height: 1.8em;
+  width: 1.8em;
+}
+
+.codewars-icon.active {
+  background-image: url("./assets/codewars-orange.svg");
+  width: 1.8em;
+  height: 1.8em;
+}
+
+.github-link {
   margin-left: 4rem;
 }
 
 .nav-logo img {
-  height: 4rem;
+  height: 3.5rem;
   margin-top: 0.5rem;
 }
 
 .nav-links ul {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  align-items: center;
   list-style-type: none;
-  text-align: left;
 }
 
 .nav-links ul a {
   font-family: var(--ff-headlines);
-  font-size: 1rem;
+  font-size: 0.8rem;
   font-weight: 400;
-  color: var(--clr-primary-200);
+  color: white;
   text-decoration: none;
-  margin-right: 4rem;
+  margin-right: 6rem;
+  display: flex;
+  align-items: center;
 }
 
 .nav-links ul a.active {
-  color: var(--clr-secondary-200);
+  color: var(--clr-secondary-400);
   font-weight: 500;
 }
 
 .nav-links li {
   margin-top: 0.5rem;
-  text-align: right;
+}
+
+.nav-align {
+  margin-top: 0.3rem;
 }
 
 /* HERO SECTION */
 .hero-section-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center;
 }
 
 .hero-container {
+  margin-top: 4rem;
   max-width: 600px;
 }
 
