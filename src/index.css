@@ -48,7 +48,7 @@ h3 {
 }
 
 /* NAVBAR */
-.navbar {
+/* .navbar {
   height: 6rem;
   background-color: transparent;
   position: relative;
@@ -58,9 +58,10 @@ h3 {
   max-width: 1700px;
   margin: 0 auto;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   height: 100%;
+  border: 1px solid red;
 }
 
 .codewars-icon {
@@ -75,8 +76,12 @@ h3 {
   height: 1.8em;
 }
 
-.github-link {
+.github-icon {
   margin-left: 4rem;
+}
+
+.about-link {
+  margin-left: 7rem;
 }
 
 .nav-logo img {
@@ -87,8 +92,13 @@ h3 {
 .nav-links ul {
   display: flex;
   flex-direction: row;
-  align-items: center;
   list-style-type: none;
+}
+
+.icon-align {
+  position: relative;
+  left: 5.3%;
+  border: 1px solid red;
 }
 
 .nav-links ul a {
@@ -97,9 +107,8 @@ h3 {
   font-weight: 400;
   color: white;
   text-decoration: none;
-  margin-right: 6rem;
   display: flex;
-  align-items: center;
+  align-items: center; 
 }
 
 .nav-links ul a.active {
@@ -113,7 +122,12 @@ h3 {
 
 .nav-align {
   margin-top: 0.3rem;
+  margin-right: 6rem;
 }
+
+.icon-align li {
+  margin-right: 7rem;
+} */
 
 /* HERO SECTION */
 .hero-section-container {
@@ -240,9 +254,13 @@ h3 {
   }
 
   /* NAVBAR */
+  /* .nav-container {
+    justify-content: space-between;
+  }
+
   .menu-icon {
     position: absolute;
-    z-index: 1;
+    z-index: 3;
     right: 4rem;
     display: flex;
     flex-direction: column;
@@ -250,10 +268,12 @@ h3 {
     transform: rotate(180deg);
     width: 2.7rem;
     height: 2rem;
+    margin-top: 1rem;
   }
 
   .nav-logo img {
-    margin-top: 0rem;
+    margin-top: 1rem;
+    margin-left: 4rem;
   }
 
   .menu-icon .bar {
@@ -280,23 +300,54 @@ h3 {
     width: 0;
   }
 
+  .github-icon {
+    margin-left: 0;
+  }
+
+  .codewars-icon {
+    background-image: url("./assets/codewars-white.svg");
+    height: 1.8em;
+    width: 1.8em;
+  }
+  
+  .codewars-icon.active {
+    background-image: url("./assets/codewars-orange.svg");
+    width: 1.8em;
+    height: 1.8em;
+  }
+
   .nav-links {
     position: absolute;
     right: 0;
     top: 0;
-    background-color: var(--clr-bg);
-    width: 21rem;
+    background-color: var(--clr-primary-600);
+    width: 50%;
     height: 0;
     overflow: hidden;
     transition: all var(--animation-timing);
     border-left: 1px solid var(--clr-primary-200);
+    z-index: 2;
   }
 
   .nav-links.active {
-    padding-top: 80px;
+    padding-top: 6rem;
     height: 100vh;
     transition: all var(--animation-timing);
     border-left: 1px solid var(--clr-primary-200);
+  }
+
+  .icon-align {
+    position: relative;
+    top: 100vh;
+    background-color: transparent;
+  }
+
+  .icon-align.active {
+    padding-top: 0;
+  }
+
+  .icon-align ul {
+    margin-top: 0;
   }
 
   .nav-links ul {
@@ -305,13 +356,21 @@ h3 {
   }
 
   .nav-links ul a {
-    font-size: 1.8rem;
+    font-size: 1.4rem;
+    margin-top: 5rem;
+    margin-right: 4rem;
+  }
+
+  .icon-align ul a {
+    margin-top: 0;
+    margin-bottom: 5rem;
   }
 
   .nav-links ul li {
     margin-right: unset;
-    margin-top: 4rem;
-  }
+    margin-top: 0;
+  } */
+
 
   /* HERO SECTION */
   .hero-headline-container {
@@ -328,6 +387,19 @@ h3 {
     font-size: 15px;
   }
 
+  /* NAVBAR */
+  /* .nav-links ul a {
+    margin-right: 3rem;
+  }
+
+  .github-icon {
+    margin-left: 0;
+  }
+
+  .nav-logo img {
+    height: 3rem;
+  } */
+
   .hero-triangle-container {
     bottom: 10rem;
   }
@@ -341,4 +413,27 @@ h3 {
   .hero-triangle-container {
     bottom: 14rem;
   }
+
+  /* .nav-container {
+    border: 1px solid red;
+    margin: 0 auto;
+  }
+
+  .nav-links ul a {
+    margin-right: 4rem;
+  }
+
+  .nav-links ul {
+    
+    border: 1px solid red;
+  }
+
+  .github-icon {
+    margin-left: 2rem;
+  }
+
+  .nav-logo img {
+    height: 3rem;
+  } */
+
 }

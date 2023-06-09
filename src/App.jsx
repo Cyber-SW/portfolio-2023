@@ -1,4 +1,4 @@
-import Navbar from "./components/Navbar";
+import Navbar from "./components/Navbar/Navbar";
 import HomePage from "./pages/HomePage";
 import AboutPage from "./pages/AboutPage";
 
@@ -7,7 +7,7 @@ function App() {
     <>
       <Navbar />
       <HomePage />
-      <AboutPage />
+      {/* <AboutPage /> */}
     </>
   );
 }
