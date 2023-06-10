@@ -1,8 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Jost:wght@100;300;400;500;700&family=Raleway:wght@100;300;400;500;700&display=swap');
 
 :root {
-  font-size: 20px;
-
   --clr-primary-200: #A1A1A1;
   --clr-primary-400: #333333;
   --clr-primary-600: #151515;
@@ -47,6 +45,35 @@ h3 {
   line-height: 1.5em;
 }
 
+/* MOBILE */
+@media (max-width: 480px) {
+  :root {
+    font-size: 10px;
+  }
+}
+
+/* TABLETS */
+@media (min-width: 481px) and (max-width: 768px) {
+  :root {
+    font-size: 14px;
+  }
+}
+
+/* LAPTOPS */
+@media (min-width: 769px) and (max-width: 1200px) {
+  :root {
+    font-size: 16px;
+  }
+}
+
+/* DESKTOPS */
+@media (min-width: 1201px) {
+  :root {
+    font-size: 20px;
+  }
+}
+
+
 /* NAVBAR */
 /* .navbar {
   height: 6rem;
@@ -62,21 +89,21 @@ h3 {
   align-items: center;
   height: 100%;
   border: 1px solid red;
-}
+} */
 
-.codewars-icon {
+/* .cw-icon {
   background-image: url("./assets/codewars-white.svg");
   height: 1.8em;
   width: 1.8em;
 }
 
-.codewars-icon.active {
+.cw-icon.active {
   background-image: url("./assets/codewars-orange.svg");
   width: 1.8em;
   height: 1.8em;
-}
+} */
 
-.github-icon {
+/* .github-icon {
   margin-left: 4rem;
 }
 
@@ -248,10 +275,10 @@ h3 {
 }
 
 
-@media (max-width: 600px) {
+/* @media (max-width: 600px) {
   :root {
     font-size: 10px;
-  }
+  } */
 
   /* NAVBAR */
   /* .nav-container {
@@ -373,19 +400,19 @@ h3 {
 
 
   /* HERO SECTION */
-  .hero-headline-container {
+  /* .hero-headline-container {
     margin-top: 16rem;
   }
 
   .hero-triangle-container {
     bottom: 7rem;
   }
-}
+} */
 
-@media(min-width: 601px) and (max-width: 1030px) {
+/* @media(min-width: 601px) and (max-width: 1030px) {
   :root {
     font-size: 15px;
-  }
+  } */
 
   /* NAVBAR */
   /* .nav-links ul a {
@@ -400,7 +427,7 @@ h3 {
     height: 3rem;
   } */
 
-  .hero-triangle-container {
+  /* .hero-triangle-container {
     bottom: 10rem;
   }
 }
@@ -412,7 +439,7 @@ h3 {
 
   .hero-triangle-container {
     bottom: 14rem;
-  }
+  } */
 
   /* .nav-container {
     border: 1px solid red;
@@ -436,4 +463,4 @@ h3 {
     height: 3rem;
   } */
 
-}
+/* } */

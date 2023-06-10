@@ -1,10 +1,8 @@
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { faGithub, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 import SWLogo from "../../assets/logo-sw-2.png";
-// import CWIconWhite from "../../assets/codewars-white.svg";
-// import CWIconOrange from "../../assets/codewars-orange.svg";
 import "./navbar.css";
 
 function Navbar() {
@@ -20,44 +18,42 @@ function Navbar() {
         <div className={`nav-links  ${toggleNav && "active"}`}>
           <ul>
             <li>
-              <NavLink to="About" className="nav-align about-link">
-                ABOUT
-              </NavLink>
+              <NavLink to="About">ABOUT</NavLink>
             </li>
             <li>
-              <NavLink to="Work" className="nav-align">
-                WORK
-              </NavLink>
+              <NavLink to="Work">WORK</NavLink>
             </li>
             <li>
-              <NavLink to="Contact" className="nav-align">
-                CONTACT
-              </NavLink>
+              <NavLink to="Contact">CONTACT</NavLink>
             </li>
           </ul>
         </div>
-        <div className="nav-logo">
-          <img src={SWLogo} alt="logo-sw" />
-        </div>
+        <NavLink to="/">
+          <div className="nav-logo">
+            <img src={SWLogo} alt="logo-sw" />
+          </div>
+        </NavLink>
+
         <div className={`nav-icons  ${toggleNav && "active"}`}>
           <ul>
             <li>
-              <NavLink to="GitHub">
-                <FontAwesomeIcon icon={faGithub} size="2x" className="
-                github-icon"/>
-              </NavLink>
-            </li>
-            <li>
-              <NavLink to="LinkedIn">
-                <FontAwesomeIcon icon={faLinkedin} size="2x" />
+              <NavLink to="https://github.com/Cyber-SW" target="_blank">
+                <FontAwesomeIcon icon={faGithub} size="2x" />
               </NavLink>
             </li>
             <li>
               <NavLink
-                to="CodeWars"
-                className={(isActive) =>
-                  isActive ? "cw-icon" : "cw-icon active"
-                }
+                to="https://www.linkedin.com/in/shawn-wolter-93a263195/"
+                target="_blank"
+              >
+                <FontAwesomeIcon icon={faLinkedinIn} size="2x" />
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="https://www.codewars.com/users/Cyber-SW"
+                target="_blank"
+                className="cw-icon"
               ></NavLink>
             </li>
           </ul>

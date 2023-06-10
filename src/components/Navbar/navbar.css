@@ -1,74 +1,185 @@
+:root {
+  font-size: 20px;
+}
+
 .navbar {
-    height: 6rem;
+  height: 6rem;
+  position: relative;
 }
 
 .nav-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    width: 100%;
-    border: 1px solid red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
 }
 
 .nav-logo img {
-    height: 3rem;
-    margin: 0 10rem;
+  height: 3rem;
+  margin: 0 10rem;
 }
 
 .nav-links ul,
 .nav-icons ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    list-style-type: none;
-    width: 20rem;
-    border: 1px solid red;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  list-style-type: none;
+  width: 20rem;
 }
 
 .nav-links ul a,
 .nav-icons ul a {
-    font-family: var(--ff-headlines);
-    font-size: 0.8rem;
-    font-weight: 400;
-    color: white;
-    text-decoration: none;
-}
-  
-.nav-links ul a.active,
-.nav-icons ul a.active {
-    color: var(--clr-secondary-400);
-    font-weight: 500;
+  font-family: var(--ff-headlines);
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: white;
+  text-decoration: none;
 }
 
-.github-icon {
-    
+.nav-links ul a.active,
+.nav-icons ul a.active {
+  color: var(--clr-secondary-400);
+  font-weight: 500;
 }
 
 .cw-icon {
-    background-image: url("../../assets/codewars-white.svg");
-    width: 1.8em;
-    height: 1.8em;
-    border: 1px solid red;
+  background-image: url("../../assets/codewars-white.svg");
+  background-size: 1.5rem;
+  background-repeat: no-repeat;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-top: 0.1rem;
 }
 
 .cw-icon.active {
-    background-image: url("../../assets/codewars-orange.svg");
-    width: 1.8em;
-    height: 1.8em;
-    border: 1px solid red;
+  background-image: url("../../assets/codewars-orange.svg");
+  background-size: 1.5rem;
+  background-repeat: no-repeat;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
 }
 
-/* .nav-icons li:nth-child(3) {
-    background-image: url("../../assets/codewars-white.svg");
-    width: 1.8em;
-    height: 1.8em;
-    border: 1px solid red;
+/* MOBILE */
+@media (max-width: 480px) {
+  .nav-container {
+    justify-content: space-between;
+  }
+
+  .nav-logo img {
+    height: 3rem;
+    margin-right: 0;
+    margin-left: 4rem;
+  }
+
+  .menu-icon {
+    position: absolute;
+    right: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transform: rotate(180deg);
+    width: 2.7rem;
+    height: 2rem;
+    z-index: 999;
+  }
+
+  .menu-icon .bar {
+    height: 0.1rem;
+    width: 100%;
+    transform-origin: left center;
+    background-color: var(--clr-primary-200);
+    transition: all var(--animation-timing);
+  }
+
+  .menu-icon.active span:nth-child(1) {
+    transform: rotate(45deg);
+  }
+
+  .menu-icon.active span:nth-child(3) {
+    transform: rotate(-45deg);
+  }
+
+  .middle {
+    max-width: 70%;
+  }
+
+  .middle.active {
+    width: 0;
+  }
+
+  .nav-links,
+  .nav-icons {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: var(--clr-primary-600);
+    width: 45%;
+    height: 0;
+    overflow: hidden;
+    transition: all var(--animation-timing);
+    border-left: 1px solid var(--clr-primary-200);
+    z-index: 2;
+  }
+
+  .nav-icons {
+    position: relative;
+    top: 100vh;
+  }
+
+  .nav-links.active,
+  .nav-icons.active {
+    padding-top: 15rem;
+    height: 100vh;
+    transition: all var(--animation-timing);
+    border-left: 1px solid var(--clr-primary-200);
+  }
+
+  .nav-icons.active {
+    padding-top: 0;
+  }
+
+  .nav-links ul,
+  .nav-icons ul {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-right: 4rem;
+  }
+
+  .nav-links ul li,
+  .nav-icons ul li {
+    margin-bottom: 4rem;
+  }
+
+  .nav-links ul a,
+  .nav-icons ul a {
+    font-size: 1.4rem;
+  }
+
+  .cw-icon,
+  .cw-icon.active {
+    background-size: 2.8rem;
+    width: 2.8rem;
+    height: 2.8rem;
+  }
 }
 
-.nav-icons li:nth-child(3).active {
-    background-image: url("../../assets/codewars-orange.svg");
-    width: 1.8em;
-    height: 1.8em;
-    border: 1px solid red;
-} */
+/* TABLETS */
+@media (min-width: 481px) and (max-width: 768px) {
+
+}
+
+/* LAPTOPS */
+@media (min-width: 769px) and (max-width: 1024px) {
+ 
+}
+
+/* DESKTOPS */
+@media (min-width: 1201px) {
+  
+}
