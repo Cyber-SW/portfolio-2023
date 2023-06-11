@@ -5,7 +5,9 @@ import {
   useSpringRef,
   animated,
 } from "@react-spring/web";
-import TriangleSVG from "../assets/triangle.svg";
+import TriangleSVG from "../../assets/triangle.svg";
+import HeroTriangleSVG from "../../assets/hero-triangle-3.svg";
+import "./homepage.css";
 
 function HeroSection() {
   const [scrollVal, setScrollVal] = useState(0);
@@ -41,16 +43,26 @@ function HeroSection() {
   return (
     <section className="hero-section-container">
       <div className="hero-container">
-        <h3>Hello, my name is</h3>
-        <h1>Shawn Wolter.</h1>
-        <h2>I am a Hamburg based Web Developer and Media Designer.</h2>
-        <p className="hero-p">
-          Design and technology fascinates me since I was a little kid when I
-          was very passionate about drawing and playing with Legos. Things need
-          to be functional but also need to look good, that was my motto and is
-          to this day.
-        </p>
+        <div className="hero-headline-container">
+          <h3>Hello, my name is</h3>
+          <h1>Shawn Wolter.</h1>
+          <h2>I am a Hamburg based Web Developer and Media Designer.</h2>
+          <p>
+            Design and technology fascinates me since I was a little kid when I
+            was very passionate about drawing and playing with Legos. Things
+            need to be functional but also need to look good, that was my motto
+            and is to this day.
+          </p>
+        </div>
+        <div className="hero-triangle-svg-container">
+          <img
+            src={HeroTriangleSVG}
+            alt="hero triangle svg"
+            className="hero-triangle-svg"
+          />
+        </div>
       </div>
+
       {/* <animated.div className="hero-headline-container" style={heroHeadline}>
         <h1>
           "If you can get 1% better each day for one year, you'll end up 37
