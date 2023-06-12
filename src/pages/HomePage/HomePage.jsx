@@ -6,39 +6,63 @@ import {
   animated,
 } from "@react-spring/web";
 import TriangleSVG from "../../assets/triangle.svg";
-import HeroTriangleSVG from "../../assets/hero-triangle-3.svg";
+import HeroTriangleSVG from "../../assets/hero-triangle-5.svg";
+import HeroTriangleImage1 from "../../assets/hero-tirangle-new/hero-triangle-frame-1.png";
+import HeroTriangleImage2 from "../../assets/hero-tirangle-new/hero-triangle-frame-2.png";
+import HeroTriangleImage3 from "../../assets/hero-tirangle-new/hero-triangle-frame-3.png";
+import HeroTriangleImage4 from "../../assets/hero-tirangle-new/hero-triangle-frame-4.png";
 import "./homepage.css";
 
 function HeroSection() {
-  const [scrollVal, setScrollVal] = useState(0);
-  const [headlineFade, setHeadlineFade] = useState(null);
-  const heroHeadlineApi = useSpringRef();
+  let [countImage, setCountImage] = useState(1);
+  const [displayImage, setDisplayImage] = useState(HeroTriangleImage1);
+  // const [scrollVal, setScrollVal] = useState(0);
+  // const [headlineFade, setHeadlineFade] = useState(null);
+  // const heroHeadlineApi = useSpringRef();
 
-  const { scrollYProgress } = useScroll({
-    onChange: ({ value: { scrollYProgress } }) => {
-      setScrollVal(Math.exp(scrollYProgress * 9.2) * 0.2);
-    },
-  });
+  // const { scrollYProgress } = useScroll({
+  //   onChange: ({ value: { scrollYProgress } }) => {
+  //     setScrollVal(Math.exp(scrollYProgress * 9.2) * 0.2);
+  //   },
+  // });
+
+  // useEffect(() => {
+  //   if (scrollVal > 0.44) {
+  //     heroHeadlineApi.start();
+  //     setHeadlineFade(false);
+  //   } else if (scrollVal < 0.44) {
+  //     setHeadlineFade(true);
+  //     heroHeadlineApi.start();
+  //   }
+  // }, [scrollVal]);
+
+  // console.log("SCROLL VAL", scrollVal);
+  // console.log("SCROLL PROGRESS", scrollYProgress);
+
+  function handleTriangleGallery(e) {
+    e.target.id === "forth"
+      ? setCountImage((countImage += 1))
+      : setCountImage((countImage -= 1));
+    if (countImage < 1) {
+      setCountImage(4);
+    }
+    if (countImage > 4) {
+      setCountImage(1);
+    }
+  }
 
   useEffect(() => {
-    if (scrollVal > 0.44) {
-      heroHeadlineApi.start();
-      setHeadlineFade(false);
-    } else if (scrollVal < 0.44) {
-      setHeadlineFade(true);
-      heroHeadlineApi.start();
-    }
-  }, [scrollVal]);
-
-  const heroHeadline = useSpring({
-    ref: heroHeadlineApi,
-    from: { opacity: 1 },
-    to: { opacity: 0 },
-    reverse: headlineFade,
-  });
-
-  console.log("SCROLL VAL", scrollVal);
-  console.log("SCROLL PROGRESS", scrollYProgress);
+    console.log(countImage);
+    countImage === 1
+      ? setDisplayImage(HeroTriangleImage1)
+      : countImage === 2
+      ? setDisplayImage(HeroTriangleImage2)
+      : countImage === 3
+      ? setDisplayImage(HeroTriangleImage3)
+      : countImage === 4
+      ? setDisplayImage(HeroTriangleImage4)
+      : "";
+  }, [countImage]);
 
   return (
     <section className="hero-section-container">
@@ -56,10 +80,22 @@ function HeroSection() {
         </div>
         <div className="hero-triangle-svg-container">
           <img
-            src={HeroTriangleSVG}
+            src={displayImage}
             alt="hero triangle svg"
             className="hero-triangle-svg"
           />
+          <button
+            type="button"
+            id="back"
+            className="triangle-button-back"
+            onClick={handleTriangleGallery}
+          ></button>
+          <button
+            type="button"
+            id="forth"
+            className="triangle-button-forth"
+            onClick={handleTriangleGallery}
+          ></button>
         </div>
       </div>
 
@@ -70,7 +106,7 @@ function HeroSection() {
         </h1>
         <h2>James Clear, Atomic Habits</h2>
       </animated.div> */}
-      <div className="hero-triangle-container">
+      {/* <div className="hero-triangle-container">
         <div className="hero-triangle">
           <img
             className="triangle"
@@ -141,7 +177,7 @@ function HeroSection() {
             ""
           )}
         </div>
-      </div>
+      </div> */}
     </section>
   );
 }
