@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
-import {
-  useScroll,
-  useSpring,
-  useSpringRef,
-  animated,
-} from "@react-spring/web";
-import TriangleSVG from "../../assets/triangle.svg";
-import HeroTriangleSVG from "../../assets/hero-triangle-5.svg";
+// import {
+//   useScroll,
+//   useSpring,
+//   useSpringRef,
+//   animated,
+// } from "@react-spring/web";
+// import TriangleSVG from "../../assets/triangle.svg";
+// import HeroTriangleSVG from "../../assets/hero-triangle-5.svg";
 import HeroTriangleImage1 from "../../assets/hero-tirangle-new/hero-triangle-frame-1.png";
 import HeroTriangleImage2 from "../../assets/hero-tirangle-new/hero-triangle-frame-2.png";
 import HeroTriangleImage3 from "../../assets/hero-tirangle-new/hero-triangle-frame-3.png";
@@ -52,7 +52,6 @@ function HeroSection() {
   }
 
   useEffect(() => {
-    console.log(countImage);
     countImage === 1
       ? setDisplayImage(HeroTriangleImage1)
       : countImage === 2
@@ -72,11 +71,12 @@ function HeroSection() {
           <h1>Shawn Wolter.</h1>
           <h2>I am a Hamburg based Web Developer and Media Designer.</h2>
           <p>
-            Design and technology fascinates me since I was a little kid when I
+            Design and technology interest me since I was a little kid when I
             was very passionate about drawing and playing with Legos. Things
             need to be functional but also need to look good, that was my motto
             and is to this day.
           </p>
+          <button>Check out my work!</button>
         </div>
         <div className="hero-triangle-svg-container">
           <img
@@ -89,13 +89,13 @@ function HeroSection() {
             id="back"
             className="triangle-button-back"
             onClick={handleTriangleGallery}
-          ></button>
+          >BACK</button>
           <button
             type="button"
             id="forth"
             className="triangle-button-forth"
             onClick={handleTriangleGallery}
-          ></button>
+          >NEXT</button>
         </div>
       </div>
 
