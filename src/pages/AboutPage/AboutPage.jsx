@@ -5,13 +5,14 @@ import {
   useSpringRef,
   animated,
 } from "@react-spring/web";
-import AboutImage from "../../assets/about-triangle/about-triangle-image-white.png";
+import AboutImage from "../../assets/about-triangle/about-triangle-image-white-mirror.png";
 import "./aboutpage.css";
 
 function AboutSection() {
   return (
     <section className="about-section-container">
       <h1 className="about-section-headline">ABOUT ME</h1>
+
       <div className="about-container">
         <div className="about-image-container">
           <img src={AboutImage} alt="about-image" />
@@ -29,27 +30,26 @@ function AboutSection() {
             developer.
           </p>
         </div>
-      </div>
-
-      <div className="about-skills-container">
-        <h2>My Toolkit</h2>
-        <div className="about-skills">
-          <ul>
-            <li>HTML5</li>
-            <li>CSS3</li>
-            <li>JavaScript</li>
-          </ul>
-          <ul>
-            <li>MongoDB</li>
-            <li>Express</li>
-            <li>React</li>
-            <li>Node.Js</li>
-          </ul>
-          <ul>
-            <li>Git/GitHub</li>
-            <li>Vite</li>
-            <li>Axios</li>
-          </ul>
+        <div className="about-skills-container">
+          {/* <h2>My Toolkit</h2> */}
+          <div className="about-skills">
+            <ul>
+              <li>HTML5</li>
+              <li>CSS3</li>
+              <li>JavaScript</li>
+            </ul>
+            <ul>
+              <li>MongoDB</li>
+              <li>Express</li>
+              <li>React</li>
+              <li>Node.Js</li>
+            </ul>
+            <ul>
+              <li>Git/GitHub</li>
+              <li>Vite</li>
+              <li>Axios</li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>

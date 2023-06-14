@@ -1,94 +1,82 @@
 .about-section-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  background-image: url("../../assets/about-triangle/about-triangle-bg-btn-align.svg");
+  /* align-items: center; */
+  background-color: var(--clr-secondary-200);
+  /* background-image: url("../../assets/about-triangle/about-triangle-bg-btn-align.svg");
   background-repeat: no-repeat;
   background-size: contain;
-  background-position: center;
-  height: 40rem;
-  margin-top: 35rem;
-  margin-bottom: 30rem;
-  margin-left: 5rem;
+  background-position: center; */
+  height: 55rem;
+  margin-top: 25rem;
 }
 
 .about-section-headline {
-  position: relative;
-  right: 42rem;
-  bottom: 10rem;
-  font-size: 3rem;
-  text-align: left;
-  color: white;
+  font-size: 10rem;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 4rem;
+  margin-top: 2rem;
+  color: var(--clr-primary-000); 
 }
 
 .about-container {
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
+  margin-top: 5rem;
+  margin-right: 12rem;
 }
 
 .about-image-container {
 }
 
 .about-image-container img {
-  max-width: 500px;
-  position: relative;
-  right: 8rem;
-  bottom: 4.5rem;
+  max-width: 450px;
+  margin-right: 5rem;
 }
 
 .about-text-container {
-  position: relative;
-  bottom: 2.5rem;
-  right: 2rem;
-  max-width: 350px;
-  font-size: 0.8rem;
-  line-height: 1.25rem;
+  max-width: 400px;
+  font-size: 1rem;
+  line-height: 1.5rem;
   color: var(--clr-primary-600);
   font-weight: 400;
 }
 
 .about-text-container h2 {
-  position: relative;
-  font-size: 2rem;
-  line-height: 1.4;
-  margin-bottom: 0.8rem;
-  color: white;
+  font-size: 2.9rem;
+  line-height: 3.5rem;
+  margin-bottom: 2rem;
+  color: var(--clr-primary-000);
 }
 
 .about-skills-container {
   display: flex;
   flex-direction: column;
-  align-items: first baseline;
-  position: relative;
-  right: 19.5rem;
-  margin-top: -2.5rem;
+  margin-left: 5rem;
 }
 
-.about-skills-container h2 {
-    color: white;
-    margin-bottom: 0.5rem;
-}
-
-.about-skills {
-    display: flex;
-    flex-direction: row;
-}
+/* .about-skills-container h2 {
+  color: var(--clr-primary-000);
+  margin-bottom: 0.5rem;
+} */
 
 .about-skills-container li {
   list-style-type: none;
+  color: var(--clr-primary-600);
+  font-weight: 400;
   position: relative;
   right: 1.7rem;
-  font-size: 0.8rem;
+  font-size: 1rem;
   padding-left: 0.75rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1.2rem;
 }
 
 .about-skills-container li:before {
   content: "\25BA \0020";
   position: absolute;
-  color: var(--clr-secondary-200);
+  color: var(--clr-primary-000);
   font-size: 0.5rem;
   left: -0.2rem;
 }

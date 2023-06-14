@@ -17,7 +17,7 @@
 }
 
 .hero-headline-container h1 {
-  color: white;
+  color: var(--clr-primary-000);
   font-size: 3rem;
 }
 
@@ -28,7 +28,7 @@
 }
 
 .hero-headline-container h3 {
-  color: var(--clr-secondary-200);
+  color: var(--clr-secondary-400);
   font-weight: 400;
   font-size: 1rem;
 }
@@ -62,7 +62,7 @@
   cursor: pointer;
   animation: pulse 2s infinite;
   padding-top: 1.5rem;
-  color: white;
+  color: var(--clr-primary-000);
 }
 
 .triangle-button-forth {
@@ -78,7 +78,7 @@
   cursor: pointer;
   animation: pulse 2s infinite;
   padding-bottom: 1.7rem;
-  color: white;
+  color: var(--clr-primary-000);
 }
 
 @keyframes pulse {

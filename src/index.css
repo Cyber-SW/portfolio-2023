@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Jost:wght@100;300;400;500;700&family=Raleway:wght@100;300;400;500;700&display=swap');
 
 :root {
+  --clr-primary-000: #ffffff;
   --clr-primary-200: #A1A1A1;
   --clr-primary-400: #333333;
   --clr-primary-600: #151515;

@@ -8,7 +8,7 @@
   justify-content: center;
   align-items: center;
   height: 100%;
-  width: 100%;
+  max-width: 100%;
 }
 
 .nav-logo img {
@@ -31,7 +31,7 @@
   font-family: var(--ff-headlines);
   font-size: 0.8rem;
   font-weight: 400;
-  color: white;
+  color: var(--clr-primary-000);
   text-decoration: none;
 }
 
