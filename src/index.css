@@ -46,6 +46,20 @@ h3 {
   line-height: 1.5em;
 }
 
+/* ANIMATIONS */
+@keyframes pulse {
+  0% {
+    transform: scale(0.95);
+  }
+  60% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.95);
+  }
+}
+
+
 /* MOBILE */
 @media (max-width: 480px) {
   :root {
@@ -70,7 +84,7 @@ h3 {
 /* DESKTOPS */
 @media (min-width: 1301px) {
   :root {
-    font-size: 20px;
+    font-size: 18px;
   }
 }
 

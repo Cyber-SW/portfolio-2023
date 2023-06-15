@@ -1,82 +1,107 @@
 .about-section-container {
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
-  background-color: var(--clr-secondary-200);
-  /* background-image: url("../../assets/about-triangle/about-triangle-bg-btn-align.svg");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center; */
   height: 55rem;
   margin-top: 25rem;
 }
 
 .about-section-headline {
-  font-size: 10rem;
+  font-size: 4.7rem;
   display: flex;
-  justify-content: flex-end;
-  margin-right: 4rem;
-  margin-top: 2rem;
-  color: var(--clr-primary-000); 
+  justify-content: flex-start;
+  margin-left: 10.7rem;
+  color: var(--clr-primary-000);
 }
 
 .about-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 5rem;
-  margin-right: 12rem;
-}
-
-.about-image-container {
+  margin-top: 7rem;
+  margin-right: 4.5rem;
 }
 
 .about-image-container img {
-  max-width: 450px;
-  margin-right: 5rem;
+  max-width: 25rem;
+  margin-right: 4rem;
 }
 
 .about-text-container {
-  max-width: 400px;
+  max-width: 25rem;
   font-size: 1rem;
-  line-height: 1.5rem;
-  color: var(--clr-primary-600);
-  font-weight: 400;
+  line-height: 1.6rem;
+  color: var(--clr-primary-200);
+  margin-left: 5.5rem;
 }
 
 .about-text-container h2 {
-  font-size: 2.9rem;
-  line-height: 3.5rem;
+  font-size: 3rem;
+  line-height: 4rem;
   margin-bottom: 2rem;
   color: var(--clr-primary-000);
+}
+
+.about-text-container h3 {
+  color: var(--clr-secondary-400);
+  font-weight: 400;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .about-skills-container {
   display: flex;
   flex-direction: column;
-  margin-left: 5rem;
 }
-
-/* .about-skills-container h2 {
-  color: var(--clr-primary-000);
-  margin-bottom: 0.5rem;
-} */
 
 .about-skills-container li {
   list-style-type: none;
-  color: var(--clr-primary-600);
-  font-weight: 400;
+  color: var(--clr-primary-200);
   position: relative;
   right: 1.7rem;
   font-size: 1rem;
   padding-left: 0.75rem;
-  margin-bottom: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.about-skills-container li:last-child {
+  margin-bottom: 0;
 }
 
 .about-skills-container li:before {
   content: "\25BA \0020";
   position: absolute;
-  color: var(--clr-primary-000);
+  color: var(--clr-secondary-400);
   font-size: 0.5rem;
   left: -0.2rem;
+}
+
+.about-cv-btn,
+.about-certificates-btn {
+  position: relative;
+  top: 2.5rem;
+  left: 6rem;
+  background-image: url("../../assets/about-triangle/about-button.svg");
+  width: 6.6rem;
+  height: 7.5rem;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: none;
+  cursor: pointer;
+  padding-left: 0.8rem;
+  font-size: 0.8rem;
+  color: white;
+  text-align: left;
+  animation: pulse 2s infinite;
+}
+
+.about-certificates-btn {
+  top: 10.3rem;
+  left: -0.6rem;
+  padding-top: 0.2rem;
+}
+
+.about-cv-btn:hover,
+.about-certificates-btn:hover {
+  animation: none;
 }

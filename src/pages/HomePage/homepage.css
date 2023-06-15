@@ -6,14 +6,12 @@
 
 .hero-container {
   display: flex;
-  align-items: flex-start;
+  margin-left: 2rem;
 }
 
 .hero-headline-container {
   margin-top: 13rem;
-  margin-right: 2rem;
-  margin-left: 9rem;
-  max-width: 500px;
+  max-width: 25rem;
 }
 
 .hero-headline-container h1 {
@@ -35,12 +33,12 @@
 
 .hero-headline-container p {
   margin-top: 1.5rem;
-  line-height: 1.5rem;
+  line-height: 1.6rem;
 }
 
 .hero-triangle-svg-container {
   width: 40rem;
-  margin-left: 2rem;
+  margin-left: 5rem;
   margin-top: 6rem;
 }
 
@@ -49,7 +47,7 @@
   width: 40rem;
 }
 
-.triangle-button-back {
+.triangle-btn-back {
   position: relative;
   top: 23.1rem;
   left: 3.6rem;
@@ -62,10 +60,11 @@
   cursor: pointer;
   animation: pulse 2s infinite;
   padding-top: 1.5rem;
+  font-size: 0.8rem;
   color: var(--clr-primary-000);
 }
 
-.triangle-button-forth {
+.triangle-btn-forth {
   position: relative;
   top: 7.3rem;
   left: 23.25rem;
@@ -78,22 +77,11 @@
   cursor: pointer;
   animation: pulse 2s infinite;
   padding-bottom: 1.7rem;
+  font-size: 0.8rem;
   color: var(--clr-primary-000);
 }
 
-@keyframes pulse {
-  0% {
-    transform: scale(0.95);
-  }
-  60% {
-    transform: scale(1);
-  }
-  100% {
-    transform: scale(0.95);
-  }
-}
-
-.triangle-button-back:hover,
-.triangle-button-forth:hover {
+.triangle-btn-back:hover,
+.triangle-btn-forth:hover {
   animation: none;
 }

@@ -1,10 +1,3 @@
-import { useEffect, useState } from "react";
-import {
-  useScroll,
-  useSpring,
-  useSpringRef,
-  animated,
-} from "@react-spring/web";
 import AboutImage from "../../assets/about-triangle/about-triangle-image-white-mirror.png";
 import "./aboutpage.css";
 
@@ -17,7 +10,23 @@ function AboutSection() {
         <div className="about-image-container">
           <img src={AboutImage} alt="about-image" />
         </div>
+        <div className="about-skills-container">
+          <ul>
+            <li>HTML5</li>
+            <li>CSS3</li>
+            <li>JavaScript</li>
+            <li>MongoDB</li>
+            <li>Express</li>
+            <li>React</li>
+            <li>Node.Js</li>
+            <li>Handlebars</li>
+            <li>Axios</li>
+            <li>Vite</li>
+            <li>Git/GitHub</li>
+          </ul>
+        </div>
         <div className="about-text-container">
+          <h3>The short version of</h3>
           <h2>How I became a developer</h2>
           <p>
             Even during my apprenticeship as a media designer, I was fascinated
@@ -25,31 +34,14 @@ function AboutSection() {
             apprenticeship, I didn't know where the journey should go. So I
             started working on my own and created Shopify stores, logo designs,
             and video ads. I enjoyed building online stores so much that I began
-            to watch coding videos on youtube without understanding a single
+            to watch coding videos on YouTube without understanding a single
             line of code. From then on it was clear to me, I would become a
             developer.
           </p>
         </div>
-        <div className="about-skills-container">
-          {/* <h2>My Toolkit</h2> */}
-          <div className="about-skills">
-            <ul>
-              <li>HTML5</li>
-              <li>CSS3</li>
-              <li>JavaScript</li>
-            </ul>
-            <ul>
-              <li>MongoDB</li>
-              <li>Express</li>
-              <li>React</li>
-              <li>Node.Js</li>
-            </ul>
-            <ul>
-              <li>Git/GitHub</li>
-              <li>Vite</li>
-              <li>Axios</li>
-            </ul>
-          </div>
+        <div className="about-btn-container">
+          <button type="button" id="cv" className="about-cv-btn">CV/<br/>RESUME</button>
+          <button type="button" id="certificates" className="about-certificates-btn">CERTIFI-CATIONS</button>
         </div>
       </div>
     </section>

@@ -87,13 +87,13 @@ function HeroSection() {
           <button
             type="button"
             id="back"
-            className="triangle-button-back"
+            className="triangle-btn-back"
             onClick={handleTriangleGallery}
           >BACK</button>
           <button
             type="button"
             id="forth"
-            className="triangle-button-forth"
+            className="triangle-btn-forth"
             onClick={handleTriangleGallery}
           >NEXT</button>
         </div>
