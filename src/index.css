@@ -46,6 +46,24 @@ h3 {
   line-height: 1.5em;
 }
 
+hr {
+  position: relative;
+  bottom: 4.1rem;
+  width: 80%;
+  height: 0px;
+  border: none;
+  border-top: 1px solid var(--clr-primary-400);
+}
+
+.section-headline {
+  font-size: 4.7rem;
+  margin: 0 auto;
+  padding: 0 4rem;
+  background-color: var(--clr-primary-600);
+  color: var(--clr-primary-400);
+  z-index: 800;
+}
+
 /* ANIMATIONS */
 @keyframes pulse {
   0% {

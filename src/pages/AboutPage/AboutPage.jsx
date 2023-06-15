@@ -4,8 +4,8 @@ import "./aboutpage.css";
 function AboutSection() {
   return (
     <section className="about-section-container">
-      <h1 className="about-section-headline">ABOUT ME</h1>
-
+      <h1 className="section-headline">ABOUT</h1>
+      <hr />
       <div className="about-container">
         <div className="about-image-container">
           <img src={AboutImage} alt="about-image" />
@@ -40,8 +40,18 @@ function AboutSection() {
           </p>
         </div>
         <div className="about-btn-container">
-          <button type="button" id="cv" className="about-cv-btn">CV/<br/>RESUME</button>
-          <button type="button" id="certificates" className="about-certificates-btn">CERTIFI-CATIONS</button>
+          <button type="button" id="cv" className="about-cv-btn">
+            CV/
+            <br />
+            RESUME
+          </button>
+          <button
+            type="button"
+            id="certificates"
+            className="about-certificates-btn"
+          >
+            CERTIFI-CATIONS
+          </button>
         </div>
       </div>
     </section>
