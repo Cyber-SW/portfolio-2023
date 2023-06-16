@@ -3,3 +3,75 @@
     flex-direction: column;
     height: 55rem;
 }
+
+@keyframes carouselAnim{
+    0%{
+      transform: translateX(100%) rotatey(0) scale(1.2, 1.2);
+      transform-origin: center center;
+      z-index: 10;
+    }
+    27%{
+      transform: translateX(100%) rotatey(0) scale(1.2, 1.2);
+      transform-origin: center center;
+      z-index: 10;
+    }
+    33.33333%{
+      transform: translateX(25%) translateY(0) rotatey(-10deg) scale(0.7,0.8);
+      transform-origin: left center;
+      z-index: 5;
+    }
+    60%{
+      transform: translateX(25%) translateY(0) rotatey(-10deg) scale(0.7,0.8);
+      transform-origin: left center;
+      z-index: 5;
+    }
+    66.666666%{
+      transform: translateX(175%) translateY(0) rotatey(10deg) scale(0.7,0.8);
+      transform-origin: right center;
+      z-index: 5;
+    }
+    93%{
+      transform: translateX(175%) translateY(0) rotatey(10deg) scale(0.7,0.8);
+      transform-origin: right center;
+      z-index: 5;
+    }
+    100%{
+      transform: translateX(100%) rotatey(0) scale(1.2, 1.2);
+      transform-origin: center center;
+      z-index: 10;
+    }
+  }
+  
+  .projects-container {
+    width: 90%;
+    max-width: 90%;
+    perspective: 16.5rem;
+    perspective-origin: 50% 60%;
+    min-height: 14rem;
+    margin: auto;
+    margin-top: 7rem;
+  }
+  
+  .carousel-item {
+    position: absolute;
+    width: 33%; 
+    padding-bottom: 19%;
+    animation-name: carouselAnim;
+    /* transform: translateX(0) rotatey(50deg); */
+    transform-origin: left center;
+    animation-duration: 12s;
+    animation-iteration-count: infinite;
+  }
+  
+  .carousel-item:first-child {
+    animation-delay: -4s;
+  }
+  .carousel-item:last-child {
+    animation-delay: -8s;
+  }
+  
+  .carousel-image {
+    position: absolute;
+    width: 100%;
+    border-radius: 2px;
+  }
