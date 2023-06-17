@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
 // import {
 //   useScroll,
 //   useSpring,
@@ -7,15 +7,15 @@ import { useEffect, useState } from "react";
 // } from "@react-spring/web";
 // import TriangleSVG from "../../assets/triangle.svg";
 // import HeroTriangleSVG from "../../assets/hero-triangle-5.svg";
-import HeroTriangleImage1 from "../../assets/hero-tirangle-new/hero-triangle-frame-1.png";
-import HeroTriangleImage2 from "../../assets/hero-tirangle-new/hero-triangle-frame-2.png";
-import HeroTriangleImage3 from "../../assets/hero-tirangle-new/hero-triangle-frame-3.png";
-import HeroTriangleImage4 from "../../assets/hero-tirangle-new/hero-triangle-frame-4.png";
+// import HeroTriangleImage1 from "../../assets/hero-tirangle-new/hero-triangle-frame-1.png";
+// import HeroTriangleImage2 from "../../assets/hero-tirangle-new/hero-triangle-frame-2.png";
+// import HeroTriangleImage3 from "../../assets/hero-tirangle-new/hero-triangle-frame-3.png";
+// import HeroTriangleImage4 from "../../assets/hero-tirangle-new/hero-triangle-frame-4.png";
 import "./homepage.css";
 
 function HeroSection() {
-  let [countImage, setCountImage] = useState(1);
-  const [displayImage, setDisplayImage] = useState(HeroTriangleImage1);
+  // let [countImage, setCountImage] = useState(1);
+  // const [displayImage, setDisplayImage] = useState(HeroTriangleImage1);
   // const [scrollVal, setScrollVal] = useState(0);
   // const [headlineFade, setHeadlineFade] = useState(null);
   // const heroHeadlineApi = useSpringRef();
@@ -39,29 +39,29 @@ function HeroSection() {
   // console.log("SCROLL VAL", scrollVal);
   // console.log("SCROLL PROGRESS", scrollYProgress);
 
-  function handleTriangleGallery(e) {
-    e.target.id === "forth"
-      ? setCountImage((countImage += 1))
-      : setCountImage((countImage -= 1));
-    if (countImage < 1) {
-      setCountImage(4);
-    }
-    if (countImage > 4) {
-      setCountImage(1);
-    }
-  }
+  // function handleTriangleGallery(e) {
+  //   e.target.id === "forth"
+  //     ? setCountImage((countImage += 1))
+  //     : setCountImage((countImage -= 1));
+  //   if (countImage < 1) {
+  //     setCountImage(4);
+  //   }
+  //   if (countImage > 4) {
+  //     setCountImage(1);
+  //   }
+  // }
 
-  useEffect(() => {
-    countImage === 1
-      ? setDisplayImage(HeroTriangleImage1)
-      : countImage === 2
-      ? setDisplayImage(HeroTriangleImage2)
-      : countImage === 3
-      ? setDisplayImage(HeroTriangleImage3)
-      : countImage === 4
-      ? setDisplayImage(HeroTriangleImage4)
-      : "";
-  }, [countImage]);
+  // useEffect(() => {
+  //   countImage === 1
+  //     ? setDisplayImage(HeroTriangleImage1)
+  //     : countImage === 2
+  //     ? setDisplayImage(HeroTriangleImage2)
+  //     : countImage === 3
+  //     ? setDisplayImage(HeroTriangleImage3)
+  //     : countImage === 4
+  //     ? setDisplayImage(HeroTriangleImage4)
+  //     : "";
+  // }, [countImage]);
 
   return (
     <section className="hero-section-container">
@@ -78,7 +78,7 @@ function HeroSection() {
           </p>
           <button>Check out my work!</button>
         </div>
-        <div className="hero-triangle-svg-container">
+        {/* <div className="hero-triangle-svg-container">
           <img
             src={displayImage}
             alt="hero triangle svg"
@@ -96,7 +96,7 @@ function HeroSection() {
             className="triangle-btn-forth"
             onClick={handleTriangleGallery}
           >NEXT</button>
-        </div>
+        </div> */}
       </div>
 
       {/* <animated.div className="hero-headline-container" style={heroHeadline}>

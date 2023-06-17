@@ -27,7 +27,7 @@ function AboutSection() {
         </div>
         <div className="about-text-container">
           <h3>The short version of</h3>
-          <h2>How I became a developer</h2>
+          <h2>How I Became a Developer</h2>
           <p>
             Even during my apprenticeship as a media designer, I was fascinated
             by web technologies such as HTML and CSS. After completing the

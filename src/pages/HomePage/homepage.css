@@ -42,7 +42,7 @@
   margin-top: 6rem;
 }
 
-.hero-triangle-svg {
+/* .hero-triangle-svg {
   position: absolute;
   width: 40rem;
 }
@@ -84,4 +84,4 @@
 .triangle-btn-back:hover,
 .triangle-btn-forth:hover {
   animation: none;
-}
+} */

@@ -1,77 +1,91 @@
 .projects-section-container {
-    display: flex;
-    flex-direction: column;
-    height: 55rem;
+  display: flex;
+  flex-direction: column;
+  height: 55rem;
 }
 
-@keyframes carouselAnim{
-    0%{
-      transform: translateX(100%) rotatey(0) scale(1.2, 1.2);
-      transform-origin: center center;
-      z-index: 10;
-    }
-    27%{
-      transform: translateX(100%) rotatey(0) scale(1.2, 1.2);
-      transform-origin: center center;
-      z-index: 10;
-    }
-    33.33333%{
-      transform: translateX(25%) translateY(0) rotatey(-10deg) scale(0.7,0.8);
-      transform-origin: left center;
-      z-index: 5;
-    }
-    60%{
-      transform: translateX(25%) translateY(0) rotatey(-10deg) scale(0.7,0.8);
-      transform-origin: left center;
-      z-index: 5;
-    }
-    66.666666%{
-      transform: translateX(175%) translateY(0) rotatey(10deg) scale(0.7,0.8);
-      transform-origin: right center;
-      z-index: 5;
-    }
-    93%{
-      transform: translateX(175%) translateY(0) rotatey(10deg) scale(0.7,0.8);
-      transform-origin: right center;
-      z-index: 5;
-    }
-    100%{
-      transform: translateX(100%) rotatey(0) scale(1.2, 1.2);
-      transform-origin: center center;
-      z-index: 10;
-    }
-  }
-  
-  .projects-container {
-    width: 90%;
-    max-width: 90%;
-    perspective: 16.5rem;
-    perspective-origin: 50% 60%;
-    min-height: 14rem;
-    margin: auto;
-    margin-top: 7rem;
-  }
-  
-  .carousel-item {
-    position: absolute;
-    width: 33%; 
-    padding-bottom: 19%;
-    animation-name: carouselAnim;
-    /* transform: translateX(0) rotatey(50deg); */
-    transform-origin: left center;
-    animation-duration: 12s;
-    animation-iteration-count: infinite;
-  }
-  
-  .carousel-item:first-child {
-    animation-delay: -4s;
-  }
-  .carousel-item:last-child {
-    animation-delay: -8s;
-  }
-  
-  .carousel-image {
-    position: absolute;
-    width: 100%;
-    border-radius: 2px;
-  }
+.projects-container {
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.project-title {
+  position: absolute;
+  margin-top: 5rem;
+  margin-left: 4rem;
+  z-index: 2;
+}
+
+.project-title h2 {
+  font-size: 3rem;
+  line-height: 3rem;
+  margin-bottom: 2rem;
+  color: var(--clr-primary-000);
+}
+
+.project-title h3 {
+  color: var(--clr-secondary-400);
+  font-weight: 400;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.triangle-svg-container {
+  width: 40rem;
+  margin-top: 4rem;
+  margin-left: 4rem;
+  z-index: 1;
+}
+
+.triangle-svg {
+  position: absolute;
+  width: 40rem;
+}
+
+.triangle-btn-back {
+  position: relative;
+  top: 23.1rem;
+  left: 3.5rem;
+  background-image: url("../../assets/hero-tirangle-new/hero-triangle-button-1.svg");
+  width: 8.1rem;
+  height: 7.4rem;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  animation: pulse 2s infinite;
+  padding-top: 1.5rem;
+  font-size: 0.8rem;
+  color: var(--clr-primary-000);
+}
+
+.triangle-btn-forth {
+  position: relative;
+  top: 7.3rem;
+  left: 23.2rem;
+  background-image: url("../../assets/hero-tirangle-new/hero-triangle-button-2.svg");
+  width: 8.8rem;
+  height: 7.8rem;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  animation: pulse 2s infinite;
+  padding-bottom: 1.7rem;
+  font-size: 0.8rem;
+  color: var(--clr-primary-000);
+}
+
+.triangle-btn-back:hover,
+.triangle-btn-forth:hover {
+  animation: none;
+}
+
+.projects-text-container {
+  max-width: 26rem;
+  margin-top: 7rem;
+  margin-right: 4rem;
+}
