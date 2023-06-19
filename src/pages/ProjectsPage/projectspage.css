@@ -27,7 +27,8 @@
   color: var(--clr-primary-000);
 }
 
-.project-title h3 {
+.project-title h3,
+.projects-text-container h3 {
   color: var(--clr-secondary-400);
   font-weight: 400;
   font-size: 1rem;
@@ -48,7 +49,7 @@
 
 .triangle-btn-back {
   position: relative;
-  top: 23.1rem;
+  top: 23.15rem;
   left: 3.5rem;
   background-image: url("../../assets/hero-tirangle-new/hero-triangle-button-1.svg");
   width: 8.1rem;
@@ -88,10 +89,46 @@
 .projects-text-container {
   max-width: 30rem;
   margin-right: 4rem;
-  margin-top: 2rem;
+  margin-top: 5rem;
   font-size: 1rem;
   line-height: 1.6rem;
   color: var(--clr-primary-200);
+}
+
+.projects-head {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 2rem;
+}
+
+.projects-links {
+  display: flex;
+  flex-direction: row;
+}
+
+.external-link,
+.github-link {
+  background-image: url("../../assets/projects-section/arrow-up-right-from-square-solid-white.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 1.2rem;
+  height: 1.2rem;
+  margin-left: 0.75rem;
+}
+
+.github-link {
+  background-image: url("../../assets/projects-section/github-white.svg");
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.external-link:hover {
+  background-image: url("../../assets/projects-section/arrow-up-right-from-square-solid-orange.svg");
+
+}
+
+.github-link:hover {
+  background-image: url("../../assets/projects-section/github-orange.svg");
 }
 
 .projects-text-accordion li {
@@ -101,11 +138,17 @@
 }
 
 .label-img {
+  background-image: url("../../assets/projects-section/chevron-right-solid-darkgrey.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 1rem;
+  height: 1rem;
   margin-right: 1rem;
   transition: transform 0.5s;
 }
 
 .label-img.active {
+  background-image: url("../../assets/projects-section/chevron-right-solid-white.svg");
   transform: rotate(90deg);
 }
 
@@ -115,8 +158,12 @@
   font-size: 1.4rem;
   font-family: var(--ff-headlines);
   font-weight: 700;
-  color: var(--clr-primary-000);
+  color: var(--clr-primary-400);
   cursor: pointer;
+}
+
+.label-clr.active {
+  color: var(--clr-primary-000);
 }
 
 input[type="radio"] {
@@ -127,7 +174,7 @@ input[type="radio"] {
   color: var(--clr-primary-200);
   padding-top: 0rem;
   padding-bottom: 0.5rem;
-  padding-left: 1.5rem;
+  padding-left: 2rem;
   padding-right: 0;
   max-height: 0;
   overflow: hidden;
