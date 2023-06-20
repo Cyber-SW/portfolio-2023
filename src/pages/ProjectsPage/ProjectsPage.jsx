@@ -2,17 +2,17 @@ import "./projectspage.css";
 import RetroSpaceOne from "../../components/RetroSpaceOne";
 import Ratatouille from "../../components/Ratatouille";
 import Blogbytes from "../../components/Blogbytes";
-import HeroTriangleImage1 from "../../assets/hero-tirangle-new/hero-triangle-frame-1.png";
-import HeroTriangleImage2 from "../../assets/hero-tirangle-new/hero-triangle-frame-2.png";
-import HeroTriangleImage3 from "../../assets/hero-tirangle-new/hero-triangle-frame-3.png";
+import RetroSpaceOneCollage from "../../assets/projects-section/triangle-collage-retro-space-one.png";
+import BlogbytesCollage from "../../assets/projects-section/triangle-collage-blogbytes.png";
+import RatatouilleCollage from "../../assets/projects-section/triangle-collage-ratatouille.png";
 import { useState, useEffect } from "react";
 
 function ProjectsPage() {
   let [countProject, setCountProject] = useState(1);
-  const [displayProject, setDisplayProject] = useState(HeroTriangleImage1);
+  const [displayProject, setDisplayProject] = useState(RetroSpaceOneCollage);
   const [projectName, setProjectName] = useState("");
 
-  function handleTriangleGallery(e) {
+  function handleProjectGallery(e) {
     e.target.id === "forth"
       ? setCountProject((countProject += 1))
       : setCountProject((countProject -= 1));
@@ -26,12 +26,12 @@ function ProjectsPage() {
 
   useEffect(() => {
     countProject === 1
-      ? (setDisplayProject(HeroTriangleImage1),
+      ? (setDisplayProject(RetroSpaceOneCollage),
         setProjectName("Retro Space One"))
       : countProject === 2
-      ? (setDisplayProject(HeroTriangleImage2), setProjectName("Blogbytes"))
+      ? (setDisplayProject(BlogbytesCollage), setProjectName("Blogbytes"))
       : countProject === 3
-      ? (setDisplayProject(HeroTriangleImage3), setProjectName("Ratatouille"))
+      ? (setDisplayProject(RatatouilleCollage), setProjectName("Ratatouille"))
       : "";
   }, [countProject]);
 
@@ -56,7 +56,7 @@ function ProjectsPage() {
             type="button"
             id="back"
             className="triangle-btn-back"
-            onClick={handleTriangleGallery}
+            onClick={handleProjectGallery}
           >
             BACK
           </button>
@@ -64,7 +64,7 @@ function ProjectsPage() {
             type="button"
             id="forth"
             className="triangle-btn-forth"
-            onClick={handleTriangleGallery}
+            onClick={handleProjectGallery}
           >
             NEXT
           </button>

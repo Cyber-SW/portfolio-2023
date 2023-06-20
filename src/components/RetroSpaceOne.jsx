@@ -1,4 +1,13 @@
 import { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faCss3,
+  faGithub,
+  faHtml5,
+  faJs,
+  faGitAlt,
+} from "@fortawesome/free-brands-svg-icons";
+import p5Js from "../assets/projects-section/p5 JS-grey.svg";
 
 function RetroSpaceOne() {
   const [selectedSection, setSelectedSection] = useState("one");
@@ -13,10 +22,16 @@ function RetroSpaceOne() {
         <div className="projects-head">
           <h3>Time Limit: 6 Days</h3>
           <div className="projects-links">
-            <a href="https://github.com/Cyber-SW/RETRO-SPACE-ONE" target="blank">
+            <a
+              href="https://github.com/Cyber-SW/RETRO-SPACE-ONE"
+              target="blank"
+            >
               <div className="github-link" />
             </a>
-            <a href="https://cyber-sw.github.io/RETRO-SPACE-ONE/" target="blank">
+            <a
+              href="https://cyber-sw.github.io/RETRO-SPACE-ONE/"
+              target="blank"
+            >
               <div className="external-link" />
             </a>
           </div>
@@ -40,13 +55,14 @@ function RetroSpaceOne() {
                   selectedSection === "one" && "active"
                 }`}
               />
-              What is Retro-Space-One?
+              What is Retro Space One?
             </label>
             <div className="content">
               <p>
-                Retro-Space-One is a highscore based acarde retro space shooter
-                with increasing difficulty over time, and three spaceships the
-                player can choose from.
+                Retro-Space-One is a highscore-based arcade space shooter in
+                retro design with increasing difficulty over time, and three
+                spaceships, each with different properties, the player can
+                choose from.
               </p>
             </div>
             <hr className="content-hr" />
@@ -132,10 +148,14 @@ function RetroSpaceOne() {
               Technologies
             </label>
             <div className="content">
-              <p>
-                <img src="" alt="Html5 Icon" width="60px" />
-                Icons of: P5.js, JavaScript(ES6), HTML5, CSS3
-              </p>
+              <div className="icon-container">
+                <FontAwesomeIcon icon={faJs} size={"2x"} />
+                <FontAwesomeIcon icon={faHtml5} size={"2x"} />
+                <FontAwesomeIcon icon={faCss3} size={"2x"} />
+                <img src={p5Js} alt="p5.js logo" width={"70rem"} />
+                <FontAwesomeIcon icon={faGithub} size={"2x"} />
+                <FontAwesomeIcon icon={faGitAlt} size={"2x"} />
+              </div>
             </div>
             <hr className="content-hr" />
           </li>
@@ -160,8 +180,9 @@ function RetroSpaceOne() {
             </label>
             <div className="content">
               <p>
-                CONTROLS: W = Up | S = Down | A = Left | D = Right | SPACE =
-                Shoot
+                In case you want to play the game, here are the controls:
+                <br /> W = Move Up | S = Move Down | A = Move Left <br /> D =
+                Move Right | Space = Shoot | Have fun!
               </p>
             </div>
           </li>

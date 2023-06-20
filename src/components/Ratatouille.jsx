@@ -1,4 +1,13 @@
 import { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCss3, faGitAlt, faGithub, faHtml5, faJs, faNodeJs } from "@fortawesome/free-brands-svg-icons";
+import ExJs from "../assets/projects-section/express-original-grey.svg";
+import React from "../assets/projects-section/react-original-grey.svg";
+import MongoDb from "../assets/projects-section/mongodb-plain-grey.svg";
+import Jwt from "../assets/projects-section/jwtio-json-web-token-grey.svg";
+import Vite from "../assets/projects-section/vite-js-logo-grey.svg";
+import Axios from "../assets/projects-section/Axios-logo-grey.svg";
+import RatatouilleAd from "../assets/projects-section/ratatouille-advertisement.mp4";
 
 function Ratatouille() {
   const [selectedSection, setSelectedSection] = useState("one");
@@ -133,10 +142,20 @@ function Ratatouille() {
               Technologies
             </label>
             <div className="content">
-              <p>
-                <img src="" alt="Html5 Icon" width="60px" />
-                Icons of: P5.js, JavaScript(ES6), HTML5, CSS3
-              </p>
+            <div className="icon-container margin">
+                <FontAwesomeIcon icon={faJs} size={"2x"} />
+                <FontAwesomeIcon icon={faHtml5} size={"2x"} />
+                <FontAwesomeIcon icon={faCss3} size={"2x"} />
+                <img src={MongoDb} alt="mongodb logo" width={"17rem"} />
+                <img src={ExJs} alt="express logo" width={"52rem"} />
+                <img src={React} alt="react logo" width={"38rem"} />
+                <FontAwesomeIcon icon={faNodeJs} size={"2x"} />
+                <img src={Jwt} alt="jwt logo" width={"85rem"} />
+                <img src={Vite} alt="vite logo" width={"30rem"} />
+                <img src={Axios} alt="axios logo" width={"170rem"} />
+                <FontAwesomeIcon icon={faGitAlt} size={"2x"} />
+                <FontAwesomeIcon icon={faGithub} size={"2x"} />
+              </div>
             </div>
             <hr className="content-hr" />
           </li>
@@ -160,10 +179,10 @@ function Ratatouille() {
               Extras
             </label>
             <div className="content">
-              <p>
-                CONTROLS: W = Up | S = Down | A = Left | D = Right | SPACE =
-                Shoot
-              </p>
+            <video width="320px" height="240px" controls>
+              <source src={RatatouilleAd} type="video/mp4" />
+              Your browser does not support videos.
+            </video>
             </div>
           </li>
         </ul>

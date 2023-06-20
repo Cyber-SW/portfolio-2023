@@ -1,4 +1,16 @@
 import { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faCss3,
+  faGitAlt,
+  faGithub,
+  faHtml5,
+  faJs,
+  faNodeJs,
+} from "@fortawesome/free-brands-svg-icons";
+import ExJs from "../assets/projects-section/express-original-grey.svg";
+import MongoDb from "../assets/projects-section/mongodb-plain-grey.svg";
+import Hbs from "../assets/projects-section/handlebars-grey.svg";
 
 function Blogbytes() {
   const [selectedSection, setSelectedSection] = useState("one");
@@ -141,37 +153,22 @@ function Blogbytes() {
               Technologies
             </label>
             <div className="content">
-              <p>
-                <img src="" alt="Html5 Icon" width="60px" />
-                Icons of: P5.js, JavaScript(ES6), HTML5, CSS3
-              </p>
-            </div>
-            <hr className="content-hr" />
-          </li>
-          <li>
-            <input
-              type="radio"
-              name="accordion"
-              id="five"
-              checked={selectedSection === "five"}
-              onChange={handleSelect}
-            />
-            <label
-              htmlFor="five"
-              className={`label-clr  ${selectedSection === "five" && "active"}`}
-            >
-              <span
-                className={`label-img  ${
-                  selectedSection === "five" && "active"
-                }`}
-              />
-              Extras
-            </label>
-            <div className="content">
-              <p>
-                CONTROLS: W = Up | S = Down | A = Left | D = Right | SPACE =
-                Shoot
-              </p>
+              <div className="icon-container margin">
+                <FontAwesomeIcon icon={faJs} size={"2x"} />
+                <FontAwesomeIcon icon={faHtml5} size={"2x"} />
+                <FontAwesomeIcon icon={faCss3} size={"2x"} />
+                <img src={MongoDb} alt="mongodb logo" width={"17rem"} />
+                <img src={ExJs} alt="express logo" width={"52rem"} />
+                <FontAwesomeIcon icon={faNodeJs} size={"2x"} />
+                <img
+                  src={Hbs}
+                  alt="hbs logo"
+                  width={"52rem"}
+                  style={{ marginBottom: "1.2rem" }}
+                />
+                <FontAwesomeIcon icon={faGitAlt} size={"2x"} />
+                <FontAwesomeIcon icon={faGithub} size={"2x"} />
+              </div>
             </div>
           </li>
         </ul>
