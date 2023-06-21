@@ -1,14 +1,14 @@
 .projects-section-container {
   display: flex;
   flex-direction: column;
-  height: 55rem;
   overflow: hidden;
 }
 
 .projects-container {
   width: 80%;
   height: 100%;
-  margin: 0 auto;
+  margin: 12rem auto;
+  margin-top: 4rem;
   display: flex;
   justify-content: space-between;
 }
@@ -16,7 +16,7 @@
 .project-title {
   position: absolute;
   margin-top: 5rem;
-  margin-left: 4rem;
+  margin-left: 6rem;
   z-index: 2;
 }
 
@@ -38,7 +38,7 @@
 .triangle-svg-container {
   width: 40rem;
   margin-top: 4rem;
-  margin-left: 4rem;
+  margin-left: 8rem;
   z-index: 1;
 }
 
@@ -88,7 +88,7 @@
 
 .projects-text-container {
   max-width: 30rem;
-  margin-right: 4rem;
+  margin-right: 8rem;
   margin-top: 5rem;
   font-size: 1rem;
   line-height: 1.6rem;

@@ -6,6 +6,7 @@ import RetroSpaceOneCollage from "../../assets/projects-section/triangle-collage
 import BlogbytesCollage from "../../assets/projects-section/triangle-collage-blogbytes.png";
 import RatatouilleCollage from "../../assets/projects-section/triangle-collage-ratatouille.png";
 import { useState, useEffect } from "react";
+import { Element } from "react-scroll";
 
 function ProjectsPage() {
   let [countProject, setCountProject] = useState(1);
@@ -36,45 +37,47 @@ function ProjectsPage() {
   }, [countProject]);
 
   return (
-    <section className="projects-section-container">
-      <h1 className="section-headline">WORK</h1>
-      <hr />
+    <Element id="Work" name="Work Section">
+      <section className="projects-section-container">
+        <h1 className="section-headline">WORK</h1>
+        <hr />
 
-      <div className="projects-container">
-        <div className="project-title">
-          <h3>Featured Project</h3>
-          <h2>{projectName}</h2>
+        <div className="projects-container">
+          <div className="project-title">
+            <h3>Featured Project</h3>
+            <h2>{projectName}</h2>
+          </div>
+
+          <div className="triangle-svg-container">
+            <img
+              src={displayProject}
+              alt="triangle svg"
+              className="triangle-svg"
+            />
+            <button
+              type="button"
+              id="back"
+              className="triangle-btn-back"
+              onClick={handleProjectGallery}
+            >
+              BACK
+            </button>
+            <button
+              type="button"
+              id="forth"
+              className="triangle-btn-forth"
+              onClick={handleProjectGallery}
+            >
+              NEXT
+            </button>
+          </div>
+
+          {countProject === 1 && <RetroSpaceOne />}
+          {countProject === 2 && <Blogbytes />}
+          {countProject === 3 && <Ratatouille />}
         </div>
-
-        <div className="triangle-svg-container">
-          <img
-            src={displayProject}
-            alt="triangle svg"
-            className="triangle-svg"
-          />
-          <button
-            type="button"
-            id="back"
-            className="triangle-btn-back"
-            onClick={handleProjectGallery}
-          >
-            BACK
-          </button>
-          <button
-            type="button"
-            id="forth"
-            className="triangle-btn-forth"
-            onClick={handleProjectGallery}
-          >
-            NEXT
-          </button>
-        </div>
-
-        {countProject === 1 && <RetroSpaceOne />}
-        {countProject === 2 && <Blogbytes />}
-        {countProject === 3 && <Ratatouille />}
-      </div>
-    </section>
+      </section>
+    </Element>
   );
 }
 

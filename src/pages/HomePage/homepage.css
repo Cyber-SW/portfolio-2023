@@ -1,18 +1,11 @@
 .hero-section-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
-}
-
-.hero-container {
-  display: flex;
-  margin-left: 2rem;
 }
 
 .hero-headline-container {
-  margin: auto;
-  margin-top: 13rem;
-  max-width: 80%;
+  margin: 13rem auto;
+  max-width: 60%;
   text-align: center;
 }
 
@@ -24,7 +17,7 @@
 .hero-headline-container h2 {
   color: var(--clr-primary-200);
   font-weight: 700;
-  font-size: 2.5rem;
+  font-size: 2rem;
 }
 
 .hero-headline-container h3 {
@@ -41,6 +34,20 @@
 }
 
 .hero-section-btn {
-
+  background-image: url("../../assets/triangle-button.svg");
+  background-color: transparent;
+  background-repeat: no-repeat;
+  width: 8rem;
+  height: 7rem;
+  margin-top: 3rem;
+  margin-bottom: 4rem;
+  padding-bottom: 2rem;
+  border: none;
+  cursor: pointer;
+  color: var(--clr-primary-000);
+  animation: pulse 2s infinite;
 }
 
+.contact-btn:hover {
+  animation: none;
+}

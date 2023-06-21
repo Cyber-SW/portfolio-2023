@@ -158,7 +158,7 @@ function Blogbytes() {
                 <FontAwesomeIcon icon={faHtml5} size={"2x"} />
                 <FontAwesomeIcon icon={faCss3} size={"2x"} />
                 <img src={MongoDb} alt="mongodb logo" width={"17rem"} />
-                <img src={ExJs} alt="express logo" width={"52rem"} />
+                <img src={ExJs} alt="express logo" width={"45rem"} />
                 <FontAwesomeIcon icon={faNodeJs} size={"2x"} />
                 <img
                   src={Hbs}

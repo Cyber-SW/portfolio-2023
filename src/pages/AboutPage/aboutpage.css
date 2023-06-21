@@ -1,16 +1,15 @@
 .about-section-container {
   display: flex;
   flex-direction: column;
-  height: 55rem;
-  margin-top: 25rem;
 }
 
 .about-container {
   display: flex;
-  justify-content: center;
   align-items: center;
-  margin-top: 7rem;
-  margin-right: 4.5rem;
+  margin: auto;
+  margin-bottom: 16rem;
+  margin-top: 10rem;
+  margin-left: 12rem;
 }
 
 .about-image-container img {
@@ -70,8 +69,8 @@
 .about-cv-btn,
 .about-certificates-btn {
   position: relative;
-  top: 2.5rem;
-  left: 6rem;
+  bottom: 4.4rem;
+  left: 13rem;
   background-image: url("../../assets/about-triangle/about-button.svg");
   width: 6.6rem;
   height: 7.5rem;
@@ -88,8 +87,8 @@
 }
 
 .about-certificates-btn {
-  top: 10.3rem;
-  left: -0.6rem;
+  top: 4.22rem;
+  left: 6.4rem;
   padding-top: 0.2rem;
 }
 

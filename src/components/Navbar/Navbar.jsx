@@ -2,11 +2,14 @@ import { NavLink } from "react-router-dom";
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
+import * as Scroll from "react-scroll";
 import SWLogo from "../../assets/logo-sw-2.png";
 import "./navbar.css";
 
 function Navbar() {
   const [toggleNav, setToggleNav] = useState(false);
+
+  let Link = Scroll.Link;
 
   const handleToggleNavbar = () => {
     setToggleNav(!toggleNav);
@@ -18,21 +21,27 @@ function Navbar() {
         <div className={`nav-links  ${toggleNav && "active"}`}>
           <ul>
             <li>
-              <NavLink to="About">ABOUT</NavLink>
+              <Link to="About" smooth={true}>
+                ABOUT
+              </Link>
             </li>
             <li>
-              <NavLink to="Work">WORK</NavLink>
+              <Link to="Work" smooth={true}>
+                WORK
+              </Link>
             </li>
             <li>
-              <NavLink to="Contact">CONTACT</NavLink>
+              <Link to="Contact" smooth={true}>
+                CONTACT
+              </Link>
             </li>
           </ul>
         </div>
-        <NavLink to="/">
+        <Link to="Home" smooth={true}>
           <div className="nav-logo">
             <img src={SWLogo} alt="logo-sw" />
           </div>
-        </NavLink>
+        </Link>
 
         <div className={`nav-icons  ${toggleNav && "active"}`}>
           <ul>
