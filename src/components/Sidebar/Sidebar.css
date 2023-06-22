@@ -1,0 +1,78 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-vl-left,
+.sidebar-vl-right {
+  transform: rotate(90deg);
+  position: fixed;
+  width: 10rem;
+  bottom: 0;
+  border-top: 1px solid var(--clr-primary-200);
+}
+
+.sidebar-container-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 9.5rem;
+  position: fixed;
+  left: 4.4rem;
+  bottom: 7.8rem;
+}
+
+.github-icon {
+  font-size: 21px;
+  transition: transform var(--animation-timing);
+}
+
+.linkedin-icon {
+  font-size: 20px;
+  transition: transform var(--animation-timing);
+}
+
+.github-icon:hover,
+.linkedin-icon:hover {
+  transform: translateY(-3px);
+  cursor: pointer;
+  color: var(--clr-secondary-400);
+}
+
+.cw-icon {
+  background-image: url("../../assets/codewars-grey.svg");
+  background-size: 1.25rem;
+  background-repeat: no-repeat;
+  display: inline-block;
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-bottom: 0.175rem;
+  transition: transform var(--animation-timing);
+}
+
+.cw-icon:hover {
+  background-image: url("../../assets/codewars-orange.svg");
+  transform: translateY(-3px);
+  cursor: pointer;
+}
+
+.sidebar-right-mail {
+  text-decoration: none;
+  color: var(--clr-primary-200);
+  letter-spacing: 0.05rem;
+  position: fixed;
+  right: 4.45rem;
+  bottom: 8rem;
+  writing-mode: vertical-lr;
+  transition: transform var(--animation-timing);
+}
+
+.sidebar-right-mail:hover {
+  transform: translateY(-3px);
+  color: var(--clr-secondary-400);
+}
+
+.sidebar-vl-right {
+  right: 0;
+}

@@ -12,7 +12,7 @@
   --ff-headlines: "Raleway", sans-serif;
   --ff-text: "Jost", sans-serif;
 
-  --animation-timing: 0.3s ease-in-out;
+  --animation-timing: 0.2s ease-in-out;
 }
 
 /* RESET CSS */
@@ -49,7 +49,7 @@ h3 {
 hr {
   position: relative;
   bottom: 4.1rem;
-  width: 80%;
+  width: 75%;
   height: 0px;
   border: none;
   border-top: 1px solid var(--clr-primary-400);
