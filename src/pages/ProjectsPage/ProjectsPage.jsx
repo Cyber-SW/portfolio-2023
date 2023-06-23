@@ -7,11 +7,15 @@ import BlogbytesCollage from "../../assets/projects-section/triangle-collage-blo
 import RatatouilleCollage from "../../assets/projects-section/triangle-collage-ratatouille.png";
 import { useState, useEffect } from "react";
 import { Element } from "react-scroll";
+import { LanguageContext } from "../../context/lang.context";
+import { useContext } from "react";
 
 function ProjectsPage() {
   let [countProject, setCountProject] = useState(1);
   const [displayProject, setDisplayProject] = useState(RetroSpaceOneCollage);
   const [projectName, setProjectName] = useState("");
+
+  const { language } = useContext(LanguageContext);
 
   function handleProjectGallery(e) {
     e.target.id === "forth"
@@ -39,12 +43,16 @@ function ProjectsPage() {
   return (
     <Element id="Work" name="Work Section">
       <section className="projects-section-container">
-        <h1 className="section-headline">WORK</h1>
+        <h1 className="section-headline">
+          {language === "EN" ? "PROJECTS" : "PROJEKTE"}
+        </h1>
         <hr />
 
         <div className="projects-container">
           <div className="project-title">
-            <h3>Featured Project</h3>
+            <h3>
+              {language === "EN" ? "Featured Project" : "Ausgewähltes Projekt"}
+            </h3>
             <h2>{projectName}</h2>
           </div>
 
@@ -60,7 +68,7 @@ function ProjectsPage() {
               className="triangle-btn-back"
               onClick={handleProjectGallery}
             >
-              BACK
+              {language === "EN" ? "BACK" : "ZURÜCK"}
             </button>
             <button
               type="button"
@@ -68,7 +76,7 @@ function ProjectsPage() {
               className="triangle-btn-forth"
               onClick={handleProjectGallery}
             >
-              NEXT
+              {language === "EN" ? "NEXT" : "NÄCHSTES"}
             </button>
           </div>
 

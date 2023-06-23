@@ -8,9 +8,13 @@ import {
   faGitAlt,
 } from "@fortawesome/free-brands-svg-icons";
 import p5Js from "../assets/projects-section/p5 JS-grey.svg";
+import { LanguageContext } from "../context/lang.context";
+import { useContext } from "react";
 
 function RetroSpaceOne() {
   const [selectedSection, setSelectedSection] = useState("one");
+
+  const { language } = useContext(LanguageContext);
 
   function handleSelect(e) {
     setSelectedSection(e.target.id);
@@ -20,7 +24,9 @@ function RetroSpaceOne() {
     <>
       <div className="projects-text-container">
         <div className="projects-head">
-          <h3>Time Limit: 6 Days</h3>
+          <h3>
+            {language === "EN" ? "Time Limit: 6 Days" : "Zeitlimit: 6 Tage"}
+          </h3>
           <div className="projects-links">
             <a
               href="https://github.com/Cyber-SW/RETRO-SPACE-ONE"
@@ -55,14 +61,18 @@ function RetroSpaceOne() {
                   selectedSection === "one" && "active"
                 }`}
               />
-              What is Retro Space One?
+              {language === "EN"
+                ? "What is Retro Space One?"
+                : "Was ist Retro Space One?"}
             </label>
             <div className="content">
               <p>
-                Retro-Space-One is a highscore-based arcade space shooter in
+                {language === "EN"
+                  ? `Retro Space One is a highscore-based arcade space shooter in
                 retro design with increasing difficulty over time, and three
                 spaceships, each with different properties, the player can
-                choose from.
+                choose from.`
+                  : `Retro Space One ist ein Highscore-basierter Arcade-Weltraum-Shooter im Retro-Design mit über die Zeit ansteigendem Schwierigkeitsgrad und drei Raumschiffen mit unterschiedlichen Eigenschaften, aus denen der Spieler wählen kann.`}
               </p>
             </div>
             <hr className="content-hr" />
@@ -84,13 +94,17 @@ function RetroSpaceOne() {
                   selectedSection === "two" && "active"
                 }`}
               />
-              What was the biggest challenge?
+              {language === "EN"
+                ? "What was the biggest challenge?"
+                : "Was war die größte Herausforderung?"}
             </label>
             <div className="content">
               <p>
-                The biggest challenge was the calculation of the railgun hitbox
+                {language === "EN"
+                  ? `The biggest challenge was the calculation of the railgun hitbox
                 and the related calculation of the railgun laser collision with
-                the opponents.
+                the opponents.`
+                  : `Die größte Herausforderung war die Berechnung der Railgun-Hitbox und die damit verbundene Berechnung der Kollision des Railgun-Lasers mit den Gegnern.`}
               </p>
             </div>
             <hr className="content-hr" />
@@ -114,16 +128,20 @@ function RetroSpaceOne() {
                   selectedSection === "three" && "active"
                 }`}
               />
-              How did I overcome it?
+              {language === "EN"
+                ? "How did I overcome it?"
+                : "Wie habe ich sie überwunden?"}
             </label>
             <div className="content">
               <p>
-                To achieve the desired result, I colored the hitbox of the laser
+                {language === "EN"
+                  ? `To achieve the desired result, I colored the hitbox of the laser
                 red to make a change to the code more visible. I then used an
                 if-condition to see if the position of an opponent was in the
                 area covered by the laser, which of course also depends on the
                 position of the player. If the opponent is in the area, he is
-                considered hit and removed from the playing field.
+                considered hit and removed from the playing field.`
+                  : `Um das gewünschte Ergebnis zu erzielen habe ich als erstes die Hitbox des Lasers rot eingefärbt, um eine Änderung am Code besser sichtbar zu machen. Dann habe ich eine if-Condition verwendet um zu überprüfen, ob sich ein Gegner im Bereich des Lasers befindet, was natürlich auch von der Position des Spielers abhängt. Befindet sich ein Gegner in diesem Bereich, wird er als getroffen angesehen und vom Spielfeld entfernt.`}
               </p>
             </div>
             <hr className="content-hr" />
@@ -145,7 +163,9 @@ function RetroSpaceOne() {
                   selectedSection === "four" && "active"
                 }`}
               />
-              Technologies
+              {language === "EN"
+                ? "Used technologies"
+                : "Verwendete Technologien"}
             </label>
             <div className="content">
               <div className="icon-container">
@@ -178,11 +198,14 @@ function RetroSpaceOne() {
               />
               Extras
             </label>
-            <div className="content">
+            <div className="content pre-line">
               <p>
-                In case you want to play the game, here are the controls:
-                <br /> W = Move Up | S = Move Down | A = Move Left <br /> D =
-                Move Right | Space = Shoot | Have fun!
+                {language === "EN"
+                  ? `In case you want to play the game, here are the controls:
+                  W = Move Up | S = Move Down | A = Move Left
+                  D = Move Right | Space = Shoot | Have fun!`
+                  : `Hier ist die Steuerung, falls du Retro Space One spielen möchtest: W = Move Up | S = Move Down | A = Move Left
+                  D = Move Right | Space = Shoot | Have fun!`}
               </p>
             </div>
           </li>

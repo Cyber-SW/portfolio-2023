@@ -186,6 +186,10 @@ input[type="radio"] {
   margin-top: 1.5rem;
 }
 
+.pre-line {
+  white-space: pre-line;
+}
+
 .icon-container * {
   margin-right: 1rem;
 }

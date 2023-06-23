@@ -46,6 +46,7 @@
   cursor: pointer;
   color: var(--clr-primary-000);
   animation: pulse 2s infinite;
+  white-space: pre-line;
 }
 
 .contact-btn:hover {

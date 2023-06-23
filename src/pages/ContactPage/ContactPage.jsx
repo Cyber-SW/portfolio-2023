@@ -1,24 +1,32 @@
 import "./contactpage.css";
 import { Element } from "react-scroll";
+import { LanguageContext } from "../../context/lang.context";
+import { useContext } from "react";
 
 function ContactPage() {
+  const { language } = useContext(LanguageContext);
+
   return (
     <Element id="Contact" name="Contact Section">
       <section className="contact-section-container">
-        <h1 className="section-headline">CONTACT</h1>
+        <h1 className="section-headline">
+          {language === "EN" ? "CONTACT" : "KONTAKT"}
+        </h1>
         <hr />
 
         <div className="contact-container">
-          <h3>What´s next?</h3>
-          <h2>Get in Touch</h2>
+          <h3>{language === "EN" ? "What´s next?" : "Was jetzt?"}</h3>
+          <h2>{language === "EN" ? "Get in touch" : "Kontakt aufnehmen"}</h2>
           <p>
-            I am currently looking for a full-time job as a junior developer so
+            {language === "EN"
+              ? `I am currently looking for a full-time job as a junior developer so
             if you have any job opportunities, want to start a project together,
-            or just want to say hi, feel free to click the button below.
+            or just want to say hi, feel free to click the button below.`
+              : `Ich bin derzeit auf der Suche nach einer Vollzeitstelle als Junior Entwickler. Wenn du also irgendwelche Jobangebote hast, ein gemeinsames Projekt starten möchtest oder einfach nur Hallo sagen willst, klicke auf die Schaltfläche.`}
           </p>
           <a href="mailto:woltersh@outlook.de">
             <button type="button" className="contact-btn">
-              SAY HELLO
+              {language === "EN" ? "SAY HELLO" : "SAG HALLO"}
             </button>
           </a>
         </div>

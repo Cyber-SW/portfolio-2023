@@ -1,13 +1,13 @@
-import { NavLink } from "react-router-dom";
-import { useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGithub, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
+import { useState, useContext } from "react";
+import { LanguageContext } from "../../context/lang.context";
 import * as Scroll from "react-scroll";
 import SWLogo from "../../assets/logo-sw-2.png";
 import "./navbar.css";
 
 function Navbar() {
   const [toggleNav, setToggleNav] = useState(false);
+
+  const { language, toggleLanguage } = useContext(LanguageContext);
 
   let Link = Scroll.Link;
 
@@ -22,17 +22,17 @@ function Navbar() {
           <ul>
             <li>
               <Link to="About" smooth={true}>
-                ABOUT
+                {language === "EN" ? "ABOUT ME" : "ÜBER MICH"}
               </Link>
             </li>
             <li>
               <Link to="Work" smooth={true}>
-                WORK
+                {language === "EN" ? "PROJECTS" : "PROJEKTE"}
               </Link>
             </li>
             <li>
               <Link to="Contact" smooth={true}>
-                CONTACT
+                {language === "EN" ? "CONTACT" : "KONTAKT"}
               </Link>
             </li>
           </ul>
@@ -43,7 +43,19 @@ function Navbar() {
           </div>
         </Link>
 
-        <div className={`nav-icons  ${toggleNav && "active"}`}>
+        <div className="lang-btn">
+          {language === "EN" ? (
+            <button type="button" id="DE" onClick={toggleLanguage}>
+              Switch to German
+            </button>
+          ) : (
+            <button type="button" id="EN" onClick={toggleLanguage}>
+              Wechseln zu Englisch
+            </button>
+          )}
+        </div>
+
+        {/* <div className={`nav-icons  ${toggleNav && "active"}`}>
           <ul>
             <li>
               <NavLink to="https://github.com/Cyber-SW" target="_blank">
@@ -66,7 +78,7 @@ function Navbar() {
               ></NavLink>
             </li>
           </ul>
-        </div>
+        </div> */}
         <div
           className={`menu-icon ${toggleNav && "active"}`}
           onClick={handleToggleNavbar}

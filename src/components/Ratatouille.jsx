@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faCss3,
@@ -8,6 +8,7 @@ import {
   faJs,
   faNodeJs,
 } from "@fortawesome/free-brands-svg-icons";
+import { LanguageContext } from "../context/lang.context";
 import ExJs from "../assets/projects-section/express-original-grey.svg";
 import React from "../assets/projects-section/react-original-grey.svg";
 import MongoDb from "../assets/projects-section/mongodb-plain-grey.svg";
@@ -19,6 +20,8 @@ import RatatouilleAd from "../assets/projects-section/ratatouille-advertisement.
 function Ratatouille() {
   const [selectedSection, setSelectedSection] = useState("one");
 
+  const { language } = useContext(LanguageContext);
+
   function handleSelect(e) {
     setSelectedSection(e.target.id);
   }
@@ -27,7 +30,9 @@ function Ratatouille() {
     <>
       <div className="projects-text-container">
         <div className="projects-head">
-          <h3>Time Limit: 9 Days</h3>
+          <h3>
+            {language === "EN" ? "Time Limit: 9 Days" : "Zeitlimit: 9 Tage"}
+          </h3>
           <div className="projects-links">
             <a href="https://github.com/Cyber-SW/ratatouille" target="blank">
               <div className="github-link" />
@@ -56,13 +61,17 @@ function Ratatouille() {
                   selectedSection === "one" && "active"
                 }`}
               />
-              What is Ratatouille?
+              {language === "EN"
+                ? "What is Ratatouille?"
+                : "Was ist Ratatouille?"}
             </label>
             <div className="content">
               <p>
-                Ratatouille is a dish generator and eating habits organizer
+                {language === "EN"
+                  ? `Ratatouille is a dish generator and eating habits organizer
                 powered by OpenAi´s artificial intelligence ChatGPT. It is
-                optimized for mobile and HD screens upwards.
+                optimized for mobile and HD screens upwards.`
+                  : `Ratatouille ist ein Rezeptgenerator und Essensplaner, der mit der künstlichen Intelligenz ChatGPT von OpenAi angetrieben wird. Es ist für Mobilgeräte und HD-Bildschirme aufwärts optimiert.`}
               </p>
             </div>
             <hr className="content-hr" />
@@ -84,14 +93,18 @@ function Ratatouille() {
                   selectedSection === "two" && "active"
                 }`}
               />
-              What was the biggest challenge?
+              {language === "EN"
+                ? "What was the biggest challenge?"
+                : "Was war die größte Herausforderung?"}
             </label>
             <div className="content">
               <p>
-                The biggest challenge was handling React's asynchronous
+                {language === "EN"
+                  ? `The biggest challenge was handling React's asynchronous
                 behavior, especially when retrieving data from the database or
                 API´s. This gets even more difficult when you have to wait for
-                two API calls before you can display the data.
+                two API calls before you can display the data.`
+                  : `Die größte Herausforderung war der Umgang mit dem asynchronen Verhalten von React, insbesondere beim Abrufen von Daten aus der Datenbank oder von APIs. Dies wird noch schwieriger, wenn man zwei API-Abfragen abwarten muss, bevor man die Daten anzeigen kann.`}
               </p>
             </div>
             <hr className="content-hr" />
@@ -115,16 +128,20 @@ function Ratatouille() {
                   selectedSection === "three" && "active"
                 }`}
               />
-              How did I overcome it?
+              {language === "EN"
+                ? "How did I overcome it?"
+                : "Wie habe ich sie überwunden?"}
             </label>
             <div className="content">
               <p>
-                I have used promises in the frontend to only proceed with the
+                {language === "EN"
+                  ? `I have used promises in the frontend to only proceed with the
                 execution of the code when the data requested by the backend is
                 available. I also used promises in the backend for the API calls
                 to make sure everything works properly. For data from the
                 database, I used useEffect, which requests the data from the
-                database at each page reload to display them.
+                database at each page reload to display them.`
+                  : `Ich habe Promises im Frontend verwendet, um die Ausführung des Codes nur dann fortzusetzen, wenn die vom Backend angeforderten Daten verfügbar sind. Außerdem habe ich im Backend Promises für die API-Abfragen verwendet, um sicherzustellen, dass alles ordnungsgemäß funktioniert. Für die Daten aus der Datenbank habe ich useEffect verwendet, das bei jedem Neuladen der Seite die Daten aus der Datenbank anfordert, um sie anzuzeigen.`}
               </p>
             </div>
             <hr className="content-hr" />
@@ -146,7 +163,9 @@ function Ratatouille() {
                   selectedSection === "four" && "active"
                 }`}
               />
-              Technologies
+              {language === "EN"
+                ? "Used technologies"
+                : "Verwendete Technologien"}
             </label>
             <div className="content">
               <div className="icon-container margin">
@@ -193,7 +212,9 @@ function Ratatouille() {
             <div className="content">
               <video width="320px" height="240px" controls>
                 <source src={RatatouilleAd} type="video/mp4" />
-                Your browser does not support videos.
+                {language === "EN"
+                  ? "Your browser does not support videos."
+                  : "Dein Browser unterstützt keine Videos."}
               </video>
             </div>
           </li>

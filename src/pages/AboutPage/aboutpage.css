@@ -26,8 +26,8 @@
 }
 
 .about-text-container h2 {
-  font-size: 3rem;
-  line-height: 4rem;
+  font-size: 2.8rem;
+  line-height: 4.2rem;
   margin-bottom: 2rem;
   color: var(--clr-primary-000);
 }
@@ -84,6 +84,7 @@
   color: white;
   text-align: left;
   animation: pulse 2s infinite;
+  white-space: pre-line;
 }
 
 .about-certificates-btn {
