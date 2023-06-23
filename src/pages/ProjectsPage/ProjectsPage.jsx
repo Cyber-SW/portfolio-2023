@@ -41,7 +41,7 @@ function ProjectsPage() {
   }, [countProject]);
 
   return (
-    <Element id="Work" name="Work Section">
+    <Element id="Projects" name="Projects Section">
       <section className="projects-section-container">
         <h1 className="section-headline">
           {language === "EN" ? "PROJECTS" : "PROJEKTE"}

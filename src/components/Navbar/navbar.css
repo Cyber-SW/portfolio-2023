@@ -5,7 +5,7 @@
 
 .nav-container {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   height: 100%;
   max-width: 100%;
@@ -13,54 +13,70 @@
 
 .nav-logo img {
   height: 3rem;
-  margin: 0 10rem;
   cursor: pointer;
 }
 
-.nav-links ul,
-.nav-icons ul {
+.nav-links ul {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   list-style-type: none;
   cursor: pointer;
-  width: 20rem;
+  width: 25rem;
+  padding-left: 5rem;
 }
 
-.nav-links ul a,
-.nav-icons ul a {
+.nav-links ul a {
   font-family: var(--ff-headlines);
   font-size: 0.8rem;
   font-weight: 400;
   color: var(--clr-primary-000);
   text-decoration: none;
+  transition: color var(--animation-timing);
 }
 
-.nav-links ul a.active,
-.nav-icons ul a.active {
-  color: var(--clr-secondary-400);
-  font-weight: 500;
+.nav-links ul a:hover {
+  color: var(--clr-secondary-200);
 }
 
-.cw-icon {
-  background-image: url("../../assets/codewars-white.svg");
-  background-size: 1.5rem;
-  background-repeat: no-repeat;
-  display: inline-block;
-  width: 1.5rem;
-  height: 1.5rem;
-  margin-top: 0.1rem;
+.nav-links ul a.active {
+  color: var(--clr-secondary-200);
 }
 
-.cw-icon.active {
-  background-image: url("../../assets/codewars-orange.svg");
-  background-size: 1.5rem;
-  background-repeat: no-repeat;
-  display: inline-block;
-  width: 1.5rem;
-  height: 1.5rem;
+.lang-btn-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 25rem;
+  padding-right: 4.45rem;
 }
+
+.lang-btn {
+  margin-right: 0.5rem;
+  color: var(--clr-primary-000);
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-family: var(--ff-headlines);
+  font-size: 0.8rem;
+  font-weight: 400;
+  transition: color var(--animation-timing);
+}
+
+.lang-icon {
+  color: var(--clr-primary-000);
+  transition: color var(--animation-timing);
+}
+
+.lang-btn:hover + .lang-icon {
+  color: var(--clr-secondary-200);
+}
+
+.lang-btn:hover {
+  color: var(--clr-secondary-200);
+}
+
 
 /* MOBILE */
 @media (max-width: 480px) {
@@ -110,8 +126,7 @@
     width: 0;
   }
 
-  .nav-links,
-  .nav-icons {
+  .nav-links {
     position: absolute;
     right: 0;
     top: 0;
@@ -124,46 +139,26 @@
     z-index: 2;
   }
 
-  .nav-icons {
-    position: relative;
-    top: 100vh;
-  }
-
-  .nav-links.active,
-  .nav-icons.active {
+  .nav-links.active {
     padding-top: 15rem;
     height: 100vh;
     transition: all var(--animation-timing);
     border-left: 1px solid var(--clr-primary-200);
   }
 
-  .nav-icons.active {
-    padding-top: 0;
-  }
-
-  .nav-links ul,
-  .nav-icons ul {
+  .nav-links ul {
     display: flex;
     flex-direction: column;
     width: 100%;
     padding-right: 4rem;
   }
 
-  .nav-links ul li,
-  .nav-icons ul li {
+  .nav-links ul li {
     margin-bottom: 4rem;
   }
 
-  .nav-links ul a,
-  .nav-icons ul a {
+  .nav-links ul a {
     font-size: 1.4rem;
-  }
-
-  .cw-icon,
-  .cw-icon.active {
-    background-size: 2.8rem;
-    width: 2.8rem;
-    height: 2.8rem;
   }
 }
 
@@ -179,8 +174,7 @@
     margin-right: 0;
   }
 
-  .nav-links ul,
-  .nav-icons ul {
+  .nav-links ul {
     max-width: 15rem;
   }
 
@@ -188,21 +182,8 @@
     margin-left: -3.5rem;
   }
 
-  .nav-icons ul {
-    margin-top: 1.2rem;
-  }
-
-  .nav-links ul a,
-  .nav-icons ul a {
+  .nav-links ul a {
     font-size: 0.5rem;
-  }
-
-  .cw-icon,
-  .cw-icon.active {
-    background-size: 0.9rem;
-    width: 0.9rem;
-    height: 0.9rem;
-    margin-top: 0;
   }
 }
 
@@ -218,8 +199,7 @@
     margin-right: 3rem;
   }
 
-  .nav-links ul,
-  .nav-icons ul {
+  .nav-links ul {
     max-width: 18rem;
   }
 
@@ -227,20 +207,7 @@
     margin-left: -3.5rem;
   }
 
-  .nav-icons ul {
-    margin-top: 1.1rem;
-  }
-
-  .nav-links ul a,
-  .nav-icons ul a {
+  .nav-links ul a {
     font-size: 0.7rem;
-  }
-
-  .cw-icon,
-  .cw-icon.active {
-    background-size: 1.3rem;
-    width: 1.3rem;
-    height: 1.3rem;
-    margin-top: 0;
   }
 }

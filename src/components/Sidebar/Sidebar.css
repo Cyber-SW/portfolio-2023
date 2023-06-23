@@ -37,7 +37,7 @@
 .linkedin-icon:hover {
   transform: translateY(-3px);
   cursor: pointer;
-  color: var(--clr-secondary-400);
+  color: var(--clr-secondary-200);
 }
 
 .cw-icon {
@@ -52,7 +52,7 @@
 }
 
 .cw-icon:hover {
-  background-image: url("../../assets/codewars-orange.svg");
+  background-image: url("../../assets/codewars-orange-200.svg");
   transform: translateY(-3px);
   cursor: pointer;
 }
@@ -70,7 +70,7 @@
 
 .sidebar-right-mail:hover {
   transform: translateY(-3px);
-  color: var(--clr-secondary-400);
+  color: var(--clr-secondary-200);
 }
 
 .sidebar-vl-right {

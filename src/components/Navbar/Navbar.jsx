@@ -1,5 +1,7 @@
 import { useState, useContext } from "react";
 import { LanguageContext } from "../../context/lang.context";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLanguage } from "@fortawesome/free-solid-svg-icons";
 import * as Scroll from "react-scroll";
 import SWLogo from "../../assets/logo-sw-2.png";
 import "./navbar.css";
@@ -26,7 +28,7 @@ function Navbar() {
               </Link>
             </li>
             <li>
-              <Link to="Work" smooth={true}>
+              <Link to="Projects" smooth={true}>
                 {language === "EN" ? "PROJECTS" : "PROJEKTE"}
               </Link>
             </li>
@@ -37,56 +39,43 @@ function Navbar() {
             </li>
           </ul>
         </div>
-        <Link to="Home" smooth={true}>
-          <div className="nav-logo">
-            <img src={SWLogo} alt="logo-sw" />
-          </div>
-        </Link>
 
-        <div className="lang-btn">
-          {language === "EN" ? (
-            <button type="button" id="DE" onClick={toggleLanguage}>
-              Switch to German
-            </button>
-          ) : (
-            <button type="button" id="EN" onClick={toggleLanguage}>
-              Wechseln zu Englisch
-            </button>
-          )}
+        <div className="nav-logo">
+          <Link to="Home" smooth={true}>
+            <img src={SWLogo} alt="logo-sw" />
+          </Link>
         </div>
 
-        {/* <div className={`nav-icons  ${toggleNav && "active"}`}>
-          <ul>
-            <li>
-              <NavLink to="https://github.com/Cyber-SW" target="_blank">
-                <FontAwesomeIcon icon={faGithub} size="2x" />
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="https://www.linkedin.com/in/shawn-wolter-93a263195/"
-                target="_blank"
-              >
-                <FontAwesomeIcon icon={faLinkedinIn} size="2x" />
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="https://www.codewars.com/users/Cyber-SW"
-                target="_blank"
-                className="cw-icon"
-              ></NavLink>
-            </li>
-          </ul>
-        </div> */}
-        <div
+        <div className="lang-btn-container">
+          {language === "EN" ? (
+            <button
+              type="button"
+              id="DE"
+              className="lang-btn"
+              onClick={toggleLanguage}
+            >
+              GERMAN
+            </button>
+          ) : (
+            <button
+              type="button"
+              id="EN"
+              className="lang-btn"
+              onClick={toggleLanguage}
+            >
+              ENGLISCH
+            </button>
+          )}
+          <FontAwesomeIcon icon={faLanguage} size="2x" className="lang-icon" />
+        </div>
+        {/* <div
           className={`menu-icon ${toggleNav && "active"}`}
           onClick={handleToggleNavbar}
         >
           <span className="bar"></span>
           <span className={`bar middle ${toggleNav && "active"}`}></span>
           <span className="bar"></span>
-        </div>
+        </div> */}
       </div>
     </nav>
   );
