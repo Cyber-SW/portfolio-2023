@@ -206,3 +206,12 @@ input[type="radio"] {
   bottom: 0rem;
   width: 100%;
 }
+
+.credit-link {
+  color: var(--clr-primary-200);
+  transition: all var(--animation-timing);
+}
+
+.credit-link:hover {
+  color: var(--clr-secondary-200);
+}

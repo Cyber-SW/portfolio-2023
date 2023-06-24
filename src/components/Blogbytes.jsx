@@ -26,7 +26,9 @@ function Blogbytes() {
     <>
       <div className="projects-text-container">
         <div className="projects-head">
-          <h3>{language === "EN" ? "Time Limit: 6 Days" : "Zeitlimit: 6 Tage"}</h3>
+          <h3>
+            {language === "EN" ? "Time Limit: 6 Days" : "Zeitlimit: 6 Tage"}
+          </h3>
           <div className="projects-links">
             <a href="https://github.com/Cyber-SW/blogbytes" target="blank">
               <div className="github-link" />
@@ -59,19 +61,35 @@ function Blogbytes() {
             </label>
             <div className="content">
               <p>
-                {language === "EN"
-                  ? `Blogbytes is an blogging website where users can create, read,
-                update, delete and comment and like blogs. This project was
-                created in collaboration with Muhammad Hussain, with the goal of learning the GitHub workflow.`
-                  : "Blogbytes ist eine Blogging-Website, auf der Benutzer Blogs erstellen, lesen, aktualisieren, löschen, kommentieren und liken können. Dieses Projekt wurde in Zusammenarbeit mit Muhammad Hussain erstellt, mit dem Ziel, den GitHub-Workflow zu erlernen."}
-
-                {/* <a
-                  href="https://www.linkedin.com/in/muhammad-hussain-kamran-/"
-                  target="blank"
-                  style={{ color: "#A1A1A1" }}
-                >
-                  Muhammad Hussain
-                </a> */}
+                {language === "EN" ? (
+                  <>
+                    Blogbytes is an blogging website where users can create,
+                    read, update, delete and comment and like blogs. This
+                    project was created in collaboration with{" "}
+                    <a
+                      href="https://www.linkedin.com/in/muhammad-hussain-kamran-/"
+                      target="blank"
+                      className="credit-link"
+                    >
+                      Muhammad Hussain
+                    </a>
+                    , with the goal of learning the GitHub workflow.
+                  </>
+                ) : (
+                  <>
+                    Blogbytes ist eine Blogging-Website, auf der Benutzer Blogs
+                    erstellen, lesen, aktualisieren, löschen, kommentieren und
+                    liken können. Dieses Projekt wurde in Zusammenarbeit mit{" "}
+                    <a
+                      href="https://www.linkedin.com/in/muhammad-hussain-kamran-/"
+                      target="blank"
+                      className="credit-link"
+                    >
+                      Muhammad Hussain
+                    </a>{" "}
+                    erstellt, mit dem Ziel, den GitHub-Workflow zu erlernen.
+                  </>
+                )}
               </p>
             </div>
             <hr className="content-hr" />

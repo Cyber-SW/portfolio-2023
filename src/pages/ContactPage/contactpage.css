@@ -43,3 +43,19 @@
 .contact-btn:hover {
   animation: none;
 }
+
+.contact-credits h4 {
+  font-size: 0.8rem;
+  font-weight: 300;
+  text-align: center;
+}
+
+.credits-link {
+  text-decoration: none;
+  color: var(--clr-primary-200);
+  transition: all var(--animation-timing);
+}
+
+.credits-link:hover {
+  color: var(--clr-secondary-200);
+}

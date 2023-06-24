@@ -1,6 +1,27 @@
 .navbar {
   height: 6rem;
-  position: relative;
+  width: 100%;
+  position: fixed;
+  transition: all var(--animation-timing);
+  z-index: 999;
+}
+
+.top {
+  top: 0;
+}
+
+.down {
+  top: -6rem;
+}
+
+.up {
+  top: 0;
+}
+
+.up,
+.down {
+  background: rgba(21, 21, 21, 0.97);
+  box-shadow: 0px 0px 5px black;
 }
 
 .nav-container {
@@ -8,7 +29,7 @@
   justify-content: space-between;
   align-items: center;
   height: 100%;
-  max-width: 100%;
+  width: 100%;
 }
 
 .nav-logo img {
@@ -49,7 +70,7 @@
   justify-content: flex-end;
   align-items: center;
   width: 25rem;
-  padding-right: 4.45rem;
+  padding-right: 5rem;
 }
 
 .lang-btn {
@@ -76,7 +97,6 @@
 .lang-btn:hover {
   color: var(--clr-secondary-200);
 }
-
 
 /* MOBILE */
 @media (max-width: 480px) {

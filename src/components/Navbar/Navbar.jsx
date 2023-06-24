@@ -1,4 +1,4 @@
-import { useState, useContext } from "react";
+import { useState, useContext, useEffect } from "react";
 import { LanguageContext } from "../../context/lang.context";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLanguage } from "@fortawesome/free-solid-svg-icons";
@@ -8,6 +8,7 @@ import "./navbar.css";
 
 function Navbar() {
   const [toggleNav, setToggleNav] = useState(false);
+  const [navstate, setNavstate] = useState("top");
 
   const { language, toggleLanguage } = useContext(LanguageContext);
 
@@ -17,8 +18,26 @@ function Navbar() {
     setToggleNav(!toggleNav);
   };
 
+  useEffect(() => {
+    let prevScrollPos = 0;
+    window.onscroll = function () {
+      let y = window.scrollY;
+
+      if (y > prevScrollPos) {
+        setNavstate("down");
+      }
+      if (y < prevScrollPos) {
+        setNavstate("up");
+      }
+      if (y === 0) {
+        setNavstate("top");
+      }
+      prevScrollPos = y;
+    };
+  }, []);
+
   return (
-    <nav className="navbar">
+    <nav className={"navbar " + navstate}>
       <div className="nav-container">
         <div className={`nav-links  ${toggleNav && "active"}`}>
           <ul>

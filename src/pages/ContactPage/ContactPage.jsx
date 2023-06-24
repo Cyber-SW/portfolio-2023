@@ -30,6 +30,10 @@ function ContactPage() {
             </button>
           </a>
         </div>
+        <div className="contact-credits">
+          <a href="https://github.com/Cyber-SW/portfolio-2023" target="blank" className="credits-link"><h4>Designed & developed by Shawn Wolter<br/>with React and Vite.</h4></a>
+          <a href="https://v4.brittanychiang.com/" target="blank" className="credits-link"><h4>Inspiration</h4></a>
+        </div>
       </section>
     </Element>
   );

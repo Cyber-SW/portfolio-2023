@@ -34,7 +34,7 @@ function HeroSection() {
             and is to this day.`
               : `Design und Technologie begleiten mich schon seit meiner Kindheit, als ich noch gern gezeichnet oder mit Legos gespielt habe. Für mich müssen die Dinge funktional sein, aber eben auch gut aussehen. Das war mein Motto und ist es bis heute.`}
           </p>
-          <Link to="Work" smooth={true}>
+          <Link to="Projects" smooth={true}>
             <button type="button" className="hero-section-btn">
               {language === "EN"
                 ? "CHECK OUT\nMY WORK"

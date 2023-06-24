@@ -28,7 +28,7 @@ function AboutSection() {
                 className="about-cv-btn"
                 style={
                   language === "DE"
-                    ? { paddingTop: "0.5rem" }
+                    ? { paddingTop: "0.3rem" }
                     : { paddingTop: "0" }
                 }
               >
