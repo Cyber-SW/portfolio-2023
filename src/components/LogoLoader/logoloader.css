@@ -1,0 +1,31 @@
+.logo-loader-container {
+  max-width: 20rem;
+}
+
+.logo-svg-loader {
+  fill: transparent;
+  stroke: #ffffff;
+  stroke-miterlimit: 10;
+  stroke-dasharray: 2926.772px;
+  stroke-dashoffset: 2926.772px;
+  animation: logo_animation 8s ease-in-out forwards;
+}
+
+@keyframes logo_animation {
+  10% {
+    stroke-dashoffset: 2926.772px;
+    fill: transparent;
+  }
+  50% {
+    stroke-dashoffset: 0;
+    fill: transparent;
+  }
+  75% {
+    stroke-dashoffset: 0;
+    fill: white;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    fill: white;
+  }
+}

@@ -204,8 +204,8 @@ function RetroSpaceOne() {
                   ? `In case you want to play the game, here are the controls:
                   W = Move Up | S = Move Down | A = Move Left
                   D = Move Right | Space = Shoot | Have fun!`
-                  : `Hier ist die Steuerung, falls du Retro Space One spielen möchtest: W = Move Up | S = Move Down | A = Move Left
-                  D = Move Right | Space = Shoot | Have fun!`}
+                  : `Hier ist die Steuerung, falls du Retro Space One spielen möchtest: W = Hoch | S = Runter | A = Links
+                  D = Rechts | Leertaste = Schießen | Viel Spaß!`}
               </p>
             </div>
           </li>
