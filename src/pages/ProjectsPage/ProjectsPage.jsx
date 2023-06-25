@@ -62,22 +62,24 @@ function ProjectsPage() {
               alt="triangle svg"
               className="triangle-svg"
             />
-            <button
-              type="button"
-              id="back"
-              className="triangle-btn-back"
-              onClick={handleProjectGallery}
-            >
-              {language === "EN" ? "BACK" : "ZURÜCK"}
-            </button>
-            <button
-              type="button"
-              id="forth"
-              className="triangle-btn-forth"
-              onClick={handleProjectGallery}
-            >
-              {language === "EN" ? "NEXT" : "NÄCHSTES"}
-            </button>
+            <div className="projects-btn-container">
+              <button
+                type="button"
+                id="back"
+                className="triangle-btn-back"
+                onClick={handleProjectGallery}
+              >
+                {language === "EN" ? "BACK" : "ZURÜCK"}
+              </button>
+              <button
+                type="button"
+                id="forth"
+                className="triangle-btn-forth"
+                onClick={handleProjectGallery}
+              >
+                {language === "EN" ? "NEXT" : "NÄCHSTES"}
+              </button>
+            </div>
           </div>
 
           {countProject === 1 && <RetroSpaceOne />}

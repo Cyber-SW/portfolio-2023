@@ -1,13 +1,16 @@
 .logo-loader-container {
-  max-width: 20rem;
+  max-width: 10rem;
+  margin: 40vh auto;
 }
 
 .logo-svg-loader {
   fill: transparent;
   stroke: #ffffff;
+  stroke-width: 3;
   stroke-miterlimit: 10;
   stroke-dasharray: 2926.772px;
   stroke-dashoffset: 2926.772px;
+  transform-origin: center;
   animation: logo_animation 8s ease-in-out forwards;
 }
 
@@ -15,17 +18,29 @@
   10% {
     stroke-dashoffset: 2926.772px;
     fill: transparent;
+    transform: scale(100%);
   }
   50% {
     stroke-dashoffset: 0;
     fill: transparent;
+    transform: scale(100%);
   }
   75% {
     stroke-dashoffset: 0;
     fill: white;
+    transform: scale(100%);
   }
-  100% {
+  90% {
     stroke-dashoffset: 0;
     fill: white;
+    transform: scale(100%);
+  }
+  95% {
+    stroke-dashoffset: 0;
+    fill: white;
+    transform: scale(100%);
+  }
+  100% {
+    transform: scale(20%);
   }
 }

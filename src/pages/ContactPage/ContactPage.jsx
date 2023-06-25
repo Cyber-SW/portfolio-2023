@@ -16,7 +16,7 @@ function ContactPage() {
 
         <div className="contact-container">
           <h3>{language === "EN" ? "What´s next?" : "Was jetzt?"}</h3>
-          <h2>{language === "EN" ? "Get in touch" : "Kontakt aufnehmen"}</h2>
+          <h2>{language === "EN" ? "Get in Touch" : "Kontakt aufnehmen"}</h2>
           <p>
             {language === "EN"
               ? `I am currently looking for a full-time job as a junior developer so

@@ -76,3 +76,19 @@
 .sidebar-vl-right {
   right: 0;
 }
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .sidebar {
+    display: none;
+  }
+}
+
+/* LAPTOPS */
+@media (min-width: 769px) and (max-width: 1300px) {
+  .cw-icon {
+    background-size: 1.42rem;
+    width: 1.42rem;
+    height: 1.42rem;
+  }
+}

@@ -61,6 +61,7 @@ hr {
   padding: 0 4rem;
   background-color: var(--clr-primary-600);
   color: var(--clr-primary-400);
+  white-space: nowrap;
   z-index: 800;
 }
 
@@ -88,16 +89,14 @@ hr {
 }
 
 /* MOBILE */
-@media (max-width: 480px) {
-  :root {
-    font-size: 10px;
-  }
-}
-
-/* TABLETS */
-@media (min-width: 481px) and (max-width: 768px) {
+@media (max-width: 768px) {
   :root {
     font-size: 12px;
+  }
+
+  .section-headline {
+    font-size: 3rem;
+    padding: 0 2rem;
   }
 }
 

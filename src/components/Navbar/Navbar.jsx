@@ -9,6 +9,8 @@ import "./navbar.css";
 function Navbar() {
   const [toggleNav, setToggleNav] = useState(false);
   const [navstate, setNavstate] = useState("top");
+  const [mobile, setMobile] = useState(null);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   const { language, toggleLanguage } = useContext(LanguageContext);
 
@@ -17,6 +19,21 @@ function Navbar() {
   const handleToggleNavbar = () => {
     setToggleNav(!toggleNav);
   };
+
+  useEffect(() => {
+    const handleWindowWidthResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+    window.addEventListener("resize", handleWindowWidthResize);
+
+    return () => {
+      window.removeEventListener("resize", handleWindowWidthResize);
+    };
+  }, []);
+
+  useEffect(() => {
+    windowWidth < 769 ? setMobile(true) : setMobile(false);
+  }, [windowWidth]);
 
   useEffect(() => {
     let prevScrollPos = 0;
@@ -56,6 +73,38 @@ function Navbar() {
                 {language === "EN" ? "CONTACT" : "KONTAKT"}
               </Link>
             </li>
+            {mobile ? (
+              <li
+                className={`lang-btn-container-mobile ${toggleNav && "active"}`}
+              >
+                {language === "EN" ? (
+                  <button
+                    type="button"
+                    id="DE"
+                    className="lang-btn"
+                    onClick={toggleLanguage}
+                  >
+                    GERMAN
+                  </button>
+                ) : (
+                  <button
+                    type="button"
+                    id="EN"
+                    className="lang-btn"
+                    onClick={toggleLanguage}
+                  >
+                    ENGLISCH
+                  </button>
+                )}
+                <FontAwesomeIcon
+                  icon={faLanguage}
+                  size="2x"
+                  className="lang-icon"
+                />
+              </li>
+            ) : (
+              ""
+            )}
           </ul>
         </div>
 
@@ -65,36 +114,47 @@ function Navbar() {
           </Link>
         </div>
 
-        <div className="lang-btn-container">
-          {language === "EN" ? (
-            <button
-              type="button"
-              id="DE"
-              className="lang-btn"
-              onClick={toggleLanguage}
-            >
-              GERMAN
-            </button>
-          ) : (
-            <button
-              type="button"
-              id="EN"
-              className="lang-btn"
-              onClick={toggleLanguage}
-            >
-              ENGLISCH
-            </button>
-          )}
-          <FontAwesomeIcon icon={faLanguage} size="2x" className="lang-icon" />
-        </div>
-        {/* <div
-          className={`menu-icon ${toggleNav && "active"}`}
-          onClick={handleToggleNavbar}
-        >
-          <span className="bar"></span>
-          <span className={`bar middle ${toggleNav && "active"}`}></span>
-          <span className="bar"></span>
-        </div> */}
+        {!mobile ? (
+          <div className={`lang-btn-container ${toggleNav && "active"}`}>
+            {language === "EN" ? (
+              <button
+                type="button"
+                id="DE"
+                className="lang-btn"
+                onClick={toggleLanguage}
+              >
+                GERMAN
+              </button>
+            ) : (
+              <button
+                type="button"
+                id="EN"
+                className="lang-btn"
+                onClick={toggleLanguage}
+              >
+                ENGLISCH
+              </button>
+            )}
+            <FontAwesomeIcon
+              icon={faLanguage}
+              size="2x"
+              className="lang-icon"
+            />
+          </div>
+        ) : (
+          ""
+        )}
+
+        {mobile && (
+          <div
+            className={`menu-icon ${toggleNav && "active"}`}
+            onClick={handleToggleNavbar}
+          >
+            <span className="bar"></span>
+            <span className={`bar middle ${toggleNav && "active"}`}></span>
+            <span className="bar"></span>
+          </div>
+        )}
       </div>
     </nav>
   );

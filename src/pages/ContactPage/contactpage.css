@@ -59,3 +59,18 @@
 .credits-link:hover {
   color: var(--clr-secondary-200);
 }
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+}
+
+/* LAPTOPS */
+@media (min-width: 769px) and (max-width: 1300px) {
+  
+}
+
+/* DESKTOPS */
+@media (min-width: 1301px) {
+  
+}
