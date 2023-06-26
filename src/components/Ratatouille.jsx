@@ -210,7 +210,7 @@ function Ratatouille() {
               Extras
             </label>
             <div className="content">
-              <video width="320px" height="240px" controls>
+              <video className="video-ad" controls>
                 <source src={RatatouilleAd} type="video/mp4" />
                 {language === "EN"
                   ? "Your browser does not support videos."

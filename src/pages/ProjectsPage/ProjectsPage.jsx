@@ -3,8 +3,11 @@ import RetroSpaceOne from "../../components/RetroSpaceOne";
 import Ratatouille from "../../components/Ratatouille";
 import Blogbytes from "../../components/Blogbytes";
 import RetroSpaceOneCollage from "../../assets/projects-section/triangle-collage-retro-space-one.png";
+import RetroSpaceOneCollageMobile from "../../assets/projects-section/triangle-collage-retro-space-one-mobile.png";
 import BlogbytesCollage from "../../assets/projects-section/triangle-collage-blogbytes.png";
-import RatatouilleCollage from "../../assets/projects-section/triangle-collage-ratatouille.png";
+import BlogbytesCollageMobile from "../../assets/projects-section/triangle-collage-blogbytes-mobile.png";
+import RatatouilleCollage from "../../assets/projects-section/triangle-collage-ratatouille-2.png";
+import RatatouilleCollageMobile from "../../assets/projects-section/triangle-collage-ratatouille-mobile.png";
 import { useState, useEffect } from "react";
 import { Element } from "react-scroll";
 import { LanguageContext } from "../../context/lang.context";
@@ -14,6 +17,8 @@ function ProjectsPage() {
   let [countProject, setCountProject] = useState(1);
   const [displayProject, setDisplayProject] = useState(RetroSpaceOneCollage);
   const [projectName, setProjectName] = useState("");
+  const [mobile, setMobile] = useState(null);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   const { language } = useContext(LanguageContext);
 
@@ -31,14 +36,37 @@ function ProjectsPage() {
 
   useEffect(() => {
     countProject === 1
-      ? (setDisplayProject(RetroSpaceOneCollage),
+      ? (mobile
+          ? setDisplayProject(RetroSpaceOneCollageMobile)
+          : setDisplayProject(RetroSpaceOneCollage),
         setProjectName("Retro Space One"))
       : countProject === 2
-      ? (setDisplayProject(BlogbytesCollage), setProjectName("Blogbytes"))
+      ? (mobile
+          ? setDisplayProject(BlogbytesCollageMobile)
+          : setDisplayProject(BlogbytesCollage),
+        setProjectName("Blogbytes"))
       : countProject === 3
-      ? (setDisplayProject(RatatouilleCollage), setProjectName("Ratatouille"))
+      ? (mobile
+          ? setDisplayProject(RatatouilleCollageMobile)
+          : setDisplayProject(RatatouilleCollage),
+        setProjectName("Ratatouille"))
       : "";
-  }, [countProject]);
+  }, [countProject, mobile]);
+
+  useEffect(() => {
+    const handleWindowWidthResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+    window.addEventListener("resize", handleWindowWidthResize);
+
+    return () => {
+      window.removeEventListener("resize", handleWindowWidthResize);
+    };
+  }, []);
+
+  useEffect(() => {
+    windowWidth < 1300 ? setMobile(true) : setMobile(false);
+  }, [windowWidth]);
 
   return (
     <Element id="Projects" name="Projects Section">

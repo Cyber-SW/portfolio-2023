@@ -94,6 +94,10 @@ hr {
     font-size: 12px;
   }
 
+  hr {
+    width: 90%;
+  }
+
   .section-headline {
     font-size: 3rem;
     padding: 0 2rem;

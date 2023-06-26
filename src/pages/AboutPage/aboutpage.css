@@ -22,7 +22,6 @@
   line-height: 1.6rem;
   color: var(--clr-primary-200);
   margin-left: 5.5rem;
-  border: 1px solid red;
 }
 
 .about-text-container h2 {
@@ -107,68 +106,8 @@
   animation: none;
 }
 
-/* MOBILE */
-@media (max-width: 768px) {
-  .about-container {
-    flex-direction: column;
-    margin: auto 2rem;
-    margin-bottom: 16rem;
-    margin-top: 10rem;
-  }
-
-  .about-left-container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    max-width: 100%;
-  }
-
-  .about-image-container {
-    max-width: 25rem;
-  }
-
-  .about-image-container img {
-    max-width: 100%;
-  }
-
-  .about-skills-container {
-    display: flex;
-    flex-direction: column;
-    max-width: 8rem;
-  }
-
-  .about-skills-container li:before {
-    font-size: 0.5rem;
-    left: -0.5rem;
-  }
-
-  .about-skills-container li {
-    font-size: 0.8rem;
-    margin-bottom: 1rem;
-    right: 0;
-  }
-
-  .about-text-container {
-    margin: auto;
-    margin-top: 5rem;
-    max-width: 33rem;
-  }
-
-  .about-cv-btn,
-  .about-certificates-btn {
-    bottom: 3.88rem;
-    width: 5.7rem;
-    height: 6.5rem;
-  }
-
-  .about-certificates-btn {
-    top: 3.75rem;
-    left: -5.7rem;
-  }
-}
-
-/* LAPTOPS */
-@media (min-width: 769px) and (max-width: 1300px) {
+/* MOBILE + SMALL SCREENS */
+@media (max-width: 1300px) {
   .about-container {
     flex-direction: column;
     margin: auto 2rem;
@@ -226,3 +165,126 @@
     left: -5.7rem;
   }
 }
+
+/* ULTRA SMALL SCREENS */
+@media (max-width: 450px) {
+  .about-left-container {
+    flex-direction: column;
+  }
+
+  .about-image-container {
+    max-width: 33rem;
+    border: 1px solid red;
+  }
+
+  .about-image-container img {
+    margin-right: 0;
+  }
+
+  .about-skills-container {
+    display: inline;
+    flex-direction: row;
+    max-width: 33rem;
+    margin-top: 4rem;
+    border: 1px solid red;
+  }
+
+  .about-skills-container ul {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  .about-skills-container li:before {
+    display: inline;
+    font-size: 0.5rem;
+    left: 0;
+  }
+
+  .about-skills-container li {
+    display: inline-block;
+    font-size: 1rem;
+    right: 0;
+    padding-right: 1rem;
+  }
+
+  .about-cv-btn,
+  .about-certificates-btn {
+    bottom: 0;
+    width: 5.7rem;
+    height: 6.5rem;
+  }
+
+  .about-certificates-btn {
+    top: 0;
+    left: 0;
+  }
+
+  .about-btn-container {
+    position: absolute;
+    left: 2rem;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid red;
+    max-width: 33rem;
+  }
+}
+
+/* LAPTOPS */
+/* @media (min-width: 769px) and (max-width: 1300px) {
+  .about-container {
+    flex-direction: column;
+    margin: auto 2rem;
+    margin-bottom: 16rem;
+    margin-top: 10rem;
+  }
+
+  .about-left-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    max-width: 100%;
+  }
+
+  .about-image-container {
+    max-width: 25rem;
+  }
+
+  .about-image-container img {
+    max-width: 100%;
+  }
+
+  .about-skills-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 8rem;
+  }
+
+  .about-skills-container li:before {
+    font-size: 0.5rem;
+    left: -0.5rem;
+  }
+
+  .about-skills-container li {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    right: 0;
+  }
+
+  .about-text-container {
+    margin: auto;
+    margin-top: 5rem;
+    max-width: 33rem;
+  }
+
+  .about-cv-btn,
+  .about-certificates-btn {
+    bottom: 3.88rem;
+    width: 5.7rem;
+    height: 6.5rem;
+  }
+
+  .about-certificates-btn {
+    top: 3.75rem;
+    left: -5.7rem;
+  }
+} */

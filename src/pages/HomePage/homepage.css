@@ -54,8 +54,8 @@
   animation: none;
 }
 
-/* MOBILE */
-@media (max-width: 768px) {
+/* MOBILE + SMALL SCREENS */
+@media (max-width: 1300px) {
   .hero-headline-container {
     max-width: 37rem;
     padding: 0 2rem;
@@ -71,12 +71,17 @@
 }
 
 /* LAPTOPS */
-@media (min-width: 769px) and (max-width: 1300px) {
+/* @media (min-width: 769px) and (max-width: 1300px) {
   .hero-headline-container {
-    max-width: 70%;
+    max-width: 37rem;
+    padding: 0 2rem;
+  }
+
+  .hero-headline-container h1 {
+    font-size: 2.8rem;
   }
 
   .hero-headline-container p {
-    max-width: 60%;
+    max-width: 33rem;
   }
-}
+} */
