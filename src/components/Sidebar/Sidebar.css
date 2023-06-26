@@ -10,6 +10,7 @@
   width: 10rem;
   bottom: 0;
   border-top: 1px solid var(--clr-primary-200);
+  z-index: 700;
 }
 
 .sidebar-container-left {
@@ -21,15 +22,16 @@
   position: fixed;
   left: 4.4rem;
   bottom: 7.8rem;
+  z-index: 701;
 }
 
 .github-icon {
-  font-size: 21px;
+  font-size: 1.31rem;
   transition: transform var(--animation-timing);
 }
 
 .linkedin-icon {
-  font-size: 20px;
+  font-size: 1.25rem;
   transition: transform var(--animation-timing);
 }
 
@@ -85,7 +87,11 @@
 }
 
 /* LAPTOPS */
-@media (min-width: 769px) and (max-width: 1300px) {
+@media (min-width: 769px) and (max-width: 1380px) {
+  .github-icon {
+    font-size: 1.45rem;
+  }
+
   .cw-icon {
     background-size: 1.42rem;
     width: 1.42rem;

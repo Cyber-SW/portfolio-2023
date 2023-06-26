@@ -65,7 +65,7 @@ function ProjectsPage() {
   }, []);
 
   useEffect(() => {
-    windowWidth < 1300 ? setMobile(true) : setMobile(false);
+    windowWidth < 1380 ? setMobile(true) : setMobile(false);
   }, [windowWidth]);
 
   return (

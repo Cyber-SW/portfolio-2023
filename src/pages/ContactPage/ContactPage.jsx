@@ -1,10 +1,29 @@
 import "./contactpage.css";
 import { Element } from "react-scroll";
 import { LanguageContext } from "../../context/lang.context";
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 
 function ContactPage() {
   const { language } = useContext(LanguageContext);
+  const [mobile, setMobile] = useState(null);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleWindowWidthResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+    window.addEventListener("resize", handleWindowWidthResize);
+
+    return () => {
+      window.removeEventListener("resize", handleWindowWidthResize);
+    };
+  }, []);
+
+  useEffect(() => {
+    windowWidth < 768 ? setMobile(true) : setMobile(false);
+  }, [windowWidth]);
 
   return (
     <Element id="Contact" name="Contact Section">
@@ -30,9 +49,58 @@ function ContactPage() {
             </button>
           </a>
         </div>
+        {mobile ? (
+          <div className="contact-social-btn">
+            <a
+              href="https://github.com/Cyber-SW"
+              style={{ color: "var(--clr-primary-200)" }}
+              target="blank"
+            >
+              <FontAwesomeIcon
+                icon={faGithub}
+                size="2x"
+                className="contact-github-icon"
+              />
+            </a>
+            <a
+              href="https://www.codewars.com/users/Cyber-SW"
+              target="blank"
+              className="contact-cw-icon"
+            />
+            <a
+              href="https://www.linkedin.com/in/shawn-wolter-93a263195/"
+              style={{ color: "var(--clr-primary-200)" }}
+              target="blank"
+            >
+              <FontAwesomeIcon
+                icon={faLinkedinIn}
+                size="2x"
+                className="contact-linkedin-icon"
+              />
+            </a>
+          </div>
+        ) : (
+          ""
+        )}
         <div className="contact-credits">
-          <a href="https://github.com/Cyber-SW/portfolio-2023" target="blank" className="credits-link"><h4>Designed & developed by Shawn Wolter<br/>with React and Vite.</h4></a>
-          <a href="https://v4.brittanychiang.com/" target="blank" className="credits-link"><h4>Inspiration</h4></a>
+          <a
+            href="https://github.com/Cyber-SW/portfolio-2023"
+            target="blank"
+            className="credits-link"
+          >
+            <h4>
+              Designed & developed by Shawn Wolter
+              <br />
+              with React and Vite.
+            </h4>
+          </a>
+          <a
+            href="https://v4.brittanychiang.com/"
+            target="blank"
+            className="credits-link"
+          >
+            <h4>Inspiration</h4>
+          </a>
         </div>
       </section>
     </Element>

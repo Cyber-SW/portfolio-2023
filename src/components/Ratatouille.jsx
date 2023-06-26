@@ -1,4 +1,4 @@
-import { useState, useContext } from "react";
+import { useState, useContext, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faCss3,
@@ -19,12 +19,29 @@ import RatatouilleAd from "../assets/projects-section/ratatouille-advertisement.
 
 function Ratatouille() {
   const [selectedSection, setSelectedSection] = useState("one");
+  const [mobile, setMobile] = useState(null);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   const { language } = useContext(LanguageContext);
 
   function handleSelect(e) {
     setSelectedSection(e.target.id);
   }
+
+  useEffect(() => {
+    const handleWindowWidthResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+    window.addEventListener("resize", handleWindowWidthResize);
+
+    return () => {
+      window.removeEventListener("resize", handleWindowWidthResize);
+    };
+  }, []);
+
+  useEffect(() => {
+    windowWidth < 1380 ? setMobile(true) : setMobile(false);
+  }, [windowWidth]);
 
   return (
     <>
@@ -68,7 +85,7 @@ function Ratatouille() {
             <div className="content">
               <p>
                 {language === "EN"
-                  ? `Ratatouille is a dish generator and eating habits organizer
+                  ? `Ratatouille is a dish generator and meal planner
                 powered by OpenAi´s artificial intelligence ChatGPT. It is
                 optimized for mobile and HD screens upwards.`
                   : `Ratatouille ist ein Rezeptgenerator und Essensplaner, der mit der künstlichen Intelligenz ChatGPT von OpenAi angetrieben wird. Es ist für Mobilgeräte und HD-Bildschirme aufwärts optimiert.`}
@@ -172,17 +189,37 @@ function Ratatouille() {
                 <FontAwesomeIcon icon={faJs} size={"2x"} />
                 <FontAwesomeIcon icon={faHtml5} size={"2x"} />
                 <FontAwesomeIcon icon={faCss3} size={"2x"} />
-                <img src={MongoDb} alt="mongodb logo" width={"17rem"} />
-                <img src={ExJs} alt="express logo" width={"45rem"} />
-                <img src={React} alt="react logo" width={"33rem"} />
+                <img
+                  src={MongoDb}
+                  alt="mongodb logo"
+                  width={mobile ? "12rem" : "17rem"}
+                />
+                <img
+                  src={ExJs}
+                  alt="express logo"
+                  width={mobile ? "35rem" : "45rem"}
+                />
+                <img
+                  src={React}
+                  alt="react logo"
+                  width={mobile ? "25rem" : "33rem"}
+                />
                 <FontAwesomeIcon icon={faNodeJs} size={"2x"} />
-                <img src={Jwt} alt="jwt logo" width={"85rem"} />
-                <img src={Vite} alt="vite logo" width={"30rem"} />
+                <img
+                  src={Jwt}
+                  alt="jwt logo"
+                  width={mobile ? "65rem" : "85rem"}
+                />
+                <img
+                  src={Vite}
+                  alt="vite logo"
+                  width={mobile ? "22rem" : "30rem"}
+                />
                 <img
                   src={Axios}
                   alt="axios logo"
                   width={"90rem"}
-                  style={{ marginBottom: "1.5rem" }}
+                  style={{ marginBottom: mobile ? "1.1rem" : "1.5rem" }}
                 />
                 <FontAwesomeIcon icon={faGithub} size={"2x"} />
                 <FontAwesomeIcon icon={faGitAlt} size={"2x"} />

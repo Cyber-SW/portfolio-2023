@@ -21,37 +21,40 @@ function AboutSection() {
 
         <div className="about-container">
           <div className="about-left-container">
-            <div className="about-btn-container">
-              <a href={language === "EN" ? CV : Lebenslauf} target="blank">
-                <button
-                  type="button"
-                  id="cv"
-                  className="about-cv-btn"
-                  style={
-                    language === "DE"
-                      ? { paddingTop: "0.3rem" }
-                      : { paddingTop: "0" }
-                  }
+            <div className="about-btn-img">
+              <div className="about-btn-container">
+                <a href={language === "EN" ? CV : Lebenslauf} target="blank">
+                  <button
+                    type="button"
+                    id="cv"
+                    className="about-cv-btn"
+                    style={
+                      language === "DE"
+                        ? { paddingTop: "0.3rem" }
+                        : { paddingTop: "0" }
+                    }
+                  >
+                    {language === "EN" ? "CV/\nRESUME" : "LEBENS-\nLAUF"}
+                  </button>
+                </a>
+                <a
+                  href={language === "EN" ? Certificates : Zeugnisse}
+                  target="blank"
                 >
-                  {language === "EN" ? "CV/\nRESUME" : "LEBENS-\nLAUF"}
-                </button>
-              </a>
-              <a
-                href={language === "EN" ? Certificates : Zeugnisse}
-                target="blank"
-              >
-                <button
-                  type="button"
-                  id="certificates"
-                  className="about-certificates-btn"
-                >
-                  {language === "EN" ? "CERTIFI-\nCATES" : "ZEUG-\nNISSE"}
-                </button>
-              </a>
+                  <button
+                    type="button"
+                    id="certificates"
+                    className="about-certificates-btn"
+                  >
+                    {language === "EN" ? "CERTIFI-\nCATES" : "ZEUG-\nNISSE"}
+                  </button>
+                </a>
+              </div>
+              <div className="about-image-container">
+                <img src={AboutImage} alt="about-image" />
+              </div>
             </div>
-            <div className="about-image-container">
-              <img src={AboutImage} alt="about-image" />
-            </div>
+
             <div className="about-skills-container">
               <ul>
                 <li>HTML5</li>

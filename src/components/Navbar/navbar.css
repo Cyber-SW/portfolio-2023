@@ -193,7 +193,7 @@
 }
 
 /* LAPTOPS */
-@media (min-width: 769px) and (max-width: 1300px) {
+@media (min-width: 769px) and (max-width: 1380px) {
   .navbar {
     height: 5rem;
   }

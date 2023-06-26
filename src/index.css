@@ -105,15 +105,22 @@ hr {
 }
 
 /* LAPTOPS */
-@media (min-width: 769px) and (max-width: 1300px) {
+@media (min-width: 769px) and (max-width: 1380px) {
   :root {
     font-size: 14px;
   }
 }
 
 /* DESKTOPS */
-@media (min-width: 1301px) {
+@media (min-width: 1381px) {
   :root {
     font-size: 16px;
+  }
+}
+
+/* ULTRA-WIDE SCREENS */
+@media (min-width: 1921px) {
+  :root {
+    font-size: 18px;
   }
 }

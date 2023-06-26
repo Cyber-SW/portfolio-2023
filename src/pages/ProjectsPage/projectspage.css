@@ -6,8 +6,10 @@
 
 .projects-container {
   max-width: 100%;
-  margin: 12rem auto;
-  margin-top: 4rem;
+  position: relative;
+  margin: 7rem auto;
+  margin-top: 5rem;
+  right: 1.5rem;
   display: flex;
   justify-content: space-between;
 }
@@ -15,7 +17,6 @@
 .project-title {
   position: absolute;
   margin-top: 5rem;
-  margin-left: 6rem;
   z-index: 2;
 }
 
@@ -36,13 +37,18 @@
 
 .triangle-svg-container {
   max-width: 40rem;
-  margin-top: 4rem;
-  margin-left: 8rem;
+  margin-top: 5rem;
+  margin-right: 5rem;
   z-index: 1;
 }
 
 .triangle-svg {
   max-width: 100%;
+}
+
+.projects-btn-container {
+  position: relative;
+  bottom: 36.4rem;
 }
 
 .triangle-btn-back {
@@ -86,7 +92,6 @@
 
 .projects-text-container {
   max-width: 30rem;
-  margin-right: 8rem;
   margin-top: 5rem;
   font-size: 1rem;
   line-height: 1.6rem;
@@ -221,7 +226,7 @@ input[type="radio"] {
 }
 
 /* MOBILE + SMALL SCREENS */
-@media (max-width: 1300px) {
+@media (max-width: 1380px) {
   .projects-section-container {
     align-items: center;
     overflow: auto;
@@ -229,6 +234,7 @@ input[type="radio"] {
 
   .projects-container {
     flex-direction: column;
+    position: unset;
     max-width: 33rem;
     margin: 0 2rem;
     margin-bottom: 12rem;
@@ -239,7 +245,6 @@ input[type="radio"] {
     position: unset;
     max-width: 33rem;
     margin-top: 4rem;
-    margin-left: 0;
     z-index: 2;
   }
 
@@ -299,81 +304,10 @@ input[type="radio"] {
   }
 }
 
-/* LAPTOPS */
-/* @media (min-width: 769px) and (max-width: 1300px) {
-  .projects-section-container {
-    align-items: center;
-    overflow: auto;
-    margin: 0 2rem;
-  }
-
+/* ULTRA-WIDE SCREENS */
+@media (min-width: 1921px) {
   .projects-container {
-    flex-direction: column;
-    max-width: 33rem;
-    margin-bottom: 12rem;
-    margin-top: 4rem;
+    margin-top: 6rem;
+    margin-bottom: 10rem;
   }
-
-  .project-title {
-    position: unset;
-    max-width: 33rem;
-    margin-top: 4rem;
-    margin-left: 0;
-    z-index: 2;
-  }
-
-  .triangle-svg {
-    max-width: 100%;
-  }
-
-  .triangle-svg-container {
-    max-width: 33rem;
-    margin: 0 auto;
-    margin-top: 0;
-    margin-bottom: 4rem;
-  }
-
-  .projects-btn-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: unset;
-  }
-
-  .triangle-btn-back {
-    top: 0;
-    left: 0;
-    width: 5.1rem;
-    height: 4.7rem;
-    padding-top: 1rem;
-    padding-bottom: 0;
-  }
-
-  .triangle-btn-forth {
-    top: 0;
-    left: 0;
-    width: 5.1rem;
-    height: 4.7rem;
-    padding-bottom: 1.5rem;
-  }
-
-  .triangle-btn-back:hover,
-  .triangle-btn-forth:hover {
-    animation: none;
-  }
-
-  .projects-text-container {
-    max-width: 33rem;
-    margin-right: 0;
-    margin-top: 0;
-  }
-
-  .projects-head {
-    padding-left: 0;
-  }
-
-  .projects-text-accordion {
-    list-style: none;
-    padding-left: 0;
-  }
-} */
+}

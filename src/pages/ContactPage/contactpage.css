@@ -60,17 +60,64 @@
   color: var(--clr-secondary-200);
 }
 
-/* MOBILE */
+/* MOBILE + SMALL SCREENS */
+@media (max-width: 1380px) {
+  .contact-container {
+    max-width: 33rem;
+    margin: auto 2rem;
+  }
+}
+
+/* SOCIAL ICONS FOR MOBILE */
 @media (max-width: 768px) {
+  .contact-social-btn {
+    max-width: 15rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
 
+  .contact-github-icon {
+    font-size: 20px;
+    transition: transform var(--animation-timing);
+    margin-right: 3rem;
+  }
+
+  .contact-linkedin-icon {
+    font-size: 20px;
+    transition: transform var(--animation-timing);
+    margin-left: 3rem;
+  }
+
+  .contact-github-icon:hover,
+  .contact-linkedin-icon:hover {
+    transform: translateY(-3px);
+    cursor: pointer;
+    color: var(--clr-secondary-200);
+  }
+
+  .contact-cw-icon {
+    background-image: url("../../assets/codewars-grey.svg");
+    background-size: 1.62rem;
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: 1.62rem;
+    height: 1.62rem;
+    transition: transform var(--animation-timing);
+  }
+
+  .contact-cw-icon:hover {
+    background-image: url("../../assets/codewars-orange-200.svg");
+    transform: translateY(-3px);
+    cursor: pointer;
+  }
 }
 
-/* LAPTOPS */
-@media (min-width: 769px) and (max-width: 1300px) {
-  
-}
-
-/* DESKTOPS */
-@media (min-width: 1301px) {
-  
+/* ULTRA-WIDE SCREENS */
+@media (min-width: 1921px) {
+  .contact-section-container {
+    height: 70rem;
+  }
 }

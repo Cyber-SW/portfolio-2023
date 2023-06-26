@@ -11,6 +11,12 @@
   margin-top: 10rem;
 }
 
+.about-btn-img {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
 .about-image-container img {
   max-width: 25rem;
   margin-right: 4rem;
@@ -107,7 +113,7 @@
 }
 
 /* MOBILE + SMALL SCREENS */
-@media (max-width: 1300px) {
+@media (max-width: 1380px) {
   .about-container {
     flex-direction: column;
     margin: auto 2rem;
@@ -174,7 +180,6 @@
 
   .about-image-container {
     max-width: 33rem;
-    border: 1px solid red;
   }
 
   .about-image-container img {
@@ -186,7 +191,7 @@
     flex-direction: row;
     max-width: 33rem;
     margin-top: 4rem;
-    border: 1px solid red;
+    text-align: center;
   }
 
   .about-skills-container ul {
@@ -209,82 +214,21 @@
 
   .about-cv-btn,
   .about-certificates-btn {
-    bottom: 0;
+    right: 0rem;
     width: 5.7rem;
     height: 6.5rem;
   }
 
   .about-certificates-btn {
-    top: 0;
-    left: 0;
-  }
-
-  .about-btn-container {
-    position: absolute;
-    left: 2rem;
-    display: flex;
-    flex-direction: column;
-    border: 1px solid red;
-    max-width: 33rem;
+    top: 3.85rem;
+    left: -5.7rem;
   }
 }
 
-/* LAPTOPS */
-/* @media (min-width: 769px) and (max-width: 1300px) {
+/* ULTRA-WIDE SCREENS */
+@media (min-width: 1921px) {
   .about-container {
-    flex-direction: column;
-    margin: auto 2rem;
-    margin-bottom: 16rem;
-    margin-top: 10rem;
+    margin-bottom: 20rem;
+    margin-top: 16rem;
   }
-
-  .about-left-container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    max-width: 100%;
-  }
-
-  .about-image-container {
-    max-width: 25rem;
-  }
-
-  .about-image-container img {
-    max-width: 100%;
-  }
-
-  .about-skills-container {
-    display: flex;
-    flex-direction: column;
-    max-width: 8rem;
-  }
-
-  .about-skills-container li:before {
-    font-size: 0.5rem;
-    left: -0.5rem;
-  }
-
-  .about-skills-container li {
-    font-size: 1rem;
-    margin-bottom: 1.5rem;
-    right: 0;
-  }
-
-  .about-text-container {
-    margin: auto;
-    margin-top: 5rem;
-    max-width: 33rem;
-  }
-
-  .about-cv-btn,
-  .about-certificates-btn {
-    bottom: 3.88rem;
-    width: 5.7rem;
-    height: 6.5rem;
-  }
-
-  .about-certificates-btn {
-    top: 3.75rem;
-    left: -5.7rem;
-  }
-} */
+}

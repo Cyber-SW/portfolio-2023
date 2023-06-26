@@ -1,4 +1,4 @@
-import { useState, useContext } from "react";
+import { useState, useContext, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faCss3,
@@ -15,12 +15,29 @@ import Hbs from "../assets/projects-section/handlebars-grey.svg";
 
 function Blogbytes() {
   const [selectedSection, setSelectedSection] = useState("one");
+  const [mobile, setMobile] = useState(null);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   const { language } = useContext(LanguageContext);
 
   function handleSelect(e) {
     setSelectedSection(e.target.id);
   }
+
+  useEffect(() => {
+    const handleWindowWidthResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+    window.addEventListener("resize", handleWindowWidthResize);
+
+    return () => {
+      window.removeEventListener("resize", handleWindowWidthResize);
+    };
+  }, []);
+
+  useEffect(() => {
+    windowWidth < 1380 ? setMobile(true) : setMobile(false);
+  }, [windowWidth]);
 
   return (
     <>
@@ -186,8 +203,16 @@ function Blogbytes() {
                 <FontAwesomeIcon icon={faJs} size={"2x"} />
                 <FontAwesomeIcon icon={faHtml5} size={"2x"} />
                 <FontAwesomeIcon icon={faCss3} size={"2x"} />
-                <img src={MongoDb} alt="mongodb logo" width={"17rem"} />
-                <img src={ExJs} alt="express logo" width={"45rem"} />
+                <img
+                  src={MongoDb}
+                  alt="mongodb logo"
+                  width={mobile ? "12rem" : "17rem"}
+                />
+                <img
+                  src={ExJs}
+                  alt="express logo"
+                  width={mobile ? "35rem" : "45rem"}
+                />
                 <FontAwesomeIcon icon={faNodeJs} size={"2x"} />
                 <img
                   src={Hbs}

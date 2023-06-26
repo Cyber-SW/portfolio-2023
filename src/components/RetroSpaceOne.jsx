@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faCss3,
@@ -13,12 +13,29 @@ import { useContext } from "react";
 
 function RetroSpaceOne() {
   const [selectedSection, setSelectedSection] = useState("one");
+  const [mobile, setMobile] = useState(null);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   const { language } = useContext(LanguageContext);
 
   function handleSelect(e) {
     setSelectedSection(e.target.id);
   }
+
+  useEffect(() => {
+    const handleWindowWidthResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+    window.addEventListener("resize", handleWindowWidthResize);
+
+    return () => {
+      window.removeEventListener("resize", handleWindowWidthResize);
+    };
+  }, []);
+
+  useEffect(() => {
+    windowWidth < 1380 ? setMobile(true) : setMobile(false);
+  }, [windowWidth]);
 
   return (
     <>
@@ -172,7 +189,7 @@ function RetroSpaceOne() {
                 <FontAwesomeIcon icon={faJs} size={"2x"} />
                 <FontAwesomeIcon icon={faHtml5} size={"2x"} />
                 <FontAwesomeIcon icon={faCss3} size={"2x"} />
-                <img src={p5Js} alt="p5.js logo" width={"70rem"} />
+                <img src={p5Js} alt="p5.js logo" width={mobile ? "50rem" : "70rem"} />
                 <FontAwesomeIcon icon={faGithub} size={"2x"} />
                 <FontAwesomeIcon icon={faGitAlt} size={"2x"} />
               </div>
