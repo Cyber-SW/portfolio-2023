@@ -117,7 +117,7 @@
   .about-container {
     flex-direction: column;
     margin: auto 2rem;
-    margin-bottom: 16rem;
+    margin-bottom: 13rem;
     margin-top: 10rem;
   }
 
@@ -155,7 +155,7 @@
 
   .about-text-container {
     margin: auto;
-    margin-top: 5rem;
+    margin-top: 4rem;
     max-width: 33rem;
   }
 

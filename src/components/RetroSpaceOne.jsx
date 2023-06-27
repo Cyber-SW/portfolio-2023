@@ -34,7 +34,7 @@ function RetroSpaceOne() {
   }, []);
 
   useEffect(() => {
-    windowWidth < 1380 ? setMobile(true) : setMobile(false);
+    windowWidth < 1381 ? setMobile(true) : setMobile(false);
   }, [windowWidth]);
 
   return (
@@ -189,7 +189,11 @@ function RetroSpaceOne() {
                 <FontAwesomeIcon icon={faJs} size={"2x"} />
                 <FontAwesomeIcon icon={faHtml5} size={"2x"} />
                 <FontAwesomeIcon icon={faCss3} size={"2x"} />
-                <img src={p5Js} alt="p5.js logo" width={mobile ? "50rem" : "70rem"} />
+                <img
+                  src={p5Js}
+                  alt="p5.js logo"
+                  width={mobile ? "50rem" : "70rem"}
+                />
                 <FontAwesomeIcon icon={faGithub} size={"2x"} />
                 <FontAwesomeIcon icon={faGitAlt} size={"2x"} />
               </div>

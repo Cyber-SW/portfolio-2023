@@ -46,8 +46,11 @@
   border: none;
   cursor: pointer;
   color: var(--clr-primary-000);
-  animation: pulse 2s infinite;
   white-space: pre-line;
+}
+
+.hero-section-btn.active {
+  animation: pulse 2s infinite;
 }
 
 .hero-section-btn:hover {

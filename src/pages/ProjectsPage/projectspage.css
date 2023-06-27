@@ -55,7 +55,7 @@
   position: relative;
   top: 23.15rem;
   left: 3.5rem;
-  background-image: url("../../assets/hero-tirangle-new/hero-triangle-button-1.svg");
+  background-image: url("../../assets/projects-section/hero-triangle-button-1.svg");
   width: 8.1rem;
   height: 7.4rem;
   background-color: transparent;
@@ -72,7 +72,7 @@
   position: relative;
   top: 7.3rem;
   left: 23.2rem;
-  background-image: url("../../assets/hero-tirangle-new/hero-triangle-button-2.svg");
+  background-image: url("../../assets/projects-section/hero-triangle-button-2.svg");
   width: 8.8rem;
   height: 7.8rem;
   background-color: transparent;
@@ -291,7 +291,7 @@ input[type="radio"] {
   .projects-text-container {
     max-width: 33rem;
     margin-right: 0;
-    margin-top: 0;
+    margin-top: 4rem;
   }
 
   .projects-head {

@@ -148,7 +148,7 @@
     right: 0;
     top: 0;
     background-color: var(--clr-primary-600);
-    width: 45%;
+    width: 50%;
     height: 0;
     overflow: hidden;
     transition: all var(--animation-timing);

@@ -2,6 +2,7 @@ import { useState, useContext, useEffect } from "react";
 import { LanguageContext } from "../../context/lang.context";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLanguage } from "@fortawesome/free-solid-svg-icons";
+import { useSpring, animated } from "@react-spring/web";
 import * as Scroll from "react-scroll";
 import SWLogo from "../../assets/logo-sw-2.png";
 import "./navbar.css";
@@ -18,6 +19,11 @@ function Navbar() {
 
   const handleToggleNavbar = () => {
     setToggleNav(!toggleNav);
+  };
+
+  const handleLanguageToggle = (e) => {
+    toggleLanguage(e);
+    handleToggleNavbar();
   };
 
   useEffect(() => {
@@ -53,26 +59,55 @@ function Navbar() {
     };
   }, []);
 
+  const navAnimation1 = useSpring({
+    from: { opacity: 0, transform: "translateY(1rem)" },
+    to: { opacity: 1, transform: "translateY(0)" },
+  });
+
+  const navAnimation2 = useSpring({
+    from: { opacity: 0, transform: "translateY(1rem)" },
+    to: { opacity: 1, transform: "translateY(0)" },
+    delay: 150,
+  });
+
+  const navAnimation3 = useSpring({
+    from: { opacity: 0, transform: "translateY(1rem)" },
+    to: { opacity: 1, transform: "translateY(0)" },
+    delay: 300,
+  });
+
+  const navAnimationLangBtn = useSpring({
+    from: { opacity: 0, transform: "translateY(1rem)" },
+    to: { opacity: 1, transform: "translateY(0)" },
+    delay: 450,
+  });
+
+  const navAnimationLogo = useSpring({
+    from: { opacity: 0 },
+    to: { opacity: 1 },
+    delay: mobile ? 250 : 1000,
+  });
+
   return (
     <nav className={"navbar " + navstate}>
-      <div className="nav-container">
+      <div className="nav-container no-select">
         <div className={`nav-links  ${toggleNav && "active"}`}>
           <ul>
-            <li>
-              <Link to="About" smooth={true}>
+            <animated.li style={navAnimation1}>
+              <Link to="About" smooth={true} onClick={handleToggleNavbar}>
                 {language === "EN" ? "ABOUT ME" : "ÜBER MICH"}
               </Link>
-            </li>
-            <li>
-              <Link to="Projects" smooth={true}>
+            </animated.li>
+            <animated.li style={navAnimation2}>
+              <Link to="Projects" smooth={true} onClick={handleToggleNavbar}>
                 {language === "EN" ? "PROJECTS" : "PROJEKTE"}
               </Link>
-            </li>
-            <li>
-              <Link to="Contact" smooth={true}>
+            </animated.li>
+            <animated.li style={navAnimation3}>
+              <Link to="Contact" smooth={true} onClick={handleToggleNavbar}>
                 {language === "EN" ? "CONTACT" : "KONTAKT"}
               </Link>
-            </li>
+            </animated.li>
             {mobile ? (
               <li
                 className={`lang-btn-container-mobile ${toggleNav && "active"}`}
@@ -82,7 +117,7 @@ function Navbar() {
                     type="button"
                     id="DE"
                     className="lang-btn"
-                    onClick={toggleLanguage}
+                    onClick={handleLanguageToggle}
                   >
                     GERMAN
                   </button>
@@ -91,7 +126,7 @@ function Navbar() {
                     type="button"
                     id="EN"
                     className="lang-btn"
-                    onClick={toggleLanguage}
+                    onClick={handleLanguageToggle}
                   >
                     ENGLISCH
                   </button>
@@ -108,14 +143,17 @@ function Navbar() {
           </ul>
         </div>
 
-        <div className="nav-logo">
+        <animated.div className="nav-logo no-select" style={navAnimationLogo}>
           <Link to="Home" smooth={true}>
             <img src={SWLogo} alt="logo-sw" />
           </Link>
-        </div>
+        </animated.div>
 
         {!mobile ? (
-          <div className={`lang-btn-container ${toggleNav && "active"}`}>
+          <animated.div
+            className={`lang-btn-container ${toggleNav && "active"}`}
+            style={navAnimationLangBtn}
+          >
             {language === "EN" ? (
               <button
                 type="button"
@@ -140,20 +178,21 @@ function Navbar() {
               size="2x"
               className="lang-icon"
             />
-          </div>
+          </animated.div>
         ) : (
           ""
         )}
 
         {mobile && (
-          <div
+          <animated.div
             className={`menu-icon ${toggleNav && "active"}`}
             onClick={handleToggleNavbar}
+            style={navAnimationLogo}
           >
             <span className="bar"></span>
             <span className={`bar middle ${toggleNav && "active"}`}></span>
             <span className="bar"></span>
-          </div>
+          </animated.div>
         )}
       </div>
     </nav>

@@ -4,11 +4,13 @@ import { LanguageContext } from "../../context/lang.context";
 import { useContext, useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
+import { useSpring, useScroll, animated } from "@react-spring/web";
 
 function ContactPage() {
   const { language } = useContext(LanguageContext);
   const [mobile, setMobile] = useState(null);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [scrollVal, setScrollVal] = useState(0);
 
   useEffect(() => {
     const handleWindowWidthResize = () => {
@@ -22,18 +24,89 @@ function ContactPage() {
   }, []);
 
   useEffect(() => {
-    windowWidth < 768 ? setMobile(true) : setMobile(false);
+    windowWidth < 769 ? setMobile(true) : setMobile(false);
   }, [windowWidth]);
+
+  const [contactsAnimation1, contactsAnimationApi1] = useSpring(() => ({
+    opacity: 0,
+    transform: "translateY(0rem)",
+  }));
+
+  const [contactsAnimation2, contactsAnimationApi2] = useSpring(() => ({
+    opacity: 0,
+    transform: "translateY(0rem)",
+  }));
+
+  const [contactsAnimation3, contactsAnimationApi3] = useSpring(() => ({
+    opacity: 0,
+  }));
+
+  const [contactsAnimation4, contactsAnimationApi4] = useSpring(() => ({
+    opacity: 0,
+    transform: "translateY(0rem)",
+  }));
+
+  useScroll({
+    onChange: ({ value: { scrollYProgress } }) => {
+      setScrollVal(scrollYProgress.toFixed(2));
+    },
+  });
+
+  useEffect(() => {
+    scrollVal > 0.73
+      ? contactsAnimationApi1.start({
+          opacity: 1,
+          transform: "translateY(0rem)",
+        })
+      : contactsAnimationApi1.start({
+          opacity: 0,
+          transform: "translateY(2rem)",
+        });
+
+    scrollVal > 0.84
+      ? contactsAnimationApi2.start({
+          opacity: 1,
+          transform: "translateY(0rem)",
+        })
+      : contactsAnimationApi2.start({
+          opacity: 0,
+          transform: "translateY(2rem)",
+        });
+
+    scrollVal > 0.99
+      ? contactsAnimationApi3.start({
+          opacity: 1,
+        })
+      : contactsAnimationApi3.start({
+          opacity: 0,
+        });
+
+    scrollVal > 0.97
+      ? contactsAnimationApi4.start({
+          opacity: 1,
+          transform: "translateY(0rem)",
+        })
+      : contactsAnimationApi4.start({
+          opacity: 0,
+          transform: "translateY(2rem)",
+        });
+  }, [
+    scrollVal,
+    contactsAnimationApi1,
+    contactsAnimationApi2,
+    contactsAnimationApi3,
+    contactsAnimationApi4,
+  ]);
 
   return (
     <Element id="Contact" name="Contact Section">
       <section className="contact-section-container">
-        <h1 className="section-headline">
+        <animated.h1 className="section-headline" style={contactsAnimation1}>
           {language === "EN" ? "CONTACT" : "KONTAKT"}
-        </h1>
-        <hr />
+        </animated.h1>
+        <animated.hr style={contactsAnimation1} />
 
-        <div className="contact-container">
+        <animated.div className="contact-container" style={contactsAnimation2}>
           <h3>{language === "EN" ? "What´s next?" : "Was jetzt?"}</h3>
           <h2>{language === "EN" ? "Get in Touch" : "Kontakt aufnehmen"}</h2>
           <p>
@@ -43,50 +116,55 @@ function ContactPage() {
             or just want to say hi, feel free to click the button below.`
               : `Ich bin derzeit auf der Suche nach einer Vollzeitstelle als Junior Entwickler. Wenn du also irgendwelche Jobangebote hast, ein gemeinsames Projekt starten möchtest oder einfach nur Hallo sagen willst, klicke auf die Schaltfläche.`}
           </p>
-          <a href="mailto:woltersh@outlook.de">
-            <button type="button" className="contact-btn">
+          <a href="mailto:woltersh@outlook.de" className="no-select">
+            <button type="button" className="contact-btn no-select">
               {language === "EN" ? "SAY HELLO" : "SAG HALLO"}
             </button>
           </a>
-        </div>
+        </animated.div>
         {mobile ? (
-          <div className="contact-social-btn">
+          <animated.div
+            className="contact-social-btn"
+            style={contactsAnimation4}
+          >
             <a
               href="https://github.com/Cyber-SW"
+              className="no-select"
               style={{ color: "var(--clr-primary-200)" }}
               target="blank"
             >
               <FontAwesomeIcon
                 icon={faGithub}
                 size="2x"
-                className="contact-github-icon"
+                className="contact-github-icon no-select"
               />
             </a>
             <a
               href="https://www.codewars.com/users/Cyber-SW"
               target="blank"
-              className="contact-cw-icon"
+              className="contact-cw-icon no-select"
             />
             <a
               href="https://www.linkedin.com/in/shawn-wolter-93a263195/"
+              className="no-select"
               style={{ color: "var(--clr-primary-200)" }}
               target="blank"
             >
               <FontAwesomeIcon
                 icon={faLinkedinIn}
                 size="2x"
-                className="contact-linkedin-icon"
+                className="contact-linkedin-icon no-select"
               />
             </a>
-          </div>
+          </animated.div>
         ) : (
           ""
         )}
-        <div className="contact-credits">
+        <animated.div className="contact-credits" style={contactsAnimation3}>
           <a
             href="https://github.com/Cyber-SW/portfolio-2023"
             target="blank"
-            className="credits-link"
+            className="credits-link no-select"
           >
             <h4>
               Designed & developed by Shawn Wolter
@@ -97,11 +175,11 @@ function ContactPage() {
           <a
             href="https://v4.brittanychiang.com/"
             target="blank"
-            className="credits-link"
+            className="credits-link no-select"
           >
             <h4>Inspiration</h4>
           </a>
-        </div>
+        </animated.div>
       </section>
     </Element>
   );

@@ -36,7 +36,7 @@ function Blogbytes() {
   }, []);
 
   useEffect(() => {
-    windowWidth < 1380 ? setMobile(true) : setMobile(false);
+    windowWidth < 1381 ? setMobile(true) : setMobile(false);
   }, [windowWidth]);
 
   return (
