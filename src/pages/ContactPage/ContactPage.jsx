@@ -73,7 +73,7 @@ function ContactPage() {
           transform: "translateY(2rem)",
         });
 
-    scrollVal > 0.99
+    scrollVal > 0.97
       ? contactsAnimationApi3.start({
           opacity: 1,
         })
