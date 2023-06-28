@@ -11,7 +11,7 @@
   stroke-dasharray: 2926.772px;
   stroke-dashoffset: 2926.772px;
   transform-origin: center;
-  animation: logo_animation 8s ease-in-out forwards;
+  animation: logo_animation 6s ease-in-out forwards;
 }
 
 @keyframes logo_animation {
