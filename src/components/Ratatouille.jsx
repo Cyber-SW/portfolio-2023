@@ -248,6 +248,7 @@ function Ratatouille() {
             </label>
             <div className="content">
               <video className="video-ad" controls>
+                <source src={RatatouilleAd} type="video/webm" />
                 <source src={RatatouilleAd} type="video/mp4" />
                 {language === "EN"
                   ? "Your browser does not support videos."
