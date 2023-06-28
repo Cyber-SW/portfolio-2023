@@ -46,7 +46,7 @@ function Blogbytes() {
           <h3>
             {language === "EN" ? "Time Limit: 6 Days" : "Zeitlimit: 6 Tage"}
           </h3>
-          <div className="projects-links">
+          <div className="projects-links no-select">
             <a href="https://github.com/Cyber-SW/blogbytes" target="blank">
               <div className="github-link" />
             </a>

@@ -1,4 +1,4 @@
-import AboutImage from "../../assets/about-triangle/about-triangle-image-white-mirror.png";
+import AboutImage from "../../assets/about-triangle/about-triangle-image-white.png";
 import "./aboutpage.css";
 import { Element } from "react-scroll";
 import { LanguageContext } from "../../context/lang.context";

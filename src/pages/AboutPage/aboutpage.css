@@ -85,6 +85,7 @@
 .about-certificates-btn {
   position: relative;
   bottom: 4.35rem;
+  left: -0.1rem;
   background-image: url("../../assets/about-triangle/about-button.svg");
   width: 6.6rem;
   height: 7.5rem;
@@ -102,8 +103,8 @@
 }
 
 .about-certificates-btn {
-  top: 4.22rem;
-  left: -6.6rem;
+  top: 4.15rem;
+  left: -6.7rem;
   padding-top: 0.2rem;
 }
 
@@ -136,20 +137,14 @@
     max-width: 100%;
   }
 
-  .about-skills-container {
-    display: flex;
-    flex-direction: column;
-    max-width: 8rem;
-  }
-
   .about-skills-container li:before {
-    font-size: 0.5rem;
+    font-size: 0.625rem;
     left: -0.5rem;
   }
 
   .about-skills-container li {
-    font-size: 1rem;
-    margin-bottom: 1.5rem;
+    font-size: 1.25rem;
+    margin-bottom: 1.875rem;
     right: 0;
   }
 
@@ -159,21 +154,33 @@
     max-width: 33rem;
   }
 
+  .about-text-container h3 {
+    font-size: 1.25rem;
+    line-height: 1.875rem;
+  }
+
+  .about-text-container p {
+    font-size: 1.25rem;
+    line-height: 1.875rem;
+  }
+
   .about-cv-btn,
   .about-certificates-btn {
-    bottom: 3.88rem;
-    width: 5.7rem;
-    height: 6.5rem;
+    bottom: 4.95rem;
+    left: -0.2rem;
+    width: 7.125rem;
+    height: 8.125rem;
+    font-size: 1rem;
   }
 
   .about-certificates-btn {
-    top: 3.75rem;
-    left: -5.7rem;
+    top: 4.65rem;
+    left: -7.3rem;
   }
 }
 
 /* ULTRA SMALL SCREENS */
-@media (max-width: 450px) {
+@media (max-width: 470px) {
   .about-left-container {
     flex-direction: column;
   }
@@ -191,37 +198,36 @@
     flex-direction: row;
     max-width: 33rem;
     margin-top: 4rem;
+    margin-left: -2rem;
+    margin-right: -2rem;
     text-align: center;
   }
 
   .about-skills-container ul {
     list-style: none;
-    padding-left: 0;
+    padding-left: 2rem;
   }
 
   .about-skills-container li:before {
     display: inline;
-    font-size: 0.5rem;
-    left: 0;
   }
 
   .about-skills-container li {
     display: inline-block;
-    font-size: 1rem;
     right: 0;
-    padding-right: 1rem;
+    padding-right: 2rem;
   }
 
   .about-cv-btn,
   .about-certificates-btn {
     right: 0rem;
-    width: 5.7rem;
-    height: 6.5rem;
+    width: 7.125rem;
+    height: 8.125rem;
   }
 
   .about-certificates-btn {
-    top: 3.85rem;
-    left: -5.7rem;
+    top: 4.68rem;
+    left: -7.3rem;
   }
 }
 

@@ -46,8 +46,13 @@
 
 .contact-credits h4 {
   font-size: 0.8rem;
+  line-height: 1.2rem;
   font-weight: 300;
   text-align: center;
+}
+
+.contact-credits:last-child {
+  margin-bottom: 2rem;
 }
 
 .credits-link {
@@ -66,29 +71,47 @@
     max-width: 33rem;
     margin: auto 2rem;
   }
+
+  .contact-container h3 {
+    font-size: 1.25rem;
+    line-height: 1.875rem;
+  }
+
+  .contact-container h2 {
+    font-size: 2.8rem;
+    line-height: 4.2rem;
+  }
+
+  .contact-container p {
+    font-size: 1.25rem;
+    line-height: 1.875rem;
+  }
+
+  .contact-credits h4 {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
 }
 
 /* SOCIAL ICONS FOR MOBILE */
 @media (max-width: 768px) {
   .contact-social-btn {
-    max-width: 15rem;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     align-items: center;
     margin-bottom: 2rem;
   }
 
   .contact-github-icon {
-    font-size: 20px;
+    font-size: 25px;
     transition: transform var(--animation-timing);
-    margin-right: 3rem;
+    margin-right: 6rem;
   }
 
   .contact-linkedin-icon {
-    font-size: 20px;
+    font-size: 25px;
     transition: transform var(--animation-timing);
-    margin-left: 3rem;
+    margin-left: 6rem;
   }
 
   .contact-github-icon:hover,
@@ -100,11 +123,11 @@
 
   .contact-cw-icon {
     background-image: url("../../assets/codewars-grey.svg");
-    background-size: 1.62rem;
+    background-size: 2rem;
     background-repeat: no-repeat;
     display: inline-block;
-    width: 1.62rem;
-    height: 1.62rem;
+    width: 2rem;
+    height: 2rem;
     transition: transform var(--animation-timing);
   }
 

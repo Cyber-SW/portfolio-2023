@@ -241,11 +241,38 @@ input[type="radio"] {
     margin-top: 4rem;
   }
 
+  .projects-head h3 {
+    font-size: 1.25rem;
+    line-height: 1.875rem;
+  }
+
+  .external-link,
+  .github-link {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-left: 0.95rem;
+  }
+
+  .github-link {
+    width: 1.56rem;
+    height: 1.56rem;
+  }
+
   .project-title {
     position: unset;
     max-width: 33rem;
     margin-top: 4rem;
     z-index: 2;
+  }
+
+  .project-title h2 {
+    font-size: 2.8rem;
+    line-height: 4.2rem;
+  }
+
+  .project-title h3 {
+    font-size: 1.25rem;
+    line-height: 1.875rem;
   }
 
   .triangle-svg {
@@ -269,17 +296,19 @@ input[type="radio"] {
   .triangle-btn-back {
     top: 0;
     left: 0;
-    width: 5.1rem;
-    height: 4.7rem;
-    padding-top: 1rem;
+    width: 6.375rem;
+    height: 5.875rem;
+    font-size: 1rem;
+    padding-top: 1.25rem;
     padding-bottom: 0;
   }
 
   .triangle-btn-forth {
     top: 0;
     left: 0;
-    width: 5.1rem;
-    height: 4.7rem;
+    width: 6.375rem;
+    height: 5.875rem;
+    font-size: 1rem;
     padding-bottom: 1.5rem;
   }
 
@@ -301,6 +330,21 @@ input[type="radio"] {
   .projects-text-accordion {
     list-style: none;
     padding-left: 0;
+  }
+
+  .label-img {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+
+  .projects-text-accordion li label {
+    font-size: 1.75rem;
+    line-height: 2.625rem;
+  }
+
+  .content p {
+    font-size: 1.25rem;
+    line-height: 1.875rem;
   }
 }
 

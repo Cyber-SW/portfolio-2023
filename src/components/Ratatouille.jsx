@@ -50,7 +50,7 @@ function Ratatouille() {
           <h3>
             {language === "EN" ? "Time Limit: 9 Days" : "Zeitlimit: 9 Tage"}
           </h3>
-          <div className="projects-links">
+          <div className="projects-links no-select">
             <a href="https://github.com/Cyber-SW/ratatouille" target="blank">
               <div className="github-link" />
             </a>

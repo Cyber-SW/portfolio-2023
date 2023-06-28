@@ -89,12 +89,32 @@
 /* LAPTOPS */
 @media (min-width: 769px) and (max-width: 1380px) {
   .github-icon {
-    font-size: 1.45rem;
+    font-size: 1.81rem;
+  }
+
+  .linkedin-icon {
+    font-size: 1.56rem;
   }
 
   .cw-icon {
-    background-size: 1.42rem;
-    width: 1.42rem;
-    height: 1.42rem;
+    background-size: 1.77rem;
+    width: 1.77rem;
+    height: 1.77rem;
+  }
+
+  .sidebar-right-mail {
+    font-size: 1.25rem;
+    letter-spacing: 0.05rem;
+    right: 4.6rem;
+    bottom: 8rem;
+  }
+
+  .sidebar-container-left {
+    height: 11.875rem;
+  }
+
+  .sidebar-vl-left,
+  .sidebar-vl-right {
+    width: 10.4rem;
   }
 }

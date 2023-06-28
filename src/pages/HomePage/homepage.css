@@ -66,10 +66,22 @@
 
   .hero-headline-container h1 {
     font-size: 2.8rem;
+    line-height: 5.6rem;
+  }
+
+  .hero-headline-container h2 {
+    font-size: 2rem;
+    line-height: 3rem;
+  }
+
+  .hero-headline-container h3 {
+    font-size: 1.25rem;
   }
 
   .hero-headline-container p {
     max-width: 33rem;
+    font-size: 1.25rem;
+    line-height: 1.875rem;
   }
 }
 
