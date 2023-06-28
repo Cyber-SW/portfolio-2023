@@ -247,13 +247,16 @@ function Ratatouille() {
               Extras
             </label>
             <div className="content">
-              <video className="video-ad" controls muted>
-                <source src={RatatouilleAd} type="video/webm" />
+              <video className="video-ad" controls>
                 <source src={RatatouilleAd} type="video/mp4" />
                 {language === "EN"
                   ? "Your browser does not support videos."
                   : "Dein Browser unterstützt keine Videos."}
               </video>
+              <p>
+                If you see nothing here, turn off your adblocker and reload the
+                page.
+              </p>
             </div>
           </li>
         </ul>
