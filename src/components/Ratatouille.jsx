@@ -247,7 +247,7 @@ function Ratatouille() {
               Extras
             </label>
             <div className="content">
-              <video className="video-ad" controls>
+              <video className="video-ad" controls muted>
                 <source src={RatatouilleAd} type="video/webm" />
                 <source src={RatatouilleAd} type="video/mp4" />
                 {language === "EN"
