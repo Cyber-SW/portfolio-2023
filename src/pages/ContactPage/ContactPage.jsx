@@ -110,11 +110,21 @@ function ContactPage() {
           <h3>{language === "EN" ? "What´s next?" : "Was jetzt?"}</h3>
           <h2>{language === "EN" ? "Get in Touch" : "Kontakt aufnehmen"}</h2>
           <p>
-            {language === "EN"
-              ? `I am currently looking for a full-time job as a junior developer so
-            if you have any job opportunities, want to start a project together,
-            or just want to say hi, feel free to click the button below.`
-              : `Ich bin derzeit auf der Suche nach einer Vollzeitstelle als Junior Entwickler. Wenn du also irgendwelche Jobangebote hast, ein gemeinsames Projekt starten möchtest oder einfach nur Hallo sagen willst, klicke auf die Schaltfläche.`}
+            {language === "EN" ? (
+              <>
+                I am currently looking for a full-time job as a junior developer
+                so if you have any job opportunities, want to start a project
+                together, or just want to say hi, feel free to click the button
+                below.
+              </>
+            ) : (
+              <>
+                Ich bin derzeit auf der Suche nach einer Vollzeitstelle als
+                Junior Entwickler. Wenn du also irgendwelche Jobangebote hast,
+                ein gemeinsames Projekt starten möchtest oder einfach nur Hallo
+                sagen willst, klicke auf die Schaltfläche.
+              </>
+            )}
           </p>
           <a href="mailto:woltersh@outlook.de" className="no-select">
             <button type="button" className="contact-btn no-select">

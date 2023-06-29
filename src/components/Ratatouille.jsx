@@ -64,7 +64,7 @@ function Ratatouille() {
           </div>
         </div>
 
-        <ul className="projects-text-accordion">
+        <ul className="projects-text-accordion no-select">
           <li>
             <input
               type="radio"

@@ -196,20 +196,30 @@ function AboutSection() {
                 : "Wie ich Entwickler geworden bin"}
             </h2>
             <p>
-              {language === "EN"
-                ? `Even during my apprenticeship as a media designer, I was
-              fascinated by web technologies such as HTML and CSS. After
-              completing the apprenticeship, I didn't know where the journey
-              should go. So I started working on my own and created Shopify
-              stores, logo designs, and video ads. I enjoyed building online
-              stores so much that I began to watch coding videos on YouTube
-              without understanding a single line of code. From then on it was
-              clear to me, I would become a developer.`
-                : `Schon während meiner Ausbildung zum Mediengestalter war ich von Webtechnologien wie HTML und CSS fasziniert. 
-                Nach dem erfolgreichen Absolvieren der Ausbildung, wusste ich nicht wohin die Reise gehen sollte. 
-                Also arbeitete ich eigenständig und erstellte Shopify Shops, Logodesigns und Video-Ads. 
-                Das Erstellen von Online-Shops machte mir so sehr Spaß, dass ich anfing YouTube Videos übers Programmieren zu gucken, ohne auch nur eine Zeile Code zu verstehen. 
-                Von da an war für mich klar, ich werde Entwickler.`}
+              {language === "EN" ? (
+                <>
+                  Even during my apprenticeship as a media designer, I was
+                  fascinated by web technologies such as HTML and CSS. After
+                  completing the apprenticeship, I didn't know where the journey
+                  should go. So I started working on my own and created Shopify
+                  stores, logo designs, and video ads. I enjoyed building online
+                  stores so much that I began to watch coding videos on YouTube
+                  without understanding a single line of code. From then on it
+                  was clear to me, I would become a developer.
+                </>
+              ) : (
+                <>
+                  Schon während meiner Ausbildung zum Mediengestalter war ich
+                  von Webtechnologien wie HTML und CSS fasziniert. Nach dem
+                  erfolgreichen Absolvieren der Ausbildung, wusste ich nicht
+                  wohin die Reise gehen sollte. Also arbeitete ich eigenständig
+                  und erstellte Shopify Shops, Logodesigns und Video-Ads. Das
+                  Erstellen von Online-Shops machte mir so sehr Spaß, dass ich
+                  anfing YouTube Videos übers Programmieren zu gucken, ohne auch
+                  nur eine Zeile Code zu verstehen. Von da an war für mich klar,
+                  ich werde Entwickler.
+                </>
+              )}
             </p>
           </animated.div>
         </div>
