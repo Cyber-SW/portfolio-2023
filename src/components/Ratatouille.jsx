@@ -88,11 +88,20 @@ function Ratatouille() {
             </label>
             <div className="content">
               <p>
-                {language === "EN"
-                  ? `Ratatouille is a dish generator and meal planner
-                powered by OpenAi´s artificial intelligence ChatGPT. It is
-                optimized for mobile and HD screens upwards.`
-                  : `Ratatouille ist ein Rezeptgenerator und Essensplaner, der mit der künstlichen Intelligenz ChatGPT von OpenAi angetrieben wird. Es ist für Mobilgeräte und HD-Bildschirme aufwärts optimiert.`}
+                {language === "EN" ? (
+                  <>
+                    Ratatouille is a dish generator and meal planner powered by
+                    OpenAi´s artificial intelligence ChatGPT. It is optimized
+                    for mobile and HD screens upwards.
+                  </>
+                ) : (
+                  <>
+                    Ratatouille ist ein Rezeptgenerator und Essensplaner, der
+                    mit der künstlichen Intelligenz ChatGPT von OpenAi
+                    angetrieben wird. Es ist für Mobilgeräte und HD-Bildschirme
+                    aufwärts optimiert.
+                  </>
+                )}
               </p>
             </div>
             <hr className="content-hr" />
@@ -120,12 +129,22 @@ function Ratatouille() {
             </label>
             <div className="content">
               <p>
-                {language === "EN"
-                  ? `The biggest challenge was handling React's asynchronous
-                behavior, especially when retrieving data from the database or
-                API´s. This gets even more difficult when you have to wait for
-                two API calls before you can display the data.`
-                  : `Die größte Herausforderung war der Umgang mit dem asynchronen Verhalten von React, insbesondere beim Abrufen von Daten aus der Datenbank oder von APIs. Dies wird noch schwieriger, wenn man zwei API-Abfragen abwarten muss, bevor man die Daten anzeigen kann.`}
+                {language === "EN" ? (
+                  <>
+                    The biggest challenge was handling React's asynchronous
+                    behavior, especially when retrieving data from the database
+                    or API´s. This gets even more difficult when you have to
+                    wait for two API calls before you can display the data.
+                  </>
+                ) : (
+                  <>
+                    Die größte Herausforderung war der Umgang mit dem
+                    asynchronen Verhalten von React, insbesondere beim Abrufen
+                    von Daten aus der Datenbank oder von APIs. Dies wird noch
+                    schwieriger, wenn man zwei API-Abfragen abwarten muss, bevor
+                    man die Daten anzeigen kann.
+                  </>
+                )}
               </p>
             </div>
             <hr className="content-hr" />
@@ -155,14 +174,28 @@ function Ratatouille() {
             </label>
             <div className="content">
               <p>
-                {language === "EN"
-                  ? `I have used promises in the frontend to only proceed with the
-                execution of the code when the data requested by the backend is
-                available. I also used promises in the backend for the API calls
-                to make sure everything works properly. For data from the
-                database, I used useEffect, which requests the data from the
-                database at each page reload to display them.`
-                  : `Ich habe Promises im Frontend verwendet, um die Ausführung des Codes nur dann fortzusetzen, wenn die vom Backend angeforderten Daten verfügbar sind. Außerdem habe ich im Backend Promises für die API-Abfragen verwendet, um sicherzustellen, dass alles ordnungsgemäß funktioniert. Für die Daten aus der Datenbank habe ich useEffect verwendet, das bei jedem Neuladen der Seite die Daten aus der Datenbank anfordert, um sie anzuzeigen.`}
+                {language === "EN" ? (
+                  <>
+                    I have used promises in the frontend to only proceed with
+                    the execution of the code when the data requested by the
+                    backend is available. I also used promises in the backend
+                    for the API calls to make sure everything works properly.
+                    For data from the database, I used useEffect, which requests
+                    the data from the database at each page reload to display
+                    them.
+                  </>
+                ) : (
+                  <>
+                    Ich habe Promises im Frontend verwendet, um die Ausführung
+                    des Codes nur dann fortzusetzen, wenn die vom Backend
+                    angeforderten Daten verfügbar sind. Außerdem habe ich im
+                    Backend Promises für die API-Abfragen verwendet, um
+                    sicherzustellen, dass alles ordnungsgemäß funktioniert. Für
+                    die Daten aus der Datenbank habe ich useEffect verwendet,
+                    das bei jedem Neuladen der Seite die Daten aus der Datenbank
+                    anfordert, um sie anzuzeigen.
+                  </>
+                )}
               </p>
             </div>
             <hr className="content-hr" />
@@ -258,8 +291,17 @@ function Ratatouille() {
                   : "Dein Browser unterstützt keine Videos."}
               </video>
               <p>
-                If you see nothing here, turn off your adblocker and reload the
-                page.
+                {language === "EN" ? (
+                  <>
+                    If you see nothing here, turn off your adblocker and reload
+                    the page.
+                  </>
+                ) : (
+                  <>
+                    Wenn diese Sektion leer ist, schalte bitte deinen Adblocker
+                    aus und lade die Seite neu.
+                  </>
+                )}
               </p>
             </div>
           </li>

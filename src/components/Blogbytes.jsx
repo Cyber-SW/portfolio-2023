@@ -138,13 +138,24 @@ function Blogbytes() {
             </label>
             <div className="content">
               <p>
-                {language === "EN"
-                  ? `The biggest challenge was creating a like button with handlebars
-                because unlike in React it is not so easy to do this in the
-                frontend. In addition, all likes of a blog need to be stored in
-                the database, because every user must see the total likes of a
-                blog.`
-                  : `Die größte Herausforderung war die Erstellung eines Like-Buttons mit handlebars, da es im Gegensatz zu React nicht so einfach ist, dies im Frontend zu tun. Außerdem müssen alle Likes eines Blogs in der Datenbank gespeichert werden, da jeder Nutzer die gesamten Likes eines Blogs sehen muss.`}
+                {language === "EN" ? (
+                  <>
+                    The biggest challenge was creating a like button with
+                    handlebars because unlike in React it is not so easy to do
+                    this in the frontend. In addition, all likes of a blog need
+                    to be stored in the database, because every user must see
+                    the total likes of a blog.
+                  </>
+                ) : (
+                  <>
+                    Die größte Herausforderung war die Erstellung eines
+                    Like-Buttons mit handlebars, da es im Gegensatz zu React
+                    nicht so einfach ist, dies im Frontend zu tun. Außerdem
+                    müssen alle Likes eines Blogs in der Datenbank gespeichert
+                    werden, da jeder Nutzer die gesamten Likes eines Blogs sehen
+                    muss.
+                  </>
+                )}
               </p>
             </div>
             <hr className="content-hr" />
@@ -174,9 +185,24 @@ function Blogbytes() {
             </label>
             <div className="content">
               <p>
-                {language === "EN"
-                  ? `When a user likes a blog, the database checks if the blog-ID is already on his list of liked blogs. If that's the case, the blog-ID is removed from the list and the number of likes is decreased by one, otherwise, the likes are increased by one and the blog-ID is added to the list.`
-                  : `Wenn ein Benutzer einen Blog liked, wird in der Datenbank geprüft, ob die Blog-ID bereits auf seiner Liste der geliketen Blogs ist. Wenn dies der Fall ist, wird die Blog-ID von der Liste entfernt und die Anzahl der Likes um einen verringert, andernfalls werden die Likes um einen erhöht und die Blog-ID wird der Liste hinzugefügt.`}
+                {language === "EN" ? (
+                  <>
+                    When a user likes a blog, the database checks if the blog-ID
+                    is already on his list of liked blogs. If that's the case,
+                    the blog-ID is removed from the list and the number of likes
+                    is decreased by one, otherwise, the likes are increased by
+                    one and the blog-ID is added to the list.
+                  </>
+                ) : (
+                  <>
+                    Wenn ein Benutzer einen Blog liked, wird in der Datenbank
+                    geprüft, ob die Blog-ID bereits auf seiner Liste der
+                    geliketen Blogs ist. Wenn dies der Fall ist, wird die
+                    Blog-ID von der Liste entfernt und die Anzahl der Likes um
+                    einen verringert, andernfalls werden die Likes um einen
+                    erhöht und die Blog-ID wird der Liste hinzugefügt.
+                  </>
+                )}
               </p>
             </div>
             <hr className="content-hr" />

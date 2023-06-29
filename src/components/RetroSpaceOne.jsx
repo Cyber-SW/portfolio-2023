@@ -56,7 +56,10 @@ function RetroSpaceOne() {
               href="https://cyber-sw.github.io/RETRO-SPACE-ONE/"
               target="blank"
             >
-              <FontAwesomeIcon icon={faUpRightFromSquare} className="external-link" />
+              <FontAwesomeIcon
+                icon={faUpRightFromSquare}
+                className="external-link"
+              />
             </a>
           </div>
         </div>
@@ -85,12 +88,22 @@ function RetroSpaceOne() {
             </label>
             <div className="content">
               <p>
-                {language === "EN"
-                  ? `Retro Space One is a highscore-based arcade space shooter in
-                retro design with increasing difficulty over time, and three
-                spaceships, each with different properties, the player can
-                choose from.`
-                  : `Retro Space One ist ein Highscore-basierter Arcade-Weltraum-Shooter im Retro-Design mit über die Zeit ansteigendem Schwierigkeitsgrad und drei Raumschiffen mit unterschiedlichen Eigenschaften, aus denen der Spieler wählen kann.`}
+                {language === "EN" ? (
+                  <>
+                    Retro Space One is a highscore-based arcade space shooter in
+                    retro design with increasing difficulty over time, and three
+                    spaceships, each with different properties, the player can
+                    choose from.
+                  </>
+                ) : (
+                  <>
+                    Retro Space One ist ein Highscore-basierter
+                    Arcade-Weltraum-Shooter im Retro-Design mit über die Zeit
+                    ansteigendem Schwierigkeitsgrad und drei Raumschiffen mit
+                    unterschiedlichen Eigenschaften, aus denen der Spieler
+                    wählen kann.
+                  </>
+                )}
               </p>
             </div>
             <hr className="content-hr" />
@@ -118,11 +131,19 @@ function RetroSpaceOne() {
             </label>
             <div className="content">
               <p>
-                {language === "EN"
-                  ? `The biggest challenge was the calculation of the railgun hitbox
-                and the related calculation of the railgun laser collision with
-                the opponents.`
-                  : `Die größte Herausforderung war die Berechnung der Railgun-Hitbox und die damit verbundene Berechnung der Kollision des Railgun-Lasers mit den Gegnern.`}
+                {language === "EN" ? (
+                  <>
+                    The biggest challenge was the calculation of the railgun
+                    hitbox and the related calculation of the railgun laser
+                    collision with the opponents.
+                  </>
+                ) : (
+                  <>
+                    Die größte Herausforderung war die Berechnung der
+                    Railgun-Hitbox und die damit verbundene Berechnung der
+                    Kollision des Railgun-Lasers mit den Gegnern.
+                  </>
+                )}
               </p>
             </div>
             <hr className="content-hr" />
@@ -152,14 +173,30 @@ function RetroSpaceOne() {
             </label>
             <div className="content">
               <p>
-                {language === "EN"
-                  ? `To achieve the desired result, I colored the hitbox of the laser
-                red to make a change to the code more visible. I then used an
-                if-condition to see if the position of an opponent was in the
-                area covered by the laser, which of course also depends on the
-                position of the player. If the opponent is in the area, he is
-                considered hit and removed from the playing field.`
-                  : `Um das gewünschte Ergebnis zu erzielen habe ich als erstes die Hitbox des Lasers rot eingefärbt, um eine Änderung am Code besser sichtbar zu machen. Dann habe ich eine if-Condition verwendet um zu überprüfen, ob sich ein Gegner im Bereich des Lasers befindet, was natürlich auch von der Position des Spielers abhängt. Befindet sich ein Gegner in diesem Bereich, wird er als getroffen angesehen und vom Spielfeld entfernt.`}
+                {language === "EN" ? (
+                  <>
+                    First, I colored the laser's hitbox red to make a change to
+                    the code more visible. Then I used a condition and the four
+                    coordinates of the corners of the laser hitbox to check if
+                    there is an enemy in the area of the laser. The positions of
+                    these four coordinates depend on the player's position at
+                    the time the shoot button is pressed. If an opponent is
+                    within the four coordinates, he is considered hit and
+                    removed from the field.
+                  </>
+                ) : (
+                  <>
+                    Als erstes habe ich die Hitbox des Lasers rot eingefärbt, um
+                    eine Änderung am Code besser sichtbar zu machen. Dann habe
+                    ich mithilfe einer Condition und den vier Koordinaten, der
+                    Eckpunkte der Laser-Hitbox überprüft, ob sich ein Gegner im
+                    Bereich des Lasers befindet. Die Positionen dieser vier
+                    Koordinaten sind von der Position des Spielers zum Zeitpunkt
+                    des Drückens der Schusstaste abhängig. Befindet sich ein
+                    Gegner innerhalb der vier Koordinaten, wird er als getroffen
+                    angesehen und vom Spielfeld entfernt.
+                  </>
+                )}
               </p>
             </div>
             <hr className="content-hr" />
