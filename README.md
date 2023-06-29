@@ -6,9 +6,11 @@ My motivation behind this project was to showcase all the skills I have learned 
 Besides that, I also wanted to prove to myself that I am now capable of developing a professional website from the ground off, which means the concept, the design, and the development of the site.
 
 <h2>What did I learn?</h2>
-- How to work with react scroll and react spring.
-- How to work properly with CSS animations, transitions, media queries, advanced selectors, SVG animations, webkits, browser compatibility, and all that together in a responsive design.
-- Setting up large media for Netlify and GitHub.
+<ul>
+  <li>How to work with react scroll and react spring.</li>
+  <li>How to work properly with CSS animations, transitions, media queries, advanced selectors, SVG animations, Webkits, browser compatibility, and all that together in a responsive design.</li>
+  <li>Setting up large media for Netlify and GitHub.</li>
+</ul>
 
 <h2>What would I do better next time?</h2>
 Don´t just start coding without a clear concept. Maybe create the website in Figma or InDesign first and then start with the development,
