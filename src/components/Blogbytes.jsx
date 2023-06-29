@@ -1,5 +1,6 @@
 import { useState, useContext, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 import {
   faCss3,
   faGitAlt,
@@ -48,10 +49,13 @@ function Blogbytes() {
           </h3>
           <div className="projects-links no-select">
             <a href="https://github.com/Cyber-SW/blogbytes" target="blank">
-              <div className="github-link" />
+              <FontAwesomeIcon icon={faGithub} className="github-link" />
             </a>
             <a href="https://blogbytes.cyclic.app/" target="blank">
-              <div className="external-link" />
+              <FontAwesomeIcon
+                icon={faUpRightFromSquare}
+                className="external-link"
+              />
             </a>
           </div>
         </div>

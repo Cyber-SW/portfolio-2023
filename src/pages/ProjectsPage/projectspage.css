@@ -111,26 +111,22 @@
 
 .external-link,
 .github-link {
-  background-image: url("../../assets/projects-section/arrow-up-right-from-square-solid-white.svg");
-  background-repeat: no-repeat;
-  background-size: contain;
-  width: 1.2rem;
-  height: 1.2rem;
+  font-size: 22px;
+  color: var(--clr-primary-000);
   margin-left: 0.75rem;
 }
 
-.github-link {
-  background-image: url("../../assets/projects-section/github-white.svg");
-  width: 1.25rem;
-  height: 1.25rem;
+.external-link {
+  font-size: 20px;
+  color: var(--clr-primary-000);
 }
 
 .external-link:hover {
-  background-image: url("../../assets/projects-section/arrow-up-right-from-square-solid-orange.svg");
+  color: var(--clr-secondary-400);
 }
 
 .github-link:hover {
-  background-image: url("../../assets/projects-section/github-orange.svg");
+  color: var(--clr-secondary-400);
 }
 
 .projects-text-accordion li {

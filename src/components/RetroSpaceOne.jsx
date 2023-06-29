@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 import {
   faCss3,
   faGithub,
@@ -49,13 +50,13 @@ function RetroSpaceOne() {
               href="https://github.com/Cyber-SW/RETRO-SPACE-ONE"
               target="blank"
             >
-              <div className="github-link" />
+              <FontAwesomeIcon icon={faGithub} className="github-link" />
             </a>
             <a
               href="https://cyber-sw.github.io/RETRO-SPACE-ONE/"
               target="blank"
             >
-              <div className="external-link" />
+              <FontAwesomeIcon icon={faUpRightFromSquare} className="external-link" />
             </a>
           </div>
         </div>

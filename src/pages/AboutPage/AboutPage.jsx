@@ -4,9 +4,9 @@ import { Element } from "react-scroll";
 import { LanguageContext } from "../../context/lang.context";
 import { useContext, useState, useEffect } from "react";
 import Certificates from "../../../public/Documents/certificates Shawn Wolter.pdf";
-import CV from "../../../public/Documents/cv-resume Shawn Wolter.pdf";
+import CV from "../../../public/Documents/cv-resume Shawn-Wolter.pdf";
 import Zeugnisse from "../../../public/Documents/Zeugnisse Shawn Wolter.pdf";
-import Lebenslauf from "../../../public/Documents/cv-resume-german Shawn Wolter.pdf";
+import Lebenslauf from "../../../public/Documents/cv-resume-german Shawn-Wolter.pdf";
 import { useSpring, useScroll, animated } from "@react-spring/web";
 
 function AboutSection() {
