@@ -112,17 +112,16 @@ function ContactPage() {
           <p>
             {language === "EN" ? (
               <>
-                I am currently studying Applied Computer Science (B. Sc.) at
-                Gasnetz Hamburg, so I am not looking for job offers. However, if
-                you want to start a joint project or just want to say hello,
-                click the button.
+                I am currently looking for a part-time job as a web developer or
+                media designer. If you have a job offer for me, want to start a
+                project together or just want to say hello, click on the button.
               </>
             ) : (
               <>
-                Zurzeit studiere ich Angewandte Informatik (B. Sc.) bei Gasnetz
-                Hamburg, weshalb ich nicht auf der Suche nach Jobangeboten bin.
-                Wenn du allerdings ein gemeinsames Projekt starten möchtest oder
-                einfach nur Hallo sagen willst, klicke auf die Schaltfläche.
+                Zurzeit bin ich auf der Suche nach einem Job als Webentwickler
+                oder Mediengestalter in Teilzeit. Wenn du ein Jobangebot für
+                mich hast, ein gemeinsames Projekt starten willst oder einfach
+                nur Hallo sagen willst, klicke auf den Button.
               </>
             )}
           </p>
